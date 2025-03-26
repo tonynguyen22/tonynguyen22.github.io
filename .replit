@@ -6,7 +6,7 @@ hidden=[".config"]
 # directory= "/"
 
 [nix]
-channel = "stable-21_11"
+channel = "stable-22_11"
 
 [languages.html]
 pattern = "**/*.html"
@@ -54,12 +54,14 @@ start = "vscode-html-language-server --stdio"
 [languages.javascript]
 pattern = "**/{*.js,*.jsx,*.ts,*.tsx,*.mjs,*.cjs}"
   [languages.javascript.languageServer]
-start = "typescript-language-server --stdio"
+  start = "typescript-language-server --stdio"
 
 [languages.css]
 pattern = "**/{*.less,*.scss,*.css}"
+  [languages.css.languageServer.initializationOptions]
+  provideFormatter = true
   [languages.css.languageServer]
-start = "vscode-css-language-server --stdio"
+  start = "vscode-css-language-server --stdio"
     [languages.css.languageServer.configuration.css]
       customData = [ ]
       validate = true
@@ -178,6 +180,6 @@ start = "vscode-css-language-server --stdio"
 [gitHubImport]
 requiredFiles = [".replit", "replit.nix", ".config"]
 
-[auth]
-pageEnabled = false
-buttonEnabled = false
+[deployment]
+deploymentTarget = "static"
+publicDir = "/home/runner/bb2c457a-db1a-4cca-8089-69dd5f030af5/"
