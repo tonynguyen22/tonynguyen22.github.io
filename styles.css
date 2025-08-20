@@ -1,0 +1,540 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f0f2f5; 
+    min-height: 100vh;
+}
+
+/* App container */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+/* UPDATED SIDEBAR CONTAINER */
+.sidebar {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    background: #0f1d2f; /* Fallback background for the whole bar */
+}
+
+/* UPDATED LOGO SECTION */
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #08101a; /* Added black background */
+    padding: 2rem 2rem; /* Moved padding here */
+}
+
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* UPDATED NAVIGATION SECTION */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 2rem 1.5rem; /* Added padding */
+    flex-grow: 1;         /* Ensures this section fills remaining space */
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.2s;
+    position: relative;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.nav-item.active {
+    /* CHANGED: Replaced green with the silver/grey from your logo */
+    background: #A9B4C2;
+    /* CHANGED: Set text to dark blue for better contrast on the silver background */
+    color: #1E3A5F;
+    font-weight: 600; /* Added for better readability */
+}
+
+.nav-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex-shrink: 0;
+}
+
+.nav-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+
+/* Main content */
+.main-content {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Hero section */
+.hero-section {
+    /* CHANGED: Replaced the green gradient with a dark blue gradient from your logo */
+    background: linear-gradient(135deg, #182f4d 0%, #07223c 100%);
+    color: white;
+    padding: 4rem 2rem;
+    max-width: 100%;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, white, rgba(255, 255, 255, 0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+/* Analysis section */
+.analysis-section {
+    background-color: #ffffff;
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Analysis card */
+.analysis-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.analysis-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: #dee2e6;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.5rem 1.5rem 0;
+}
+
+.card-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-date {
+    font-size: 0.875rem;
+    color: #6c757d; 
+}
+
+.vip-badge {
+    /* CHANGED: Updated gradient to match the new branding */
+    background: linear-gradient(135deg, #A9B4C2, #8F9AAB);
+    color: #1E3A5F;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stock-symbol {
+    background: #f8f9fa;
+    color: #495057;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #dee2e6;
+}
+
+.card-content {
+    padding: 1rem 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.card-description {
+    font-size: 0.875rem;
+    color: #6c757d;
+    line-height: 1.5;
+}
+
+.card-footer {
+    padding: 0 1.5rem 1.5rem;
+}
+
+.view-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: 1px solid #ced4da;
+    color: #495057;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+    justify-content: center;
+}
+
+.view-button:hover {
+    background: #f8f9fa;
+    border-color: #adb5bd;
+}
+
+.button-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .sidebar-nav {
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 0.25rem;
+    }
+    
+    .nav-item {
+        flex-shrink: 0;
+        padding: 0.5rem;
+    }
+    
+    .nav-label {
+        display: none;
+    }
+    
+    .hero-section {
+        padding: 2rem 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .analysis-section {
+        padding: 1.5rem 1rem;
+    }
+    
+    .analysis-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+/*
+==============================================
+NEW STYLES FOR ANALYSIS DETAIL PAGES
+==============================================
+*/
+
+.analysis-detail-container {
+    background-color: #ffffff;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem 3rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.analysis-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.detail-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 0.5rem;
+}
+
+.detail-meta {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: #f8f9fa;
+    color: #495057;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid #dee2e6;
+    transition: all 0.2s;
+    flex-shrink: 0;
+    margin-left: 1rem;
+}
+
+.back-button:hover {
+    background-color: #e9ecef;
+    border-color: #ced4da;
+}
+
+.detail-section {
+    margin-bottom: 2.5rem;
+}
+
+.detail-section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 1rem;
+    /* CHANGED: Replaced green border with the silver/grey from your logo */
+    border-bottom: 2px solid #A9B4C2;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.detail-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #495057;
+    margin-bottom: 1rem;
+}
+
+/* Responsive adjustments for detail page */
+@media (max-width: 768px) {
+    .analysis-detail-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .analysis-detail-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .back-button {
+        margin-left: 0;
+        margin-top: 1rem;
+        text-align: center;
+    }
+    
+    .detail-title {
+        font-size: 1.75rem;
+    }
+}
+
+/*
+==============================================
+NEW STYLES FOR VALUATION PAGE
+==============================================
+*/
+
+.valuation-container {
+    padding: 2rem 2.5rem;
+}
+
+/* Header and Controls */
+.valuation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.page-title h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #212529;
+}
+
+.page-title p {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.valuation-controls {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.search-bar, .filter-dropdown {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+}
+
+.search-bar {
+    min-width: 250px;
+}
+
+.watchlist-button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    background-color: #f8f9fa;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.watchlist-button:hover {
+    background-color: #e9ecef;
+}
+
+/* Guidance Box */
+.valuation-guidance {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background-color: #e7f3ff;
+    border: 1px solid #d1e7fd;
+    color: #0c5460;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.guidance-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.guidance-text p, .guidance-text ol {
+    margin: 0;
+}
+.guidance-text ol {
+    padding-left: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+/* Valuation Table */
+.valuation-table-section {
+    overflow-x: auto; /* For responsiveness */
+}
+
+.valuation-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.valuation-table th, .valuation-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+.valuation-table th {
+    font-weight: 600;
+    color: #495057;
+    background-color: #f8f9fa;
+}
+
+.ticker-box {
+    background-color: #e9ecef;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    color: #495057;
+}
+
+.company-name-main {
+    font-weight: 600;
+    color: #212529;
+}
+
+.company-name-sub {
+    font-size: 0.75rem;
+    color: #6c757d;
+}
+
+.price-up {
+    color: #28a745; /* Green */
+    font-weight: 600;
+}
+
+.price-down {
+    color: #dc3545; /* Red */
+    font-weight: 600;
+}
+
+.pe-ratio {
+    color: #dc3545;
+}
+
+.pb-ratio {
+    color: #28a745;
+}

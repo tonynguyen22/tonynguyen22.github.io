@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valuation - Tonivest Research</title>
+    <meta name="description" content="Valuation table for listed companies." />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/logo-nav.png" type="image/png">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <span class="logo-text">Tonivest Research</span>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item">
+                    <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    <span class="nav-label">Company Analysis</span>
+                </a>
+                
+                <a href="valuation.html" class="nav-item active">
+                    <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                    <span class="nav-label">Valuation</span>
+                </a>
+                
+                <a href="#" class="nav-item">
+                    <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 011-1h1m-1 1v1m0 0H4a1 1 0 00-1 1v1m2-2h14m-1 0V5a2 2 0 00-1-1h-1m1 1v1"/></svg>
+                    <span class="nav-label">My Portfolio</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="valuation-container">
+                <header class="valuation-header">
+                    <div class="page-title">
+                        <h1>Valuation </h1>
+                        <p>Data is aggregated and updated continuously.</p>
+                    </div>
+                </header>
+
+                <section class="valuation-guidance">
+                    <div class="guidance-icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <div class="guidance-text">
+                        <p><strong>Usage Guide:</strong></p>
+                        <ol>
+                            <li>Click on a ticker to see detailed analysis. The 'fair value' is determined based on the 2025 business plan, assuming the company meets its targets.</li>
+                            <li>The 2026 valuation is discounted by 30% to account for business plan and market risks.</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section class="valuation-table-section">
+                    <table class="valuation-table">
+                        <thead>
+                            <tr>
+                                <th>Ticker</th>
+                                <th>Company Name</th>
+                                <th>Price</th>
+                                <th>Market Cap (B)</th>
+                                <th>Target 2025</th>
+                                <th>Upside 2025</th>
+                                <th>Target 2026</th>
+                                <th>Upside 2026</th>
+                                <th>Valuation Details</th>
+                                <th>Updated</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="ticker-box">VCB</span></td>
+                                <td>
+                                    <div class="company-name-main">Vietcombank</div>
+                                    <div class="company-name-sub">Updated: 2025-08-20 09:10</div>
+                                </td>
+                                <td class="price-down">63,000 đ</td>
+                                <td>526,428</td>
+                                <td class="price-down">50,253 đ</td>
+                                <td class="price-down">-20.2%</td>
+                                <td class="price-up">65,342 đ</td>
+                                <td class="price-up">3.7%</td>
+                                <td>
+                                    <div class="pe-ratio">P/E 66.02 đ</div>
+                                    <div class="pb-ratio">P/B 63,850 đ</div>
+                                </td>
+                                <td>2025-08-20</td>
+                            </tr>
+                            <tr>
+                                <td><span class="ticker-box">VIC</span></td>
+                                <td>
+                                    <div class="company-name-main">Vingroup</div>
+                                    <div class="company-name-sub">Updated: 2025-08-20 09:10</div>
+                                </td>
+                                <td class="price-down">124,200 đ</td>
+                                <td>474,941</td>
+                                <td class="price-down">43,933 đ</td>
+                                <td class="price-down">-64.6%</td>
+                                <td class="price-down">57,113 đ</td>
+                                <td class="price-down">-54.0%</td>
+                                <td>
+                                    <div class="pe-ratio">P/E 50,120 đ</div>
+                                    <div class="pb-ratio">P/B 88,482 đ</div>
+                                </td>
+                                <td>2025-08-20</td>
+                            </tr>
+                             <tr>
+                                <td><span class="ticker-box">VHM</span></td>
+                                <td>
+                                    <div class="company-name-main">Vinhomes</div>
+                                    <div class="company-name-sub">Updated: 2025-08-20 09:10</div>
+                                </td>
+                                <td class="price-up">99,000 đ</td>
+                                <td>406,593</td>
+                                <td class="price-up">112,491 đ</td>
+                                <td class="price-up">13.6%</td>
+                                <td class="price-up">146,238 đ</td>
+                                <td class="price-up">47.7%</td>
+                                <td>
+                                    <div class="pe-ratio">P/E 96,548 đ</div>
+                                    <div class="pb-ratio">P/B 123,538 đ</div>
+                                </td>
+                                <td>2025-08-20</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
