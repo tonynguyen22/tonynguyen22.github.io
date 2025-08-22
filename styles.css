@@ -89,6 +89,7 @@ body {
 }
 
 
+
 /* Main content */
 .main-content {
     flex: 1;
@@ -537,4 +538,68 @@ NEW STYLES FOR VALUATION PAGE
 
 .pb-ratio {
     color: #28a745;
+}
+
+/* --- Styles for Risk & Opportunities Section --- */
+
+.risk-opp-container {
+    display: flex;
+    gap: 24px; /* Adjust spacing between boxes */
+    margin-top: 1rem;
+    flex-wrap: wrap; /* Allows boxes to stack on smaller screens */
+}
+
+.risk-box, .opp-box {
+    flex: 1; /* Each box takes up half the space */
+    min-width: 280px; /* Prevents boxes from getting too narrow */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.risk-box {
+    border: 1px solid #d9534f; /* Red border */
+}
+
+.opp-box {
+    border: 1px solid #5cb85c; /* Green border */
+}
+
+.risk-box h4 {
+    color: #d9534f; /* Red text for the title */
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.opp-box h4 {
+    color: #5cb85c; /* Green text for the title */
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+/* Icons before the titles */
+.risk-box h4::before {
+    content: '⚠️';
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.opp-box h4::before {
+    content: '✅';
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.risk-box ul, .opp-box ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.risk-box li, .opp-box li {
+    margin-bottom: 10px;
+    line-height: 1.5;
 }
