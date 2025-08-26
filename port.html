@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Tonivest Research</title>
+    <link rel="icon" href="assets/logo-nav.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <span class="logo-text">Tonivest Research</span>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item">
+                    <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    <span class="nav-label">Company Analysis</span>
+                </a>
+                
+                <a href="valuation.html" class="nav-item">
+                    <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                    <span class="nav-label">Valuation</span>
+                </a>
+                
+                <a href="port.html" class="nav-item active">
+                    <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 011-1h1m-1 1v1m0 0H4a1 1 0 00-1 1v1m2-2h14m-1 0V5a2 2 0 00-1-1h-1m1 1v1"/></svg>
+                    <span class="nav-label">My Portfolio</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="valuation-container">
+                <div class="valuation-header">
+                    <div class="page-title">
+                        <h1>My Portfolio Tracker</h1>
+                        <p>Live performance of current investments.</p>
+                    </div>
+                </div>
+
+                <div class="performance-analysis" style="margin-bottom: 3rem;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Performance Analysis</h3>
+                    <p style="color: #6c757d; margin-bottom: 1.5rem;">As of August 22, 2025</p>
+                    <div class="valuation-table-section">
+                        <table class="valuation-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 50%;">Time-weighted rate of return (pre-tax)</th>
+                                    <th>MTD</th>
+                                    <th>QTD</th>
+                                    <th>YTD</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Individual Portfolio</td>
+                                    <td class="price-up">+7.60%</td>
+                                    <td class="price-up">+7.57%</td>
+                                    <td class="price-up">+18.58%</td>
+                                </tr>
+                                <tr>
+                                    <td>S&P 500® Index</td>
+                                    <td class="price-up">+2.11%</td>
+                                    <td class="price-up">+4.40%</td>
+                                    <td class="price-up">+10.88%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="analysis-grid" style="grid-template-columns: 2fr 1fr; align-items: flex-start;">
+                    <div class="portfolio-details">
+                        <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Portfolio Overview</h3>
+                        <div class="valuation-table-section">
+                            <table class="valuation-table">
+                                <thead>
+                                    <tr>
+                                        <th>Ticker</th>
+                                        <th>Avg Cost/Share</th>
+                                        <th>Market Price</th>
+                                        <th>Gain/Loss %</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="portfolio-body">
+                                    <tr><td colspan="4" style="text-align: center;">Loading portfolio data...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="portfolio-chart">
+                        <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Sector Diversification</h3>
+                        <canvas id="sector-pie-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // !!! IMPORTANT: Paste your free API key from Financial Modeling Prep here
+            const apiKey = 'J9ls4xtu2AY9PKEECzOdkhIx5U4y74eR';
+
+            // --- Main function to load all data ---
+            async function loadPortfolio() {
+                try {
+                    // Only fetch current trades
+                    const response = await fetch('data/trades.json');
+                    if (!response.ok) {
+                        throw new Error('Failed to load trades.json.');
+                    }
+                    const tradesData = await response.json();
+                    
+                    // Process and render the portfolio
+                    processAndRenderPortfolio(tradesData);
+
+                } catch (error) {
+                    console.error("Error loading portfolio:", error);
+                    document.getElementById('portfolio-body').innerHTML = `<tr><td colspan="4" style="text-align: center; color: red;">Could not load portfolio data.</td></tr>`;
+                }
+            }
+
+            // --- Process and Render Current Portfolio ---
+            async function processAndRenderPortfolio(currentTrades) {
+                if (!apiKey || apiKey === 'YOUR_FMP_API_KEY') {
+                    const errorMessage = `<tr><td colspan="4" style="text-align: center; color: orange;">Please add your FMP API key to the script.</td></tr>`;
+                    document.getElementById('portfolio-body').innerHTML = errorMessage;
+                    return;
+                }
+                
+                // Aggregate current holdings
+                const aggregated = currentTrades.reduce((acc, trade) => {
+                    if (!acc[trade.ticker]) {
+                        acc[trade.ticker] = { shares: 0, totalCost: 0, company: trade.company };
+                    }
+                    acc[trade.ticker].shares += parseFloat(trade.shares);
+                    acc[trade.ticker].totalCost += parseFloat(trade.shares) * parseFloat(trade.cost_share);
+                    return acc;
+                }, {});
+
+                const portfolio = Object.entries(aggregated).map(([ticker, data]) => ({
+                    ticker,
+                    company: data.company,
+                    shares: data.shares,
+                    costPerShare: data.totalCost / data.shares,
+                    totalCost: data.totalCost
+                }));
+
+                const tickers = portfolio.map(p => p.ticker).join(',');
+                const apiUrl = `https://financialmodelingprep.com/api/v3/quote/${tickers}?apikey=${apiKey}`;
+                const marketResponse = await fetch(apiUrl);
+                if (!marketResponse.ok) throw new Error('Failed to fetch market prices.');
+                const marketData = await marketResponse.json();
+
+                const priceMap = marketData.reduce((map, stock) => { map[stock.symbol] = stock.price; return map; }, {});
+
+                const portfolioBody = document.getElementById('portfolio-body');
+                let html = '';
+                let portfolioWithMarketData = [];
+
+                for (const stock of portfolio) {
+                    const marketPrice = priceMap[stock.ticker] || 0;
+                    const totalValue = stock.shares * marketPrice;
+                    const gainLoss = totalValue - stock.totalCost;
+                    const gainLossPercent = (stock.totalCost > 0) ? (gainLoss / stock.totalCost) * 100 : 0;
+                    const gainClass = gainLoss >= 0 ? 'price-up' : 'price-down';
+
+                    html += `
+                        <tr>
+                            <td>
+                                <div class="company-name-main">${stock.ticker}</div>
+                                <div class="company-name-sub">${stock.company}</div>
+                            </td>
+                            <td>$${stock.costPerShare.toFixed(2)}</td>
+                            <td>$${marketPrice.toFixed(2)}</td>
+                            <td class="${gainClass}">${gainLossPercent.toFixed(1)}%</td>
+                        </tr>
+                    `;
+                    portfolioWithMarketData.push({...stock, totalValue});
+                }
+                portfolioBody.innerHTML = html;
+
+                renderSectorChart(portfolioWithMarketData);
+            }
+
+            // --- Render Sector Chart ---
+            function renderSectorChart(portfolioData) {
+                const sectorMap = { "NU": "Financials", "GOOG": "Communication Services", "TSM": "Technology", "CVS": "Healthcare", "GXO": "Industrials", "WMT": "Consumer Staples", "CWAN": "Technology" };
+                const sectorAllocation = portfolioData.reduce((acc, stock) => {
+                    const sector = sectorMap[stock.ticker] || "Other";
+                    if (!acc[sector]) { acc[sector] = 0; }
+                    acc[sector] += stock.totalValue;
+                    return acc;
+                }, {});
+                const ctx = document.getElementById('sector-pie-chart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: Object.keys(sectorAllocation),
+                        datasets: [{
+                            label: 'Portfolio Value',
+                            data: Object.values(sectorAllocation),
+                            backgroundColor: ['#0f1d2f', '#1E3A5F', '#A9B4C2', '#8F9AAB', '#4a6fa5', '#1e5288', '#163e63'],
+                            borderColor: '#ffffff',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        let label = context.label || '';
+                                        if (label) {
+                                            label += ': ';
+                                        }
+                                        if (context.parsed !== null) {
+                                            const total = context.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+                                            const percentage = (total > 0) ? (context.parsed / total * 100).toFixed(1) : 0;
+                                            // MODIFIED LINE: Only show the percentage
+                                            label += `${percentage}%`;
+                                        }
+                                        return label;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // --- Start the process ---
+            loadPortfolio();
+        });
+    </script>
+</body>
+</html>
