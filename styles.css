@@ -20,7 +20,7 @@ body {
 /* Sidebar */
 /* UPDATED SIDEBAR CONTAINER */
 .sidebar {
-    width: 280px;
+    width: 260px;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
@@ -32,15 +32,23 @@ body {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    background: #08101a; /* Added black background */
-    padding: 2rem 2rem; /* Moved padding here */
+    background: #0f1d2f; /* Added black background */
+    padding: 2rem 2.5rem; /* Moved padding here */
 }
 
 
 .logo-text {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
+    font-size: 2rem;
+    font-weight: bold; /* Bold works well with gradients */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    /* Create the gradient */
+    background: linear-gradient(180deg, #FFFFFF 60%, #A9B4C2 100%);
+    /* Clip the background to the text shape */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Make the text color transparent to show the background */
+    -webkit-text-fill-color: transparent;
 }
 
 /* UPDATED NAVIGATION SECTION */

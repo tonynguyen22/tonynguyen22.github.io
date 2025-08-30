@@ -7,6 +7,35 @@
     <meta name="description" content="Valuation table for listed companies." />
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/logo-nav.png" type="image/png">
+    <style>
+        /* Add some specific styles for the calculator */
+        .calculator-section label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #495057;
+        }
+        /* Ensure select dropdowns match the input style */
+        .search-bar {
+            width: 100%;
+        }
+        /* Styles for the new "Current Price" display */
+        .current-price-cell {
+            text-align: right; /* Adjust as needed */
+            padding-right: 10px; /* Space from right edge */
+        }
+        .current-price-main {
+            font-weight: bold;
+            font-size: 1em;
+            color: #212529; /* Darker for main price */
+        }
+        .current-price-sub {
+            font-size: 0.75em;
+            color: #6c757d; /* Lighter for date */
+            margin-top: 2px;
+        }
+    </style>
 </head>
 <body>
     <div class="app-container">
@@ -27,7 +56,7 @@
                 </a>
                 
                 <a href="port.html" class="nav-item">
-                    <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 011-1h1m-1 1v1m0 0H4a1 1 0 00-1 1v1m2-2h14m-1 0V5a2 2 0 00-1-1h-1m1 1v1"/></svg>
+                    <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 D 012-2m0 0V5a2 2 0 011-1h1m-1 1v1m0 0H4a1 1 0 00-1 1v1m2-2h14m-1 0V5a2 2 0 00-1-1h-1m1 1v1"/></svg>
                     <span class="nav-label">My Portfolio</span>
                 </a>
             </nav>
@@ -38,21 +67,42 @@
                 <header class="valuation-header">
                     <div class="page-title">
                         <h1>Valuation </h1>
-                        <p>Data is aggregated and updated continuously.</p>
                     </div>
                 </header>
 
-                <section class="valuation-guidance">
-                    <div class="guidance-icon">
-                        <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                <section class="calculator-section" style="background-color: #f8f9fa; padding: 2rem; border-radius: 0.5rem; margin-bottom: 2rem; border: 1px solid #e9ecef;">
+                    <h2 style="font-size: 1.75rem; margin-top:0; margin-bottom: 1.5rem; color: #212529;">Price Target Calculator</h2>
+                    <div class="calculator-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; align-items: end;">
+                        <div>
+                            <label for="fyRevenue">Recent FY Revenue ($ M)</label>
+                            <input type="number" id="fyRevenue" class="search-bar" value="11789" placeholder="e.g., 10000">
+                        </div>
+                        <div>
+                            <label for="revGrowth">Annual Growth Rate (%)</label>
+                            <input type="number" id="revGrowth" class="search-bar" value="8.2" placeholder="e.g., 10">
+                        </div>
+                        <div>
+                            <label for="opMargin">Operating Margin (%)</label>
+                            <input type="number" id="opMargin" class="search-bar" value="4.3" placeholder="e.g., 20">
+                        </div>
+                        <div>
+                            <label for="peTarget">Forward P/E Target</label>
+                            <input type="number" id="peTarget" class="search-bar" value="16.5" placeholder="e.g., 25">
+                        </div>
+                        <div>
+                            <label for="shares">Outstanding Shares (M)</label>
+                            <input type="number" id="shares" class="search-bar" value="114.45" placeholder="e.g., 500">
+                        </div>
+                        <div>
+                            <label for="forecastYears">Forecast Period (Years)</label>
+                            <input type="number" id="forecastYears" class="search-bar" value="1.3" step="0.1" placeholder="e.g., 1.5">
+                        </div>
                     </div>
-                    <div class="guidance-text">
-                        <p><strong>Usage Guide:</strong></p>
-                        <ol>
-                            <li>Click on a ticker to see detailed analysis. The 'fair value' is determined based on the 2025 business plan, assuming the company meets its targets.</li>
-                            <li>The 2026 valuation is discounted by 30% to account for business plan and market risks.</li>
-                        </ol>
+                    <div class="calculator-result" style="margin-top: 2rem; background: #e7f3ff; padding: 1.5rem; border-radius: 0.5rem; text-align: center; border: 1px solid #d1e7fd;">
+                        <p id="result-label" style="font-size: 1rem; color: #0c5460; margin: 0;">Projected Share Price (in 1.3 years):</p>
+                        <h3 id="price-target-result" style="font-size: 2.5rem; color: #182f4d; margin: 0.5rem 0 0 0;">$67.13</h3>
                     </div>
+                    <p style="font-size: 0.8rem; color: #6c757d; margin-top: 1rem; text-align: center;">*Calculation assumes a 21% corporate tax rate on operating income.</p>
                 </section>
 
                 <section class="valuation-table-section">
@@ -61,70 +111,33 @@
                             <tr>
                                 <th>Ticker</th>
                                 <th>Company Name</th>
-                                <th>Price</th>
+                                <th>Current Price</th>
                                 <th>Market Cap (B)</th>
                                 <th>Target 2025</th>
                                 <th>Upside 2025</th>
                                 <th>Target 2026</th>
                                 <th>Upside 2026</th>
                                 <th>Valuation Details</th>
-                                <th>Updated</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><span class="ticker-box">VCB</span></td>
+                                <td><span class="ticker-box">GXO</span></td>
                                 <td>
-                                    <div class="company-name-main">Vietcombank</div>
-                                    <div class="company-name-sub">Updated: 2025-08-20 09:10</div>
+                                    <div class="company-name-main">GXO Logistics, Inc.</div>
                                 </td>
-                                <td class="price-down">63,000 đ</td>
-                                <td>526,428</td>
-                                <td class="price-down">50,253 đ</td>
-                                <td class="price-down">-20.2%</td>
-                                <td class="price-up">65,342 đ</td>
-                                <td class="price-up">3.7%</td>
+                                <td class="current-price-cell">
+                                    <div class="current-price-main">$52.65</div>
+                                    <div class="current-price-sub">As of 2025-08-30</div>
+                                </td>
+                                <td>6.03B</td>
+                                <td class="price-up">$59.12</td>
+                                <td class="price-up">12.2%</td>
+                                <td class="price-up">$63.96</td>
+                                <td class="price-up">21.4%</td>
                                 <td>
-                                    <div class="pe-ratio">P/E 66.02 đ</div>
-                                    <div class="pb-ratio">P/B 63,850 đ</div>
+                                    <div class="pe-ratio">P/E 16.5x</div>
                                 </td>
-                                <td>2025-08-20</td>
-                            </tr>
-                            <tr>
-                                <td><span class="ticker-box">VIC</span></td>
-                                <td>
-                                    <div class="company-name-main">Vingroup</div>
-                                    <div class="company-name-sub">Updated: 2025-08-20 09:10</div>
-                                </td>
-                                <td class="price-down">124,200 đ</td>
-                                <td>474,941</td>
-                                <td class="price-down">43,933 đ</td>
-                                <td class="price-down">-64.6%</td>
-                                <td class="price-down">57,113 đ</td>
-                                <td class="price-down">-54.0%</td>
-                                <td>
-                                    <div class="pe-ratio">P/E 50,120 đ</div>
-                                    <div class="pb-ratio">P/B 88,482 đ</div>
-                                </td>
-                                <td>2025-08-20</td>
-                            </tr>
-                             <tr>
-                                <td><span class="ticker-box">VHM</span></td>
-                                <td>
-                                    <div class="company-name-main">Vinhomes</div>
-                                    <div class="company-name-sub">Updated: 2025-08-20 09:10</div>
-                                </td>
-                                <td class="price-up">99,000 đ</td>
-                                <td>406,593</td>
-                                <td class="price-up">112,491 đ</td>
-                                <td class="price-up">13.6%</td>
-                                <td class="price-up">146,238 đ</td>
-                                <td class="price-up">47.7%</td>
-                                <td>
-                                    <div class="pe-ratio">P/E 96,548 đ</div>
-                                    <div class="pb-ratio">P/B 123,538 đ</div>
-                                </td>
-                                <td>2025-08-20</td>
                             </tr>
                         </tbody>
                     </table>
@@ -132,5 +145,57 @@
             </div>
         </main>
     </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Calculator Elements ---
+        const fyRevenueInput = document.getElementById('fyRevenue');
+        const revGrowthInput = document.getElementById('revGrowth');
+        const opMarginInput = document.getElementById('opMargin');
+        const peTargetInput = document.getElementById('peTarget');
+        const sharesInput = document.getElementById('shares');
+        const forecastYearsInput = document.getElementById('forecastYears');
+        const resultDisplay = document.getElementById('price-target-result');
+        const resultLabel = document.getElementById('result-label');
+
+
+        // --- Calculation Function ---
+        function calculatePriceTarget() {
+            // 1. Get values and convert to numbers
+            const revenue = parseFloat(fyRevenueInput.value) || 0;
+            const growthRate = parseFloat(revGrowthInput.value) || 0;
+            const margin = parseFloat(opMarginInput.value) || 0;
+            const peRatio = parseFloat(peTargetInput.value) || 0;
+            const shares = parseFloat(sharesInput.value) || 0;
+            const years = parseFloat(forecastYearsInput.value) || 0;
+
+            // 2. Perform the calculation with multi-year (and fractional year) compounding
+            // Projected Revenue = Recent Revenue * (1 + Growth Rate) ^ Years
+            const projectedRevenue = revenue * Math.pow((1 + (growthRate / 100)), years);
+            
+            const projectedOpIncome = projectedRevenue * (margin / 100);
+            const taxRate = 0.21; 
+            const projectedNetIncome = projectedOpIncome * (1 - taxRate);
+            const projectedMarketCap = projectedNetIncome * peRatio;
+            
+            let priceTarget = 0;
+            if (shares > 0) {
+                priceTarget = projectedMarketCap / shares;
+            }
+
+            // 3. Display the result and update the label
+            resultLabel.textContent = `Projected Share Price (in ${years} years):`;
+            resultDisplay.textContent = `$${priceTarget.toFixed(2)}`;
+        }
+
+        // --- Event Listeners to make it interactive ---
+        const inputs = [fyRevenueInput, revGrowthInput, opMarginInput, peTargetInput, sharesInput, forecastYearsInput];
+        inputs.forEach(input => {
+            input.addEventListener('input', calculatePriceTarget);
+        });
+
+        // --- Initial Calculation on Page Load ---
+        calculatePriceTarget();
+    });
+    </script>
 </body>
 </html>
