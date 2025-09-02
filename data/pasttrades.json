@@ -38,5 +38,21 @@
         "share_number": 1,
         "sell_date": "2025-05-20",
         "sell_price": 592.73
+    },
+    {
+        "ticker": "CWAN",
+        "entry_date": "2025-08-11",
+        "entry_price": 19.55,
+        "share_number": 10,
+        "sell_date": "2025-09-02",
+        "sell_price": 20.31
+    },
+    {
+        "ticker": "GXO",
+        "entry_date": "2025-06-11",
+        "entry_price": 43.92,
+        "share_number": 11.384,
+        "sell_date": "2025-09-02",
+        "sell_price": 51.36
     }
 ]

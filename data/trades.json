@@ -52,7 +52,7 @@
       "ticker": "TSM",
       "company": "Taiwan Semiconductor Manufacturing ADR",
       "date": "2025-06-10",
-      "shares": 1.41,
+      "shares": 1.413,
       "cost_share": 212.23
     },
     {
@@ -63,13 +63,6 @@
       "cost_share": 64.88
     },
     {
-      "ticker": "GXO",
-      "company": "GXO Logistics Inc",
-      "date": "2025-06-11",
-      "shares": 11.384,
-      "cost_share": 43.92
-    },
-    {
       "ticker": "WMT",
       "company": "Walmart Inc",
       "date": "2025-07-24",
@@ -77,18 +70,18 @@
       "cost_share": 96.65
     },
     {
-      "ticker": "CWAN",
-      "company": "Clearwater Analytics Holdings Inc",
-      "date": "2025-08-11",
-      "shares": 10,
-      "cost_share": 19.55
-    },
-    {
       "ticker": "WMT",
       "company": "Walmart Inc",
       "date": "2025-08-26",
       "shares": 2,
       "cost_share": 96.14
+    },
+    {
+      "ticker": "TSM",
+      "company": "Taiwan Semiconductor Manufacturing ADR",
+      "date": "2025-09-02",
+      "shares": 0.587,
+      "cost_share": 226.68
     }
   ]
   
