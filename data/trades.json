@@ -1,47 +1,5 @@
 [
     {
-      "ticker": "NU",
-      "company": "Nu Holdings Ltd",
-      "date": "2024-09-19",
-      "shares": 3,
-      "cost_share": 15.05
-    },
-    {
-      "ticker": "NU",
-      "company": "Nu Holdings Ltd",
-      "date": "2024-09-26",
-      "shares": 3,
-      "cost_share": 13.98
-    },
-    {
-      "ticker": "NU",
-      "company": "Nu Holdings Ltd",
-      "date": "2024-12-02",
-      "shares": 3,
-      "cost_share": 11.90
-    },
-    {
-      "ticker": "NU",
-      "company": "Nu Holdings Ltd",
-      "date": "2025-05-16",
-      "shares": 6,
-      "cost_share": 12.84
-    },
-    {
-      "ticker": "NU",
-      "company": "Nu Holdings Ltd",
-      "date": "2024-12-19",
-      "shares": 3,
-      "cost_share": 10.41
-    },
-    {
-      "ticker": "NU",
-      "company": "Nu Holdings Ltd",
-      "date": "2025-06-12",
-      "shares": 6,
-      "cost_share": 12.17
-    },
-    {
       "ticker": "GOOG",
       "company": "Alphabet Inc",
       "date": "2025-06-10",
@@ -82,6 +40,13 @@
       "date": "2025-09-02",
       "shares": 0.587,
       "cost_share": 226.68
+    },
+    {
+      "ticker": "C",
+      "company": "Citigroup Inc",
+      "date": "2025-09-04",
+      "shares": 3,
+      "cost_share": 96.12
     }
   ]
   
