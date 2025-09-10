@@ -47,6 +47,13 @@
       "date": "2025-09-04",
       "shares": 3,
       "cost_share": 96.12
+    },
+    {
+      "ticker": "CVS",
+      "company": "CVS Health Corp",
+      "date": "2025-09-09",
+      "shares": 2.3,
+      "cost_share": 71.58
     }
   ]
   
