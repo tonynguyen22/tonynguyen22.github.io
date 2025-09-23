@@ -192,7 +192,7 @@
 
             // --- Render Sector Chart ---
             function renderSectorChart(portfolioData) {
-                const sectorMap = { "C": "Financials", "GOOG": "Communication Services", "TSM": "Technology", "CVS": "Healthcare", "WMT": "Consumer Staples","EQT": "Energy"};
+                const sectorMap = { "C": "Financials", "GOOG": "Communication Services", "TSM": "Technology", "CVS": "Healthcare", "WMT": "Consumer Staples","EQT": "Energy", "BSX": "Healthcare"};
                 const sectorAllocation = portfolioData.reduce((acc, stock) => {
                     const sector = sectorMap[stock.ticker] || "Other";
                     if (!acc[sector]) { acc[sector] = 0; }

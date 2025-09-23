@@ -61,6 +61,13 @@
       "date": "2025-09-12",
       "shares": 5,
       "cost_share": 51.53
+    },
+    {
+      "ticker": "BSX",
+      "company": "Boston Scientific Corp",
+      "date": "2025-09-16",
+      "shares": 3,
+      "cost_share": 99.22
     }
   ]
   
