@@ -68,6 +68,13 @@
       "date": "2025-09-16",
       "shares": 3,
       "cost_share": 99.22
+    },
+    {
+      "ticker": "BTCUSD",
+      "company": "Bitcoin",
+      "date": "2025-09-18",
+      "shares": 0.00180578,
+      "cost_share": 110755.46
     }
   ]
   
