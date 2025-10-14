@@ -3,15 +3,15 @@
       "ticker": "GOOG",
       "company": "Alphabet Inc",
       "date": "2025-06-10",
-      "shares": 2.2,
+      "shares": 1,
       "cost_share": 181.53
     },
     {
       "ticker": "TSM",
       "company": "Taiwan Semiconductor Manufacturing ADR",
       "date": "2025-06-10",
-      "shares": 1.413,
-      "cost_share": 212.23
+      "shares": 1,
+      "cost_share": 220.71
     },
     {
       "ticker": "CVS",
@@ -33,13 +33,6 @@
       "date": "2025-08-26",
       "shares": 2,
       "cost_share": 96.14
-    },
-    {
-      "ticker": "TSM",
-      "company": "Taiwan Semiconductor Manufacturing ADR",
-      "date": "2025-09-02",
-      "shares": 0.587,
-      "cost_share": 226.68
     },
     {
       "ticker": "C",
@@ -75,6 +68,13 @@
       "date": "2025-09-18",
       "shares": 0.00180578,
       "cost_share": 110755.46
+    },
+    {
+      "ticker": "CASH",
+      "company": "CASH",
+      "date": "2025-09-20",
+      "shares": 1,
+      "cost_share": 1437
     }
   ]
   

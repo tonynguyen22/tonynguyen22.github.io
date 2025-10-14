@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio - Tonivest Research</title>
     <link rel="icon" href="assets/logo-nav.png" type="image/png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -97,8 +97,6 @@
                         </table>
                     </div>
                 </div>
-
-                
             </div>
         </main>
     </div>
@@ -135,8 +133,11 @@
                     return;
                 }
                 
-                // Aggregate current holdings
-                const aggregated = currentTrades.reduce((acc, trade) => {
+                // 1. Prepare data for the TABLE (excluding CASH)
+                const tradesForTable = currentTrades.filter(trade => trade.ticker !== 'CASH');
+
+                // Aggregate holdings for the TABLE
+                const aggregatedForTable = tradesForTable.reduce((acc, trade) => {
                     if (!acc[trade.ticker]) {
                         acc[trade.ticker] = { shares: 0, totalCost: 0, company: trade.company };
                     }
@@ -145,27 +146,32 @@
                     return acc;
                 }, {});
 
-                const portfolio = Object.entries(aggregated).map(([ticker, data]) => ({
+                const portfolioForTable = Object.entries(aggregatedForTable).map(([ticker, data]) => ({
                     ticker,
                     company: data.company,
                     shares: data.shares,
                     costPerShare: data.totalCost / data.shares,
                     totalCost: data.totalCost
                 }));
-
-                const tickers = portfolio.map(p => p.ticker).join(',');
-                const apiUrl = `https://financialmodelingprep.com/api/v3/quote/${tickers}?apikey=${apiKey}`;
-                const marketResponse = await fetch(apiUrl);
-                if (!marketResponse.ok) throw new Error('Failed to fetch market prices.');
-                const marketData = await marketResponse.json();
-
-                const priceMap = marketData.reduce((map, stock) => { map[stock.symbol] = stock.price; return map; }, {});
+                
+                // Get all unique tickers for the API call (excluding CASH)
+                const tickersForApi = portfolioForTable.map(p => p.ticker).join(',');
+                
+                let priceMap = {};
+                if (tickersForApi.length > 0) {
+                    const apiUrl = `https://financialmodelingprep.com/api/v3/quote/${tickersForApi}?apikey=${apiKey}`;
+                    const marketResponse = await fetch(apiUrl);
+                    if (!marketResponse.ok) throw new Error('Failed to fetch market prices.');
+                    const marketData = await marketResponse.json();
+                    priceMap = marketData.reduce((map, stock) => { map[stock.symbol] = stock.price; return map; }, {});
+                }
 
                 const portfolioBody = document.getElementById('portfolio-body');
                 let html = '';
-                let portfolioWithMarketData = [];
+                let portfolioWithMarketDataForChart = []; // Will be used later for chart
 
-                for (const stock of portfolio) {
+                // Render the table
+                for (const stock of portfolioForTable) {
                     const marketPrice = priceMap[stock.ticker] || 0;
                     const totalValue = stock.shares * marketPrice;
                     const gainLoss = totalValue - stock.totalCost;
@@ -183,23 +189,70 @@
                             <td class="${gainClass}">${gainLossPercent.toFixed(1)}%</td>
                         </tr>
                     `;
-                    portfolioWithMarketData.push({...stock, totalValue});
+                    // Add stock data (equity only) for chart preparation
+                    portfolioWithMarketDataForChart.push({...stock, totalValue});
                 }
                 portfolioBody.innerHTML = html;
 
-                renderSectorChart(portfolioWithMarketData);
+                // 2. Prepare data for the CHART (including CASH)
+                // Aggregate ALL current holdings for chart
+                const aggregatedForAll = currentTrades.reduce((acc, trade) => {
+                    if (!acc[trade.ticker]) {
+                        acc[trade.ticker] = { shares: 0, totalCost: 0, company: trade.company };
+                    }
+                    acc[trade.ticker].shares += parseFloat(trade.shares);
+                    acc[trade.ticker].totalCost += parseFloat(trade.shares) * parseFloat(trade.cost_share);
+                    return acc;
+                }, {});
+
+                const portfolioForAll = Object.entries(aggregatedForAll).map(([ticker, data]) => ({
+                    ticker,
+                    company: data.company,
+                    shares: data.shares,
+                    totalCost: data.totalCost
+                }));
+                
+                // Calculate total value for ALL assets (including CASH) for the chart
+                let finalChartData = [];
+                for (const stock of portfolioForAll) {
+                    let totalValue;
+                    if (stock.ticker === 'CASH') {
+                        // For cash, the total value is the total cost
+                        totalValue = stock.totalCost; 
+                    } else if (stock.ticker === 'BTCUSD') {
+                        // BTCUSD price is not reliably in the FMP quote API, so it uses cost as a placeholder
+                        // For production, you'd need a crypto API endpoint
+                         totalValue = stock.shares * (priceMap[stock.ticker] || stock.totalCost / stock.shares); 
+                    }
+                    else {
+                        // For equity, use the market price
+                        const marketPrice = priceMap[stock.ticker] || 0;
+                        totalValue = stock.shares * marketPrice;
+                    }
+                    finalChartData.push({...stock, totalValue});
+                }
+                
+                // Render the chart using ALL data
+                renderSectorChart(finalChartData);
             }
 
             // --- Render Sector Chart ---
             function renderSectorChart(portfolioData) {
-                const sectorMap = { "C": "Financials", "GOOG": "Communication Services", "TSM": "Technology", "CVS": "Healthcare", "WMT": "Consumer Staples","EQT": "Energy", "BSX": "Healthcare", "BTCUSD": "Cryptocurrency" };
+                const sectorMap = { "C": "Financials", "GOOG": "Communication Services", "TSM": "Technology", "CVS": "Healthcare", "WMT": "Consumer Staples","EQT": "Energy", "BSX": "Healthcare", "BTCUSD": "Cryptocurrency", "CASH": "Cash" };
                 const sectorAllocation = portfolioData.reduce((acc, stock) => {
                     const sector = sectorMap[stock.ticker] || "Other";
                     if (!acc[sector]) { acc[sector] = 0; }
                     acc[sector] += stock.totalValue;
                     return acc;
                 }, {});
+                
                 const ctx = document.getElementById('sector-pie-chart').getContext('2d');
+                
+                // Destroy any existing chart instance to prevent errors
+                if (Chart.getChart(ctx)) {
+                    Chart.getChart(ctx).destroy();
+                }
+
                 new Chart(ctx, {
                     type: 'pie',
                     data: {
@@ -207,7 +260,7 @@
                         datasets: [{
                             label: 'Portfolio Value',
                             data: Object.values(sectorAllocation),
-                            backgroundColor: ['#0f1d2f', '#1E3A5F', '#A9B4C2', '#8F9AAB', '#4a6fa5', '#1e5288', '#163e63'],
+                            backgroundColor: ['#0f1d2f', '#1E3A5F', '#A9B4C2', '#8F9AAB', '#4a6fa5', '#1e5288', '#163e63', '#666666', '#AAAAAA'],
                             borderColor: '#ffffff',
                             borderWidth: 2
                         }]
@@ -228,7 +281,6 @@
                                         if (context.parsed !== null) {
                                             const total = context.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
                                             const percentage = (total > 0) ? (context.parsed / total * 100).toFixed(1) : 0;
-                                            // MODIFIED LINE: Only show the percentage
                                             label += `${percentage}%`;
                                         }
                                         return label;
