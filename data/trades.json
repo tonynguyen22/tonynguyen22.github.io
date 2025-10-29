@@ -35,13 +35,6 @@
       "cost_share": 96.14
     },
     {
-      "ticker": "C",
-      "company": "Citigroup Inc",
-      "date": "2025-09-04",
-      "shares": 3,
-      "cost_share": 96.12
-    },
-    {
       "ticker": "CVS",
       "company": "CVS Health Corp",
       "date": "2025-09-09",
@@ -49,18 +42,11 @@
       "cost_share": 71.58
     },
     {
-      "ticker": "EQT",
-      "company": "EQT Corp",
-      "date": "2025-09-12",
-      "shares": 5,
-      "cost_share": 51.53
-    },
-    {
-      "ticker": "BSX",
-      "company": "Boston Scientific Corp",
-      "date": "2025-09-16",
-      "shares": 3,
-      "cost_share": 99.22
+      "ticker": "EXLS",
+      "company": "ExlService Holdings Inc",
+      "date": "2025-10-21",
+      "shares": 10,
+      "cost_share": 39.52
     },
     {
       "ticker": "BTCUSD",
@@ -70,18 +56,11 @@
       "cost_share": 0
     },
     {
-      "ticker": "EXLS",
-      "company": "ExlService Holdings Inc",
-      "date": "2025-10-21",
-      "shares": 5,
-      "cost_share": 41.04
-    },
-    {
       "ticker": "CASH",
       "company": "CASH",
       "date": "2025-09-20",
       "shares": 1,
-      "cost_share": 1637
+      "cost_share": 1683
     }
   ]
   
