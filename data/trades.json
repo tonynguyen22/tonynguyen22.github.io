@@ -66,8 +66,8 @@
       "ticker": "BTCUSD",
       "company": "Bitcoin",
       "date": "2025-09-18",
-      "shares": 0.00180578,
-      "cost_share": 110755.46
+      "shares": 0,
+      "cost_share": 0
     },
     {
       "ticker": "EXLS",
@@ -81,7 +81,7 @@
       "company": "CASH",
       "date": "2025-09-20",
       "shares": 1,
-      "cost_share": 1437
+      "cost_share": 1637
     }
   ]
   
