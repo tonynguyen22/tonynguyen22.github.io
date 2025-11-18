@@ -102,199 +102,216 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // !!! IMPORTANT: Paste your free API key from Financial Modeling Prep here
-            const apiKey = 'J9ls4xtu2AY9PKEECzOdkhIx5U4y74eR';
+    document.addEventListener('DOMContentLoaded', () => {
+        // !!! IMPORTANT: Paste your free API key from Financial Modeling Prep here
+        const apiKey = 'J9ls4xtu2AY9PKEECzOdkhIx5U4y74eR';
 
-            // --- Main function to load all data ---
-            async function loadPortfolio() {
-                try {
-                    // Only fetch current trades
-                    const response = await fetch('data/trades.json');
-                    if (!response.ok) {
-                        throw new Error('Failed to load trades.json.');
-                    }
-                    const tradesData = await response.json();
-                    
-                    // Process and render the portfolio
-                    processAndRenderPortfolio(tradesData);
-
-                } catch (error) {
-                    console.error("Error loading portfolio:", error);
-                    document.getElementById('portfolio-body').innerHTML = `<tr><td colspan="4" style="text-align: center; color: red;">Could not load portfolio data.</td></tr>`;
+        // --- Main function to load all data ---
+        async function loadPortfolio() {
+            try {
+                // Only fetch current trades
+                const response = await fetch('data/trades.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load trades.json.');
                 }
+                const tradesData = await response.json();
+                
+                // Process and render the portfolio
+                processAndRenderPortfolio(tradesData);
+
+            } catch (error) {
+                console.error("Error loading portfolio:", error);
+                document.getElementById('portfolio-body').innerHTML = `<tr><td colspan="4" style="text-align: center; color: red;">Could not load portfolio data.</td></tr>`;
+            }
+        }
+
+        // --- Process and Render Current Portfolio ---
+        async function processAndRenderPortfolio(currentTrades) {
+            if (!apiKey || apiKey === 'YOUR_FMP_API_KEY') {
+                const errorMessage = `<tr><td colspan="4" style="text-align: center; color: orange;">Please add your FMP API key to the script.</td></tr>`;
+                document.getElementById('portfolio-body').innerHTML = errorMessage;
+                return;
+            }
+            
+            // 1. Prepare data for the TABLE (excluding CASH)
+            const tradesForTable = currentTrades.filter(trade => trade.ticker !== 'CASH');
+
+            // Aggregate holdings for the TABLE
+            const aggregatedForTable = tradesForTable.reduce((acc, trade) => {
+                if (!acc[trade.ticker]) {
+                    acc[trade.ticker] = { shares: 0, totalCost: 0, company: trade.company };
+                }
+                acc[trade.ticker].shares += parseFloat(trade.shares);
+                acc[trade.ticker].totalCost += parseFloat(trade.shares) * parseFloat(trade.cost_share);
+                return acc;
+            }, {});
+
+            const portfolioForTable = Object.entries(aggregatedForTable).map(([ticker, data]) => ({
+                ticker,
+                company: data.company,
+                shares: data.shares,
+                costPerShare: data.totalCost / data.shares,
+                totalCost: data.totalCost
+            }));
+            
+            // Get all unique tickers for the API call (excluding CASH)
+            const tickersForApi = portfolioForTable.map(p => p.ticker).join(',');
+            
+            let priceMap = {};
+            if (tickersForApi.length > 0) {
+                // FMP can take multiple symbols separated by comma in the `symbol` parameter
+                const apiUrl = `https://financialmodelingprep.com/stable/quote?symbol=${tickersForApi}&apikey=${apiKey}`;
+                
+                const marketResponse = await fetch(apiUrl);
+                if (!marketResponse.ok) throw new Error('Failed to fetch market prices.');
+                
+                const marketData = await marketResponse.json();
+                
+                // --- FIX APPLIED HERE ---
+                // The new API returns an array, so we must reduce/map over that array
+                // The original code: marketData.reduce((map, stock) => { map[stock.symbol] = stock.price; return map; }, {});
+                // Already handles the array structure correctly, but the property names may differ.
+                // Based on your sample, the properties are `symbol` and `price`.
+                
+                // **The issue was likely that the original query was structured as /stable/quote/{tickers}
+                // while the new FMP API seems to prefer /stable/quote?symbol={tickers}.
+                // I've updated the URL construction, and the logic below should now work.**
+                priceMap = marketData.reduce((map, stock) => { 
+                    map[stock.symbol] = stock.price; 
+                    return map; 
+                }, {});
             }
 
-            // --- Process and Render Current Portfolio ---
-            async function processAndRenderPortfolio(currentTrades) {
-                if (!apiKey || apiKey === 'YOUR_FMP_API_KEY') {
-                    const errorMessage = `<tr><td colspan="4" style="text-align: center; color: orange;">Please add your FMP API key to the script.</td></tr>`;
-                    document.getElementById('portfolio-body').innerHTML = errorMessage;
-                    return;
+            const portfolioBody = document.getElementById('portfolio-body');
+            let html = '';
+            let portfolioWithMarketDataForChart = []; // Will be used later for chart
+
+            // Render the table
+            for (const stock of portfolioForTable) {
+                const marketPrice = priceMap[stock.ticker] || 0;
+                const totalValue = stock.shares * marketPrice;
+                const gainLoss = totalValue - stock.totalCost;
+                const gainLossPercent = (stock.totalCost > 0) ? (gainLoss / stock.totalCost) * 100 : 0;
+                const gainClass = gainLoss >= 0 ? 'price-up' : 'price-down';
+
+                html += `
+                    <tr>
+                        <td>
+                            <div class="company-name-main">${stock.ticker}</div>
+                            <div class="company-name-sub">${stock.company}</div>
+                        </td>
+                        <td>$${stock.costPerShare.toFixed(2)}</td>
+                        <td>$${marketPrice.toFixed(2)}</td>
+                        <td class="${gainClass}">${gainLossPercent.toFixed(1)}%</td>
+                    </tr>
+                `;
+                // Add stock data (equity only) for chart preparation
+                portfolioWithMarketDataForChart.push({...stock, totalValue});
+            }
+            portfolioBody.innerHTML = html;
+
+            // 2. Prepare data for the CHART (including CASH)
+            // Aggregate ALL current holdings for chart
+            const aggregatedForAll = currentTrades.reduce((acc, trade) => {
+                if (!acc[trade.ticker]) {
+                    acc[trade.ticker] = { shares: 0, totalCost: 0, company: trade.company };
                 }
-                
-                // 1. Prepare data for the TABLE (excluding CASH)
-                const tradesForTable = currentTrades.filter(trade => trade.ticker !== 'CASH');
+                acc[trade.ticker].shares += parseFloat(trade.shares);
+                acc[trade.ticker].totalCost += parseFloat(trade.shares) * parseFloat(trade.cost_share);
+                return acc;
+            }, {});
 
-                // Aggregate holdings for the TABLE
-                const aggregatedForTable = tradesForTable.reduce((acc, trade) => {
-                    if (!acc[trade.ticker]) {
-                        acc[trade.ticker] = { shares: 0, totalCost: 0, company: trade.company };
-                    }
-                    acc[trade.ticker].shares += parseFloat(trade.shares);
-                    acc[trade.ticker].totalCost += parseFloat(trade.shares) * parseFloat(trade.cost_share);
-                    return acc;
-                }, {});
-
-                const portfolioForTable = Object.entries(aggregatedForTable).map(([ticker, data]) => ({
-                    ticker,
-                    company: data.company,
-                    shares: data.shares,
-                    costPerShare: data.totalCost / data.shares,
-                    totalCost: data.totalCost
-                }));
-                
-                // Get all unique tickers for the API call (excluding CASH)
-                const tickersForApi = portfolioForTable.map(p => p.ticker).join(',');
-                
-                let priceMap = {};
-                if (tickersForApi.length > 0) {
-                    const apiUrl = `https://financialmodelingprep.com/stable/quote/${tickersForApi}?apikey=${apiKey}`;
-                    const marketResponse = await fetch(apiUrl);
-                    if (!marketResponse.ok) throw new Error('Failed to fetch market prices.');
-                    const marketData = await marketResponse.json();
-                    priceMap = marketData.reduce((map, stock) => { map[stock.symbol] = stock.price; return map; }, {});
+            const portfolioForAll = Object.entries(aggregatedForAll).map(([ticker, data]) => ({
+                ticker,
+                company: data.company,
+                shares: data.shares,
+                totalCost: data.totalCost
+            }));
+            
+            // Calculate total value for ALL assets (including CASH) for the chart
+            let finalChartData = [];
+            for (const stock of portfolioForAll) {
+                let totalValue;
+                if (stock.ticker === 'CASH') {
+                    // For cash, the total value is the total cost
+                    totalValue = stock.totalCost;  
+                } else if (stock.ticker === 'BTCUSD') {
+                    // BTCUSD price is not reliably in the FMP quote API, so it uses cost as a placeholder
+                    // For production, you'd need a crypto API endpoint
+                    // The API response may contain BTCUSD, so we use the price if available, otherwise cost.
+                     totalValue = stock.shares * (priceMap[stock.ticker] || stock.totalCost / stock.shares); 
                 }
-
-                const portfolioBody = document.getElementById('portfolio-body');
-                let html = '';
-                let portfolioWithMarketDataForChart = []; // Will be used later for chart
-
-                // Render the table
-                for (const stock of portfolioForTable) {
+                else {
+                    // For equity, use the market price
                     const marketPrice = priceMap[stock.ticker] || 0;
-                    const totalValue = stock.shares * marketPrice;
-                    const gainLoss = totalValue - stock.totalCost;
-                    const gainLossPercent = (stock.totalCost > 0) ? (gainLoss / stock.totalCost) * 100 : 0;
-                    const gainClass = gainLoss >= 0 ? 'price-up' : 'price-down';
-
-                    html += `
-                        <tr>
-                            <td>
-                                <div class="company-name-main">${stock.ticker}</div>
-                                <div class="company-name-sub">${stock.company}</div>
-                            </td>
-                            <td>$${stock.costPerShare.toFixed(2)}</td>
-                            <td>$${marketPrice.toFixed(2)}</td>
-                            <td class="${gainClass}">${gainLossPercent.toFixed(1)}%</td>
-                        </tr>
-                    `;
-                    // Add stock data (equity only) for chart preparation
-                    portfolioWithMarketDataForChart.push({...stock, totalValue});
+                    totalValue = stock.shares * marketPrice;
                 }
-                portfolioBody.innerHTML = html;
+                finalChartData.push({...stock, totalValue});
+            }
+            
+            // Render the chart using ALL data
+            renderSectorChart(finalChartData);
+        }
 
-                // 2. Prepare data for the CHART (including CASH)
-                // Aggregate ALL current holdings for chart
-                const aggregatedForAll = currentTrades.reduce((acc, trade) => {
-                    if (!acc[trade.ticker]) {
-                        acc[trade.ticker] = { shares: 0, totalCost: 0, company: trade.company };
-                    }
-                    acc[trade.ticker].shares += parseFloat(trade.shares);
-                    acc[trade.ticker].totalCost += parseFloat(trade.shares) * parseFloat(trade.cost_share);
-                    return acc;
-                }, {});
-
-                const portfolioForAll = Object.entries(aggregatedForAll).map(([ticker, data]) => ({
-                    ticker,
-                    company: data.company,
-                    shares: data.shares,
-                    totalCost: data.totalCost
-                }));
-                
-                // Calculate total value for ALL assets (including CASH) for the chart
-                let finalChartData = [];
-                for (const stock of portfolioForAll) {
-                    let totalValue;
-                    if (stock.ticker === 'CASH') {
-                        // For cash, the total value is the total cost
-                        totalValue = stock.totalCost; 
-                    } else if (stock.ticker === 'BTCUSD') {
-                        // BTCUSD price is not reliably in the FMP quote API, so it uses cost as a placeholder
-                        // For production, you'd need a crypto API endpoint
-                         totalValue = stock.shares * (priceMap[stock.ticker] || stock.totalCost / stock.shares); 
-                    }
-                    else {
-                        // For equity, use the market price
-                        const marketPrice = priceMap[stock.ticker] || 0;
-                        totalValue = stock.shares * marketPrice;
-                    }
-                    finalChartData.push({...stock, totalValue});
-                }
-                
-                // Render the chart using ALL data
-                renderSectorChart(finalChartData);
+        // --- Render Sector Chart ---
+        function renderSectorChart(portfolioData) {
+            const sectorMap = {"GOOG": "Communication Services", "TSM": "Technology", "CVS": "Healthcare", "WMT": "Consumer Staples","BTCUSD": "Cryptocurrency", "CASH": "Cash","EXLS": "Technology" };
+            const sectorAllocation = portfolioData.reduce((acc, stock) => {
+                const sector = sectorMap[stock.ticker] || "Other";
+                if (!acc[sector]) { acc[sector] = 0; }
+                acc[sector] += stock.totalValue;
+                return acc;
+            }, {});
+            
+            const ctx = document.getElementById('sector-pie-chart').getContext('2d');
+            
+            // Destroy any existing chart instance to prevent errors
+            if (Chart.getChart(ctx)) {
+                Chart.getChart(ctx).destroy();
             }
 
-            // --- Render Sector Chart ---
-            function renderSectorChart(portfolioData) {
-                const sectorMap = {"GOOG": "Communication Services", "TSM": "Technology", "CVS": "Healthcare", "WMT": "Consumer Staples","BTCUSD": "Cryptocurrency", "CASH": "Cash","EXLS": "Technology" };
-                const sectorAllocation = portfolioData.reduce((acc, stock) => {
-                    const sector = sectorMap[stock.ticker] || "Other";
-                    if (!acc[sector]) { acc[sector] = 0; }
-                    acc[sector] += stock.totalValue;
-                    return acc;
-                }, {});
-                
-                const ctx = document.getElementById('sector-pie-chart').getContext('2d');
-                
-                // Destroy any existing chart instance to prevent errors
-                if (Chart.getChart(ctx)) {
-                    Chart.getChart(ctx).destroy();
-                }
-
-                new Chart(ctx, {
-                    type: 'pie',
-                    data: {
-                        labels: Object.keys(sectorAllocation),
-                        datasets: [{
-                            label: 'Portfolio Value',
-                            data: Object.values(sectorAllocation),
-                            backgroundColor: ['#0f1d2f', '#1E3A5F', '#A9B4C2', '#8F9AAB', '#4a6fa5', '#1e5288', '#163e63', '#666666', '#AAAAAA'],
-                            borderColor: '#ffffff',
-                            borderWidth: 2
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        plugins: {
-                            legend: {
-                                position: 'top',
-                            },
-                            tooltip: {
-                                callbacks: {
-                                    label: function(context) {
-                                        let label = context.label || '';
-                                        if (label) {
-                                            label += ': ';
-                                        }
-                                        if (context.parsed !== null) {
-                                            const total = context.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
-                                            const percentage = (total > 0) ? (context.parsed / total * 100).toFixed(1) : 0;
-                                            label += `${percentage}%`;
-                                        }
-                                        return label;
+            new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: Object.keys(sectorAllocation),
+                    datasets: [{
+                        label: 'Portfolio Value',
+                        data: Object.values(sectorAllocation),
+                        backgroundColor: ['#0f1d2f', '#1E3A5F', '#A9B4C2', '#8F9AAB', '#4a6fa5', '#1e5288', '#163e63', '#666666', '#AAAAAA'],
+                        borderColor: '#ffffff',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
                                     }
+                                    if (context.parsed !== null) {
+                                        const total = context.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+                                        const percentage = (total > 0) ? (context.parsed / total * 100).toFixed(1) : 0;
+                                        label += `${percentage}%`;
+                                    }
+                                    return label;
                                 }
                             }
                         }
                     }
-                });
-            }
+                }
+            });
+        }
 
-            // --- Start the process ---
-            loadPortfolio();
-        });
+        // --- Start the process ---
+        loadPortfolio();
+    });
     </script>
 </body>
 </html>
