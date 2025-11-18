@@ -14,32 +14,18 @@
       "cost_share": 220.71
     },
     {
-      "ticker": "CVS",
-      "company": "CVS Health Corp",
-      "date": "2025-06-11",
-      "shares": 7.71,
-      "cost_share": 64.88
-    },
-    {
       "ticker": "WMT",
       "company": "Walmart Inc",
       "date": "2025-07-24",
-      "shares": 1,
-      "cost_share": 96.65
-    },
-    {
-      "ticker": "WMT",
-      "company": "Walmart Inc",
-      "date": "2025-08-26",
-      "shares": 2,
-      "cost_share": 96.14
+      "shares": 6,
+      "cost_share": 99.74
     },
     {
       "ticker": "CVS",
       "company": "CVS Health Corp",
       "date": "2025-09-09",
-      "shares": 2.3,
-      "cost_share": 71.58
+      "shares": 13,
+      "cost_share": 68.96
     },
     {
       "ticker": "EXLS",
@@ -60,7 +46,7 @@
       "company": "CASH",
       "date": "2025-09-20",
       "shares": 1,
-      "cost_share": 1683
+      "cost_share": 1341
     }
   ]
   
