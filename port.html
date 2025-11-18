@@ -159,7 +159,7 @@
                 
                 let priceMap = {};
                 if (tickersForApi.length > 0) {
-                    const apiUrl = `https://financialmodelingprep.com/api/v3/quote/${tickersForApi}?apikey=${apiKey}`;
+                    const apiUrl = `https://financialmodelingprep.com/stable/quote/${tickersForApi}?apikey=${apiKey}`;
                     const marketResponse = await fetch(apiUrl);
                     if (!marketResponse.ok) throw new Error('Failed to fetch market prices.');
                     const marketData = await marketResponse.json();
