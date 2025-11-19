@@ -35,13 +35,6 @@
       "cost_share": 39.52
     },
     {
-      "ticker": "BTCUSD",
-      "company": "Bitcoin",
-      "date": "2025-09-18",
-      "shares": 0,
-      "cost_share": 0
-    },
-    {
       "ticker": "CASH",
       "company": "CASH",
       "date": "2025-09-20",
