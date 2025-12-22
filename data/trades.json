@@ -3,8 +3,8 @@
       "ticker": "GOOG",
       "company": "Alphabet Inc",
       "date": "2025-06-10",
-      "shares": 1,
-      "cost_share": 181.53
+      "shares": 2,
+      "cost_share": 251.27
     },
     {
       "ticker": "TSM",
@@ -39,7 +39,7 @@
       "company": "CASH",
       "date": "2025-09-20",
       "shares": 1,
-      "cost_share": 1341
+      "cost_share": 1033.12
     }
   ]
   
