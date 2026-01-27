@@ -2,44 +2,44 @@
     {
       "ticker": "GOOG",
       "company": "Alphabet Inc",
-      "date": "2025-06-10",
-      "shares": 1,
-      "cost_share": 181.53
+      "shares": 2,
+      "cost_share": 251.27
     },
     {
       "ticker": "TSM",
       "company": "Taiwan Semiconductor Manufacturing ADR",
-      "date": "2025-06-10",
       "shares": 1,
       "cost_share": 220.71
     },
     {
       "ticker": "WMT",
       "company": "Walmart Inc",
-      "date": "2025-07-24",
       "shares": 6,
       "cost_share": 99.74
     },
     {
       "ticker": "CVS",
       "company": "CVS Health Corp",
-      "date": "2025-09-09",
-      "shares": 13,
-      "cost_share": 68.96
+      "shares": 16,
+      "cost_share": 70.07
     },
     {
       "ticker": "EXLS",
       "company": "ExlService Holdings Inc",
-      "date": "2025-10-21",
       "shares": 10,
       "cost_share": 39.52
     },
     {
+      "ticker": "NVO",
+      "company": "Novo Nordisk ADR",
+      "shares": 3,
+      "cost_share": 60.34
+    },
+    {
       "ticker": "CASH",
       "company": "CASH",
-      "date": "2025-09-20",
       "shares": 1,
-      "cost_share": 1341
+      "cost_share": 1227.33
     }
   ]
   
