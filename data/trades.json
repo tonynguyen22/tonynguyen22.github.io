@@ -12,12 +12,6 @@
       "cost_share": 220.71
     },
     {
-      "ticker": "WMT",
-      "company": "Walmart Inc",
-      "shares": 6,
-      "cost_share": 99.74
-    },
-    {
       "ticker": "CVS",
       "company": "CVS Health Corp",
       "shares": 16,
@@ -39,7 +33,7 @@
       "ticker": "CASH",
       "company": "CASH",
       "shares": 1,
-      "cost_share": 1227.33
+      "cost_share": 1705.34
     }
   ]
   
