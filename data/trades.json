@@ -18,22 +18,16 @@
       "cost_share": 70.07
     },
     {
-      "ticker": "EXLS",
-      "company": "ExlService Holdings Inc",
-      "shares": 10,
-      "cost_share": 39.52
-    },
-    {
       "ticker": "NVO",
       "company": "Novo Nordisk ADR",
-      "shares": 3,
-      "cost_share": 60.34
+      "shares": 12,
+      "cost_share": 53.59
     },
     {
       "ticker": "CASH",
       "company": "CASH",
       "shares": 1,
-      "cost_share": 1705.34
+      "cost_share": 1647.47
     }
   ]
   
