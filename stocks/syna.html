@@ -28,6 +28,24 @@
         .valuation-table th {
             background-color: #f2f2f2;
         }
+        /* Style for the PDF link */
+        .pdf-download-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #f3f4f6;
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #1f2937;
+            font-weight: 500;
+            margin-bottom: 20px;
+            border: 1px solid #e5e7eb;
+            transition: background-color 0.2s;
+        }
+        .pdf-download-link:hover {
+            background-color: #e5e7eb;
+        }
     </style>
 </head>
 <body>
@@ -62,6 +80,11 @@
 
                 <article class="detail-content">
                     
+                    <a href="../assets/SYNA-memo.pdf" target="_blank" class="pdf-download-link">
+                        <svg style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        View Investment Memo (PDF)
+                    </a>
+
                     <section class="detail-section">
                         <h3>Recommendation</h3>
                         <p>
@@ -145,7 +168,7 @@
 
                     <section class="detail-section" style="border-top: 2px solid #ccc; padding-top: 20px; margin-top: 20px;">
                         <h3>Update Q1 FY2026 (As of November 08, 2025)</h3>
-                        <p>We are updating our coverage following Synaptics' Q1 FY2026 earnings results. The stock is currently trading at <strong>$69.32</strong>. This represents a 1.3% gain since our initiation.</p>
+                        <p>We are updating our coverage following Synaptics' Q1 FY2026 earnings results. The stock traded at <strong>$69.32</strong> at the time of this update.</p>
                         
                         <h4 style="margin-bottom: 0.5rem;">Key Highlights from Q1 FY2026:</h4>
                         <p><strong>Thesis Validation (Core IoT):</strong> The primary driver of our BUY thesis—acceleration in IoT—is materializing faster than expected. Core IoT revenue grew <strong>74% year-over-year</strong>, significantly outpacing the ~53% growth rate cited in our initial report. This segment now accounts for 35% of total revenue.</p>
