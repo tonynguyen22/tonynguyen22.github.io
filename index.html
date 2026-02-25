@@ -19,6 +19,9 @@
         <aside class="sidebar">
             <div class="sidebar-logo">
                 <span class="logo-text">Tonivest Research</span>
+                <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle Sidebar">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
             </div>
             
             <nav class="sidebar-nav">
@@ -30,6 +33,16 @@
                 <a href="port.html" class="nav-item">
                     <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 011-1h1m-1 1v1m0 0H4a1 1 0 00-1 1v1m2-2h14m-1 0V5a2 2 0 00-1-1h-1m1 1v1"/></svg>
                     <span class="nav-label">My Portfolio</span>
+                </a>
+
+                <a href="tools.html" class="nav-item">
+                    <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                    <span class="nav-label">Tools & Calc</span>
+                </a>
+
+                <a href="about.html" class="nav-item">
+                    <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                    <span class="nav-label">About Me</span>
                 </a>
             </nav>
         </aside>
@@ -68,11 +81,6 @@
                         </div>
                     </article>
                     
-                </div>
-            </section>
-
-            <section class="analysis-section">
-                <div class="analysis-grid">
                     <article class="analysis-card">
                         <div class="card-header">
                             <div class="card-meta">
@@ -94,11 +102,6 @@
                         </div>
                     </article>
                     
-                </div>
-            </section>
-
-            <section class="analysis-section">
-                <div class="analysis-grid">
                     <article class="analysis-card">
                         <div class="card-header">
                             <div class="card-meta">
@@ -120,11 +123,6 @@
                         </div>
                     </article>
                     
-                </div>
-            </section>
-
-            <section class="analysis-section">
-                <div class="analysis-grid">
                     <article class="analysis-card">
                         <div class="card-header">
                             <div class="card-meta">
@@ -146,11 +144,6 @@
                         </div>
                     </article>
                     
-                </div>
-            </section>
-
-            <section class="analysis-section">
-                <div class="analysis-grid">
                     <article class="analysis-card">
                         <div class="card-header">
                             <div class="card-meta">
@@ -178,5 +171,22 @@
 
         </main>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebar = document.querySelector('.sidebar');
+            const toggleBtn = document.getElementById('sidebar-toggle');
+            
+            // Restore state from local storage
+            if (localStorage.getItem('sidebar-collapsed') === 'true') {
+                sidebar.classList.add('collapsed');
+            }
+            
+            toggleBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('collapsed');
+                localStorage.setItem('sidebar-collapsed', sidebar.classList.contains('collapsed'));
+            });
+        });
+    </script>
 </body>
 </html>

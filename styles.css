@@ -33,7 +33,8 @@ body {
     align-items: center;
     gap: 0.75rem;
     background: #0f1d2f; /* Added black background */
-    padding: 2rem 2.5rem; /* Moved padding here */
+    padding: 2rem 1.5rem; /* Adjusted padding */
+    justify-content: space-between;
 }
 
 
@@ -137,7 +138,7 @@ body {
 
 /* Analysis section */
 .analysis-section {
-    background-color: #ffffff;
+    background-color: transparent;
     padding: 3rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -157,6 +158,8 @@ body {
     overflow: hidden;
     transition: all 0.3s;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
 }
 
 .analysis-card:hover {
@@ -207,6 +210,7 @@ body {
 
 .card-content {
     padding: 1rem 1.5rem;
+    flex: 1;
 }
 
 .card-title {
@@ -254,6 +258,48 @@ body {
     height: 1rem;
 }
 
+/* Sidebar Toggle & Collapsed State */
+.sidebar-toggle {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    display: none;
+}
+
+.sidebar-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+@media (min-width: 769px) {
+    .sidebar-toggle {
+        display: flex;
+    }
+
+    .sidebar {
+        transition: width 0.3s ease;
+    }
+
+    .sidebar.collapsed {
+        width: 80px;
+    }
+
+    .sidebar.collapsed .logo-text,
+    .sidebar.collapsed .nav-label {
+        display: none;
+    }
+
+    .sidebar.collapsed .sidebar-logo,
+    .sidebar.collapsed .nav-item {
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
 
 /* Responsive design */
 @media (max-width: 768px) {
@@ -610,4 +656,243 @@ NEW STYLES FOR VALUATION PAGE
 .risk-box li, .opp-box li {
     margin-bottom: 10px;
     line-height: 1.5;
+}
+
+/* Portfolio Grid Layout */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 
+==============================================
+ABOUT ME PAGE STYLES 
+==============================================
+*/
+.about-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.about-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.profile-header {
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    background: #e9ecef;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    font-weight: bold;
+}
+
+.profile-role {
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.skill-tag {
+    background: #f1f3f5;
+    color: #495057;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Resume / About Page Specifics */
+.section-title {
+    margin-top: 2rem;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    color: #1E3A5F;
+}
+
+.resume-item {
+    margin-bottom: 2rem;
+}
+
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 0.25rem;
+}
+
+.resume-title {
+    font-weight: 700;
+    color: #212529;
+    font-size: 1.1rem;
+}
+
+.resume-date {
+    color: #6c757d;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.resume-subtitle {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.resume-list {
+    padding-left: 1.2rem;
+    margin-bottom: 0;
+}
+
+.resume-list li {
+    margin-bottom: 0.5rem;
+    color: #495057;
+    line-height: 1.6;
+}
+
+/* 
+==============================================
+TOOLS & CALCULATOR STYLES 
+==============================================
+*/
+.tools-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 900px) {
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.calculator-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #495057;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #1E3A5F;
+    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+}
+
+.calc-btn {
+    width: 100%;
+    background-color: #1E3A5F;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 1rem;
+}
+
+.calc-btn:hover {
+    background-color: #162d49;
+}
+
+.result-card {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.result-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #28a745;
+    margin: 1rem 0;
+}
+
+.result-label {
+    color: #6c757d;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.result-details {
+    margin-top: 1.5rem;
+    text-align: left;
+    border-top: 1px solid #dee2e6;
+    padding-top: 1rem;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #495057;
 }
