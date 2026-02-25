@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PVT Analysis - Tonivest Research</title>
+    <meta name="description" content="Investment proposal for PetroVietnam Transportation Corp (PVT)." />
+    <meta name="author" content="Tonivest Research" />
+    <link rel="icon" href="../assets/logo-nav.png" type="image/png">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .pdf-container {
+            margin-top: 2rem;
+            width: 100%;
+            height: 800px;
+            border: 1px solid #dee2e6;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        .pdf-fallback {
+            padding: 2rem;
+            text-align: center;
+            background: #f8f9fa;
+        }
+        .pdf-download-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #f3f4f6;
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #1f2937;
+            font-weight: 500;
+            margin-bottom: 20px;
+            border: 1px solid #e5e7eb;
+            transition: background-color 0.2s;
+        }
+        .pdf-download-link:hover {
+            background-color: #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <span class="logo-text">Tonivest Research</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="../index.html" class="nav-item active">
+                    <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    <span class="nav-label">Company Analysis</span>
+                </a>
+                <a href="../port.html" class="nav-item">
+                    <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 011-1h1m-1 1v1m0 0H4a1 1 0 00-1 1v1m2-2h14m-1 0V5a2 2 0 00-1-1h-1m1 1v1"/></svg>
+                    <span class="nav-label">My Portfolio</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="analysis-detail-container">
+                <header class="analysis-detail-header">
+                    <div class="header-content">
+                        <h1 class="detail-title">Equity Research: PetroVietnam Transportation Corp (PVT)</h1>
+                        <p class="detail-meta">Published: June 2025 | Author: Tony Nguyen</p>
+                    </div>
+                    <a href="../index.html" class="back-button">← Back to Analysis List</a>
+                </header>
+
+                <article class="detail-content">
+                    <a href="../assets/PVT.pdf" target="_blank" class="pdf-download-link">
+                        <svg style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        Download Full Report (PDF)
+                    </a>
+
+                    <div class="pdf-container">
+                        <iframe src="../assets/PVT.pdf" width="100%" height="100%" style="border: none;">
+                            <div class="pdf-fallback">
+                                <p>Your browser does not support inline PDFs.</p>
+                                <a href="../assets/PVT-Proposal.pdf">Click here to view the PDF.</a>
+                            </div>
+                        </iframe>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
