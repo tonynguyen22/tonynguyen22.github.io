@@ -31,7 +31,7 @@
 
                 <a href="tools.html" class="nav-item active">
                     <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-                    <span class="nav-label">Tools & Calc</span>
+                    <span class="nav-label">Tools & Projects</span>
                 </a>
 
                 <a href="about.html" class="nav-item">
@@ -42,119 +42,17 @@
         </aside>
 
         <main class="main-content">
-            <div class="valuation-container">
-                <div class="valuation-header">
-                    <div class="page-title">
-                        <h1>Investment Tools</h1>
-                        <p>Interactive calculators to assist in valuation and analysis.</p>
-                    </div>
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Tools & Projects</h1>
                 </div>
-
-                <div class="tools-grid">
-                    <!-- Calculator Input Section -->
-                    <div class="calculator-card">
-                        <h3 style="margin-bottom: 1.5rem; color: #1E3A5F;">Intrinsic Value Calculator (PE Method)</h3>
-                        
-                        <div class="form-group">
-                            <label class="form-label">Current EPS ($)</label>
-                            <input type="number" id="eps" class="form-input" placeholder="e.g. 5.20" step="0.01">
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">Expected Growth Rate (%)</label>
-                            <input type="number" id="growth" class="form-input" placeholder="e.g. 12" step="0.1">
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">Target P/E Ratio (Exit Multiple)</label>
-                            <input type="number" id="pe" class="form-input" placeholder="e.g. 20" step="0.1">
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">Investment Period (Years)</label>
-                            <input type="number" id="years" class="form-input" value="5" step="1">
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">Discount Rate / Required Return (%)</label>
-                            <input type="number" id="discount" class="form-input" value="10" step="0.1">
-                        </div>
-
-                        <button onclick="calculateIntrinsicValue()" class="calc-btn">Calculate Value</button>
-                    </div>
-
-                    <!-- Results Section -->
-                    <div class="result-card">
-                        <span class="result-label">Intrinsic Value (Buy Price)</span>
-                        <div id="result-value" class="result-value">$0.00</div>
-                        
-                        <div class="result-details">
-                            <div class="detail-row">
-                                <span>Future EPS (Year <span id="year-disp">5</span>):</span>
-                                <span id="future-eps" style="font-weight: 600;">$0.00</span>
-                            </div>
-                            <div class="detail-row">
-                                <span>Future Stock Price:</span>
-                                <span id="future-price" style="font-weight: 600;">$0.00</span>
-                            </div>
-                            <div class="detail-row">
-                                <span>Upside/Downside:</span>
-                                <span id="upside" style="font-weight: 600;">--</span>
-                            </div>
-                        </div>
-                        
-                        <div style="margin-top: 2rem; font-size: 0.8rem; color: #6c757d; line-height: 1.5;">
-                            <p><strong>Methodology:</strong> This calculator projects the Earnings Per Share (EPS) forward using the growth rate, applies the Target P/E multiple to determine a future stock price, and discounts that price back to today using your required rate of return.</p>
-                        </div>
-                    </div>
-                </div>
+            </section>
+            <div class="tool-feature">
+                <h2>ValuWise</h2>
+                <p>Built a professional equity valuation platform with DCF modeling, comparable company analysis, and financial grading — try it at <a href="https://valuewise.netlify.app" target="_blank">valuewise.netlify.app</a></p>
             </div>
         </main>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Sidebar Toggle Logic
-            const sidebar = document.querySelector('.sidebar');
-            const toggleBtn = document.getElementById('sidebar-toggle');
-            
-            if (localStorage.getItem('sidebar-collapsed') === 'true') {
-                sidebar.classList.add('collapsed');
-            }
-            
-            toggleBtn.addEventListener('click', () => {
-                sidebar.classList.toggle('collapsed');
-                localStorage.setItem('sidebar-collapsed', sidebar.classList.contains('collapsed'));
-            });
-        });
-
-        function calculateIntrinsicValue() {
-            const eps = parseFloat(document.getElementById('eps').value);
-            const growth = parseFloat(document.getElementById('growth').value) / 100;
-            const pe = parseFloat(document.getElementById('pe').value);
-            const years = parseFloat(document.getElementById('years').value);
-            const discount = parseFloat(document.getElementById('discount').value) / 100;
-
-            if (isNaN(eps) || isNaN(growth) || isNaN(pe) || isNaN(years) || isNaN(discount)) {
-                alert("Please fill in all fields correctly.");
-                return;
-            }
-
-            // 1. Calculate Future EPS
-            const futureEps = eps * Math.pow((1 + growth), years);
-
-            // 2. Calculate Future Stock Price
-            const futurePrice = futureEps * pe;
-
-            // 3. Calculate Present Value (Intrinsic Value)
-            const intrinsicValue = futurePrice / Math.pow((1 + discount), years);
-
-            // Update UI
-            document.getElementById('result-value').textContent = '$' + intrinsicValue.toFixed(2);
-            document.getElementById('future-eps').textContent = '$' + futureEps.toFixed(2);
-            document.getElementById('future-price').textContent = '$' + futurePrice.toFixed(2);
-            document.getElementById('year-disp').textContent = years;
-        }
-    </script>
 </body>
 </html>

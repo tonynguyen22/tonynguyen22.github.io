@@ -896,3 +896,374 @@ TOOLS & CALCULATOR STYLES
     font-size: 0.9rem;
     color: #495057;
 }
+
+/*
+==============================================
+STOCK ANALYSIS — ENHANCED LAYOUT COMPONENTS
+==============================================
+*/
+
+/* --- Stock Overview Header Card --- */
+.stock-overview-card {
+    background: linear-gradient(135deg, #182f4d 0%, #07223c 100%);
+    border-radius: 0.75rem;
+    padding: 2rem 2.5rem;
+    margin-bottom: 2.5rem;
+    color: white;
+}
+
+.stock-ticker-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.stock-ticker {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.stock-company-name {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 0.25rem;
+}
+
+.info-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 0.875rem 0;
+}
+
+.info-tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.775rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.verdict-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.35rem 1rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+}
+
+.verdict-hold {
+    background: rgba(245, 158, 11, 0.18);
+    color: #fcd34d;
+    border-color: rgba(245, 158, 11, 0.35);
+}
+
+.verdict-buy {
+    background: rgba(16, 185, 129, 0.18);
+    color: #6ee7b7;
+    border-color: rgba(16, 185, 129, 0.35);
+}
+
+.verdict-sell {
+    background: rgba(239, 68, 68, 0.18);
+    color: #fca5a5;
+    border-color: rgba(239, 68, 68, 0.35);
+}
+
+.stock-thesis {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-style: italic;
+    line-height: 1.55;
+    padding-top: 0.875rem;
+    margin-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.quick-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.quick-stat {
+    text-align: center;
+    padding: 0.5rem 0.25rem;
+}
+
+.quick-stat-value {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    display: block;
+}
+
+.quick-stat-value.qs-positive { color: #6ee7b7; }
+.quick-stat-value.qs-negative { color: #fca5a5; }
+.quick-stat-value.qs-neutral  { color: #fcd34d; }
+
+.quick-stat-label {
+    font-size: 0.68rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    margin-top: 0.2rem;
+    display: block;
+}
+
+/* --- Section Numbering Label --- */
+.section-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #A9B4C2;
+    margin-bottom: 0.2rem;
+    display: block;
+}
+
+/* --- Detail section h4 --- */
+.detail-section h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #343a40;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Earnings Update Timeline --- */
+.update-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.update-card {
+    border-left: 3px solid #A9B4C2;
+    background: #f8f9fa;
+    border-radius: 0 0.5rem 0.5rem 0;
+    padding: 1.25rem 1.5rem;
+}
+
+.update-card.latest-update {
+    border-left-color: #1E3A5F;
+    background: #eef2f7;
+}
+
+.update-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.875rem;
+    padding-bottom: 0.875rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.update-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1E3A5F;
+    margin: 0;
+}
+
+.update-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.update-date-pill {
+    font-size: 0.72rem;
+    color: #6c757d;
+    background: #e9ecef;
+    padding: 0.18rem 0.6rem;
+    border-radius: 2rem;
+}
+
+.rating-pill {
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.18rem 0.6rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.rating-buy  { background: #d1fae5; color: #065f46; }
+.rating-hold { background: #fef3c7; color: #92400e; }
+.rating-sell { background: #fee2e2; color: #991b1b; }
+
+.update-card p {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: #495057;
+    margin-bottom: 0.6rem;
+}
+
+.update-card h4 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #1E3A5F;
+    margin: 0.875rem 0 0.4rem;
+}
+
+.update-upside-row {
+    margin-top: 0.875rem;
+    padding-top: 0.875rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+    font-size: 0.875rem;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.upside-value {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.upside-value.positive { color: #059669; }
+.upside-value.negative { color: #dc2626; }
+.upside-value.neutral  { color: #d97706; }
+
+/* --- Metric Pair Grid --- */
+.metric-pair-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    gap: 1rem;
+    margin: 1.25rem 0;
+}
+
+.metric-pair {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 0.5rem;
+    padding: 0.875rem 1rem;
+}
+
+.mp-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #6c757d;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.mp-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1E3A5F;
+}
+
+.mp-context {
+    font-size: 0.775rem;
+    color: #6c757d;
+    margin-top: 0.2rem;
+    display: block;
+}
+
+/* --- Final Verdict Box --- */
+.final-verdict-box {
+    background: linear-gradient(135deg, #182f4d 0%, #07223c 100%);
+    color: white;
+    border-radius: 0.75rem;
+    padding: 2rem 2.5rem;
+    margin-top: 1rem;
+}
+
+.fvb-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+}
+
+.fvb-rating-label {
+    font-size: 0.675rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.5);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.fvb-rating {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    line-height: 1;
+}
+
+.fvb-stats-row {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.fvb-stat-label {
+    font-size: 0.675rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.5);
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+.fvb-stat-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    display: block;
+}
+
+.fvb-stat-value.fvb-positive { color: #6ee7b7; }
+.fvb-stat-value.fvb-negative { color: #fca5a5; }
+.fvb-stat-value.fvb-neutral  { color: #fcd34d; }
+
+.fvb-reasoning {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 1.25rem;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.65;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .stock-overview-card {
+        padding: 1.5rem;
+    }
+
+    .quick-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .final-verdict-box {
+        padding: 1.5rem;
+    }
+
+    .fvb-inner {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

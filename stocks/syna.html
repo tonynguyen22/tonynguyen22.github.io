@@ -7,28 +7,12 @@
     <meta name="description" content="In-depth equity research report on Synaptics, Inc. (SYNA) as of February 2026, covering its pivot to IoT and Edge AI." />
     <meta name="author" content="Tonivest Research" />
     <meta name="keywords" content="company analysis, stocks, investment, SYNA, Synaptics, semiconductor, IoT, Edge AI, Astra, Veros" />
-    
     <meta property="og:title" content="SYNA Analysis - Tonivest Research" />
     <meta property="og:description" content="In-depth equity research report on Synaptics, Inc. (SYNA)." />
     <meta property="og:type" content="website" />
     <link rel="icon" href="../assets/logo-nav.png" type="image/png">
     <link rel="stylesheet" href="../styles.css">
     <style>
-        /* Simple table styles for valuation section */
-        .valuation-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-        }
-        .valuation-table th, .valuation-table td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        .valuation-table th {
-            background-color: #f2f2f2;
-        }
-        /* Style for the PDF link */
         .pdf-download-link {
             display: inline-flex;
             align-items: center;
@@ -39,13 +23,12 @@
             text-decoration: none;
             color: #1f2937;
             font-weight: 500;
-            margin-bottom: 20px;
+            margin-bottom: 2rem;
             border: 1px solid #e5e7eb;
             transition: background-color 0.2s;
+            font-size: 0.875rem;
         }
-        .pdf-download-link:hover {
-            background-color: #e5e7eb;
-        }
+        .pdf-download-link:hover { background-color: #e5e7eb; }
     </style>
 </head>
 <body>
@@ -54,13 +37,11 @@
             <div class="sidebar-logo">
                 <span class="logo-text">Tonivest Research</span>
             </div>
-            
             <nav class="sidebar-nav">
                 <a href="../index.html" class="nav-item active">
                     <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
                     <span class="nav-label">Company Analysis</span>
                 </a>
-                
                 <a href="../port.html" class="nav-item">
                     <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 011-1h1m-1 1v1m0 0H4a1 1 0 00-1 1v1m2-2h14m-1 0V5a2 2 0 00-1-1h-1m1 1v1"/></svg>
                     <span class="nav-label">My Portfolio</span>
@@ -72,142 +53,471 @@
             <div class="analysis-detail-container">
                 <header class="analysis-detail-header">
                     <div class="header-content">
-                        <h1 class="detail-title">Equity Research Report: Synaptics, Inc. (SYNA)</h1>
-                        <p class="detail-meta">Published on: 30 Sep 2025 | Last Updated: 10 Feb 2026 | Author: Tony Nguyen</p>
+                        <h1 class="detail-title">Equity Research: Synaptics, Inc. (SYNA)</h1>
+                        <p class="detail-meta">Initiated: Sep 30, 2025 &nbsp;|&nbsp; Last Updated: Feb 10, 2026 &nbsp;|&nbsp; Author: Tony Nguyen</p>
                     </div>
-                    <a href="../index.html" class="back-button">← Back to Analysis List</a>
+                    <a href="../index.html" class="back-button">← Back</a>
                 </header>
 
                 <article class="detail-content">
-                    
+
+                    <!-- PDF Link -->
                     <a href="../assets/SYNA-memo.pdf" target="_blank" class="pdf-download-link">
-                        <svg style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
                         View Investment Memo (PDF)
                     </a>
 
-                    <section class="detail-section">
-                        <h3>Recommendation</h3>
-                        <p>
-                            <strong>Current Rating:</strong> HOLD (Downgraded from BUY)</br>
-                            <strong>Current Stock Price:</strong> $85.98 (as of Feb 10, 2026)</br>
-                            <strong>1-Year Price Target:</strong> $95.64</br>
-                            <strong>Potential Upside:</strong> 11.2%
+                    <!-- ═══════════════════════════════════════════
+                         01 — HEADER / OVERVIEW
+                    ═══════════════════════════════════════════ -->
+                    <div class="stock-overview-card">
+                        <div class="stock-ticker-row">
+                            <div>
+                                <div class="stock-ticker">SYNA</div>
+                                <div class="stock-company-name">Synaptics, Incorporated &nbsp;·&nbsp; NASDAQ</div>
+                            </div>
+                            <span class="verdict-badge verdict-hold">HOLD ↓ from BUY</span>
+                        </div>
+                        <div class="info-tags">
+                            <span class="info-tag">Technology</span>
+                            <span class="info-tag">Semiconductors</span>
+                            <span class="info-tag">IoT &amp; Edge AI</span>
+                            <span class="info-tag">Market Cap ~$2.7B</span>
+                        </div>
+                        <p class="stock-thesis">
+                            "The Edge AI pivot is executing ahead of schedule — Core IoT up 74% in Q1 and 53% in Q2 FY2026 — but the stock has re-rated to reflect this success, leaving only ~11% upside to our fair value target."
                         </p>
-                        <p>We are downgrading Synaptics to a <strong>HOLD</strong>. Since our Q1 update, the stock has rallied approximately <strong>24%</strong> (and ~26% since initiation). While the company continues to execute on its "Edge AI" pivot, the valuation has re-rated to reflect this success. With the stock now trading within ~11% of our price target, we advise investors to lock in recent gains and wait for a more attractive entry point.</p>
+                        <div class="quick-stats-grid">
+                            <div class="quick-stat">
+                                <span class="quick-stat-value">$85.98</span>
+                                <span class="quick-stat-label">Price (Feb 10, 2026)</span>
+                            </div>
+                            <div class="quick-stat">
+                                <span class="quick-stat-value">$95.64</span>
+                                <span class="quick-stat-label">1-Yr Price Target</span>
+                            </div>
+                            <div class="quick-stat">
+                                <span class="quick-stat-value qs-neutral">+11.2%</span>
+                                <span class="quick-stat-label">Upside to Target</span>
+                            </div>
+                            <div class="quick-stat">
+                                <span class="quick-stat-value">$302.5M</span>
+                                <span class="quick-stat-label">Revenue (Q2 FY26)</span>
+                            </div>
+                            <div class="quick-stat">
+                                <span class="quick-stat-value qs-positive">$1.21</span>
+                                <span class="quick-stat-label">Non-GAAP EPS (Q2)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ═══════════════════════════════════════════
+                         02 — RECENT NEWS & EARNINGS UPDATES
+                    ═══════════════════════════════════════════ -->
+                    <section class="detail-section">
+                        <span class="section-label">02 — Recent News &amp; Earnings Updates</span>
+                        <h3>Recent News</h3>
+
+                        <div class="update-timeline">
+
+                            <!-- Q2 FY2026 — Latest -->
+                            <div class="update-card latest-update">
+                                <div class="update-card-header">
+                                    <p class="update-card-title">Q2 FY2026 Earnings — Rating Downgrade</p>
+                                    <div class="update-card-meta">
+                                        <span class="update-date-pill">Feb 10, 2026</span>
+                                        <span class="rating-pill rating-hold">HOLD ↓</span>
+                                    </div>
+                                </div>
+                                <p>
+                                    We are updating coverage following Synaptics' Q2 FY2026 results, released <strong>February 5, 2026</strong>.
+                                    The stock is currently trading at <strong>$85.98</strong>.
+                                </p>
+                                <h4>Key Highlights</h4>
+                                <p><strong>Solid Financial Beat:</strong> Synaptics delivered its fifth consecutive quarter of double-digit growth.
+                                    Revenue came in at <strong>$302.5 million (+13% YoY)</strong>, beating estimates.
+                                    Non-GAAP EPS was <strong>$1.21</strong>, topping the consensus estimate of $1.15.</p>
+                                <p><strong>Core IoT Still Driving Growth:</strong> Core IoT product sales grew <strong>53% year-over-year</strong>.
+                                    While this is a deceleration from the 74% growth in Q1, it remains the primary engine of the company's expansion,
+                                    masking softer performance in mobile and auto.</p>
+                                <p><strong>Valuation Re-Rating:</strong> The stock has rallied ~24% since our last update, reflecting the market's
+                                    acceptance of the AI transformation story. With the price at $85.98, the gap to our fair value target of $95.64
+                                    has narrowed significantly. We believe the easy money has been made.</p>
+                                <div class="update-upside-row">
+                                    <span>Remaining upside: ($95.64 − $85.98) / $85.98</span>
+                                    <span class="upside-value neutral">+11.2%</span>
+                                </div>
+                            </div>
+
+                            <!-- Q1 FY2026 -->
+                            <div class="update-card">
+                                <div class="update-card-header">
+                                    <p class="update-card-title">Q1 FY2026 Earnings — BUY Reiterated</p>
+                                    <div class="update-card-meta">
+                                        <span class="update-date-pill">Nov 8, 2025</span>
+                                        <span class="rating-pill rating-buy">BUY</span>
+                                    </div>
+                                </div>
+                                <p>We updated coverage following Synaptics' Q1 FY2026 results.
+                                    The stock traded at <strong>$69.32</strong> at the time of this update.</p>
+                                <h4>Key Highlights</h4>
+                                <p><strong>Thesis Validation (Core IoT):</strong> Core IoT revenue grew <strong>74% year-over-year</strong>,
+                                    significantly outpacing the ~53% growth rate cited in our initial report.
+                                    This segment now accounts for 35% of total revenue.</p>
+                                <p><strong>Astra Platform Success:</strong> Management confirmed the new Astra AI-native processors are securing
+                                    design wins "way ahead" of schedule. Revenue contribution is expected to begin in the second half of calendar 2026.</p>
+                                <p><strong>Profitability &amp; Margins:</strong> Non-GAAP EPS grew <strong>35% year-over-year to $1.09</strong>,
+                                    driven by solid gross margins of 53.2%.</p>
+                                <p><strong>Short-Term Headwinds:</strong> Mobile Touch revenue was lower than expected due to supply chain constraints
+                                    and Automotive demand remains subdued. We view the mobile constraints as transitory push-outs, not lost demand.</p>
+                                <div class="update-upside-row">
+                                    <span>Remaining upside: ($95.64 − $69.32) / $69.32</span>
+                                    <span class="upside-value positive">+38.0%</span>
+                                </div>
+                            </div>
+
+                        </div>
                     </section>
 
+                    <!-- ═══════════════════════════════════════════
+                         03 — BUSINESS SUMMARY
+                    ═══════════════════════════════════════════ -->
                     <section class="detail-section">
-                        <h3>Company Overview</h3>
-                        <p>Synaptics Incorporated develops, markets, and sells specialized semiconductor products that enable intelligent interactions for devices worldwide. The company's diverse product portfolio is built on a foundation of processing, wireless connectivity, sensing, and biometrics. These solutions are deployed across three primary markets: the high-growth Core IoT segment, Enterprise and Automotive, and the Mobile market. Synaptics acts as a strategic partner and supplier to many global Original Equipment Manufacturers (OEMs). The company's overarching strategy is a focused transition to become a pure-play Core IoT and Edge AI leader.</p>
+                        <span class="section-label">03 — Business Summary</span>
+                        <h3>Business Summary</h3>
+                        <p>Synaptics Incorporated develops, markets, and sells specialized semiconductor products that enable intelligent
+                            interactions for devices worldwide. The company's diverse product portfolio is built on a foundation of processing,
+                            wireless connectivity, sensing, and biometrics. These solutions are deployed across three primary markets: the
+                            high-growth <strong>Core IoT</strong> segment, <strong>Enterprise and Automotive</strong>, and the <strong>Mobile</strong> market.</p>
+                        <p>Synaptics acts as a strategic partner and supplier to many global Original Equipment Manufacturers (OEMs). The company's
+                            overarching strategy is a focused transition to become a <strong>pure-play Core IoT and Edge AI leader</strong>,
+                            divesting legacy mobile exposure while aggressively building out its AI-native processing and wireless connectivity platforms.</p>
                     </section>
 
+                    <!-- ═══════════════════════════════════════════
+                         04 — INDUSTRY CONTEXT
+                    ═══════════════════════════════════════════ -->
                     <section class="detail-section">
-                        <h3>Product Portfolio</h3>
-                        <p>Synaptics' competitive advantage is built upon three integrated technology pillars. This platform approach reduces R&D burdens for OEMs, simplifies supply chains, and accelerates time-to-market.</p>
-                        <p><b>Processing (Astra™):</b> The Astra™ platform is the cornerstone of Synaptics' "AI at the Edge" strategy. It is an AI-native System-on-Chip (SoC) family engineered for real-time edge intelligence, handling advanced vision, audio, and sensor processing directly on the device. A key partnership with Google Research to co-develop AI accelerators for next-generation Astra processors validates this strategy.</p>
-                        <p><b>Connectivity (Veros™):</b> The Veros™ family of highly integrated wireless circuits provides essential connectivity for modern IoT devices. The portfolio is designed for speed, efficiency, and broad interoperability. Through strategic moves, including a Wi-Fi 7 agreement with Broadcom and the acquisition of Packetcraft for Bluetooth Low Energy (BLE) capabilities, Synaptics is building a comprehensive wireless portfolio.</p>
-                        <p><b>Sensing (Touch, Display, Biometrics):</b> This segment represents Synaptics' heritage and continues to be a source of significant innovation and cash flow. The company remains a leader in capacitive touch sensing, display drivers, and biometric solutions integral to smartphones, PCs, and automotive systems. This established business provides a stable revenue foundation that funds investment in the higher-growth Processing and Connectivity segments.</p>
+                        <span class="section-label">04 — Industry Context</span>
+                        <h3>Industry Context</h3>
+                        <p>Synaptics operates in the highly competitive semiconductor industry, sitting at the intersection of IoT, Edge AI, and
+                            wireless connectivity — among the fastest-growing verticals in tech. The company faces formidable rivals with greater
+                            scale and financial resources: <strong>Qualcomm</strong> (wireless/AI SoCs), <strong>NXP Semiconductors</strong>
+                            (automotive/IoT), and <strong>STMicroelectronics</strong> (sensing/microcontrollers) all compete in overlapping
+                            segments.</p>
+                        <p>The secular tailwind is powerful: <strong>edge AI chips are projected to reach $60–70 billion by 2030</strong>,
+                            driven by the proliferation of intelligent devices that process data locally rather than in the cloud — a trend
+                            that directly benefits Synaptics' Astra platform. Simultaneously, the adoption of Wi-Fi 7 and next-gen Bluetooth
+                            standards creates a large replacement cycle opportunity for the Veros connectivity portfolio.</p>
+                        <p>Against this backdrop, Synaptics is a relatively small-cap player (~$2.7B market cap) competing against giants,
+                            which increases both the risk and the potential reward of a successful platform transition.</p>
                     </section>
 
+                    <!-- ═══════════════════════════════════════════
+                         05 — COMPETITIVE ADVANTAGES / MOAT
+                    ═══════════════════════════════════════════ -->
                     <section class="detail-section">
-                        <h3>Investment Thesis (Original Initiation)</h3>
-                        <p>Our conviction in Synaptics is based on five key points:</p>
-                        <p><b>First, SYNA is delivering explosive growth in core IoT.</b> The Core IoT segment delivered ~53% revenue growth year-over-year in FY 2025. This segment is increasingly the centerpiece of Synaptics' growth story and could offset stagnation in legacy segments going forward.</p>
-                        <p><b>Second, SYNA is expanding its market through strategic partnerships.</b> A collaboration with Google integrates Synaptics' Astra AI-Native platform with Google's ML-Core, accelerating edge AI capabilities. An agreement with Broadcom provides access to best-in-class Wi-Fi 7/8, Bluetooth, and UWB technologies, tapping into billions in potential market growth.</p>
-                        <p><b>Third, SYNA is maintaining margin resilience while strengthening its balance sheet.</b> On a non-GAAP basis, Synaptics maintained gross margins of ~53-54% across FY 2025. The company also reduced gross debt by ~$134 million and repurchased ~$128 million worth of shares in FY 2025, strengthening financial flexibility.</p>
-                        <p><b>Fourth, SYNA is benefiting from demand stabilization and backlog recovery.</b> The company saw significant improvements in Q4 FY 2025 order activity and backlog. This is reflected in the strong Q1 FY 2026 revenue guidance of $380-$420 million, a ~13% YoY growth, which provides smoother revenue visibility for the upcoming fiscal year.</p>
-                        <p><b>Fifth, SYNA is expanding its Total Addressable Market (TAM) by leading in edge AI and connectivity.</b> Synaptics is leveraging its Astra AI-Native platform and new wireless licensing to target the growing edge AI and advanced wireless markets. With edge AI chips projected to reach $60-70 billion by 2030, Synaptics is positioned for significant long-term growth.</p>
+                        <span class="section-label">05 — Competitive Advantages &amp; Moat</span>
+                        <h3>Competitive Advantages &amp; Moat</h3>
+                        <p>Synaptics' competitive advantage is built upon three integrated technology pillars. This platform approach reduces
+                            R&amp;D burdens for OEMs, simplifies supply chains, and accelerates time-to-market — creating meaningful
+                            switching costs once a customer designs in a Synaptics solution.</p>
+                        <p><strong>Processing — Astra™:</strong> The Astra™ platform is the cornerstone of the "AI at the Edge" strategy.
+                            It is an AI-native System-on-Chip (SoC) family engineered for real-time edge intelligence, handling advanced
+                            vision, audio, and sensor processing directly on the device. A <strong>strategic partnership with Google Research</strong>
+                            to co-develop AI accelerators for next-generation Astra processors validates this technology direction and provides
+                            a significant R&amp;D co-investment moat.</p>
+                        <p><strong>Connectivity — Veros™:</strong> The Veros™ family of highly integrated wireless circuits provides essential
+                            connectivity for modern IoT devices. Through a <strong>Wi-Fi 7 licensing agreement with Broadcom</strong> and the
+                            acquisition of Packetcraft for Bluetooth Low Energy (BLE) capabilities, Synaptics is building a comprehensive,
+                            differentiated wireless portfolio that few small-cap peers can match.</p>
+                        <p><strong>Sensing (Touch, Display, Biometrics):</strong> This heritage segment represents decades of innovation and
+                            customer relationships. The company remains a leader in capacitive touch sensing, display drivers, and biometric
+                            solutions across smartphones, PCs, and automotive systems. This established business provides a <strong>stable
+                            cash flow foundation</strong> that funds investment in higher-growth Processing and Connectivity segments.</p>
                     </section>
 
+                    <!-- ═══════════════════════════════════════════
+                         06 — INVESTMENT THESIS
+                    ═══════════════════════════════════════════ -->
                     <section class="detail-section">
-                        <h3>Risks</h3>
-                        <p>While the thesis is compelling, investors should monitor the following risks:</p>
-                        <p><b>Competitive Pressures:</b> The semiconductor industry is intensely competitive. Synaptics faces formidable rivals with greater scale and financial resources, such as Qualcomm, NXP, and STMicroelectronics, who could compete aggressively on price or R&D.</p>
-                        <p><b>Execution Risk:</b> Future success is contingent upon the flawless execution of its IoT-focused strategy. Delays in the product roadmap for the Astra™ or Veros™ platforms or a failure to secure key design wins could undermine the growth narrative.</p>
-                        <p><b>Industry Cyclicality & Macroeconomic Headwinds:</b> The semiconductor industry is inherently cyclical. A significant global economic downturn could reduce consumer and enterprise spending on end-products, directly impacting demand for Synaptics' components.</p>
-                        <p><b>Customer Concentration:</b> As a supplier to major OEMs, Synaptics is exposed to customer concentration risk. The loss of, or a significant reduction in orders from, a single key customer could have a material adverse effect on revenue.</p>
-                        <p><b>Technological Obsolescence:</b> The pace of technological change is relentless. Synaptics must continuously invest in R&D to maintain its leadership. A failure to adapt to new standards could render its products obsolete.</p>
+                        <span class="section-label">06 — Investment Thesis</span>
+                        <h3>Investment Thesis</h3>
+                        <p>Our original conviction in Synaptics at initiation was based on five key points:</p>
+                        <p><strong>1. Explosive Core IoT Growth:</strong> The Core IoT segment delivered ~53% revenue growth year-over-year
+                            in FY 2025. This segment is increasingly the centerpiece of Synaptics' growth story and is now running at 74%
+                            YoY as of Q1 FY2026 — validating the thesis faster than expected.</p>
+                        <p><strong>2. Strategic Partnership Expansion:</strong> A collaboration with Google integrates Synaptics' Astra
+                            AI-Native platform with Google's ML-Core, accelerating edge AI capabilities. An agreement with Broadcom provides
+                            access to best-in-class Wi-Fi 7/8, Bluetooth, and UWB technologies, tapping into billions in potential market growth.</p>
+                        <p><strong>3. Margin Resilience &amp; Balance Sheet Strengthening:</strong> On a non-GAAP basis, Synaptics maintained
+                            gross margins of ~53–54% across FY 2025. The company also reduced gross debt by <strong>~$134 million</strong>
+                            and repurchased <strong>~$128 million</strong> worth of shares in FY 2025, strengthening financial flexibility.</p>
+                        <p><strong>4. Demand Stabilization &amp; Backlog Recovery:</strong> The company saw significant improvements in
+                            Q4 FY2025 order activity and backlog, reflected in the strong Q1 FY2026 revenue guidance of $380–$420 million
+                            (~13% YoY growth), which provides improved revenue visibility.</p>
+                        <p><strong>5. TAM Expansion via Edge AI &amp; Connectivity:</strong> With edge AI chips projected to reach $60–70
+                            billion by 2030, Synaptics is positioned for significant long-term growth through its Astra platform and new
+                            wireless licensing agreements.</p>
                     </section>
-                    
+
+                    <!-- ═══════════════════════════════════════════
+                         07 — REVENUE GROWTH & PROFITABILITY
+                    ═══════════════════════════════════════════ -->
                     <section class="detail-section">
+                        <span class="section-label">07 — Revenue Growth &amp; Profitability</span>
+                        <h3>Revenue Growth &amp; Profitability</h3>
+
+                        <div class="metric-pair-grid">
+                            <div class="metric-pair">
+                                <span class="mp-label">Total Revenue (Q2 FY2026)</span>
+                                <span class="mp-value">$302.5M</span>
+                                <span class="mp-context">+13% YoY — 5th consecutive double-digit quarter</span>
+                            </div>
+                            <div class="metric-pair">
+                                <span class="mp-label">Core IoT Growth (Q2 FY2026)</span>
+                                <span class="mp-value">+53% YoY</span>
+                                <span class="mp-context">Primary growth engine; 74% growth in Q1 FY2026</span>
+                            </div>
+                            <div class="metric-pair">
+                                <span class="mp-label">Non-GAAP Gross Margin</span>
+                                <span class="mp-value">53.2%</span>
+                                <span class="mp-context">Stable at 53–54% throughout FY2025</span>
+                            </div>
+                            <div class="metric-pair">
+                                <span class="mp-label">FY2025 Core IoT Growth</span>
+                                <span class="mp-value">~53% YoY</span>
+                                <span class="mp-context">Segment approaching majority of revenue mix</span>
+                            </div>
+                        </div>
+
+                        <p>Revenue growth is being driven almost entirely by the Core IoT segment, while Mobile and Automotive remain soft.
+                            Management has guided that Astra-based AI revenue contributions will begin materializing in the second half of
+                            calendar 2026, which could serve as the next meaningful re-rating catalyst.</p>
+                    </section>
+
+                    <!-- ═══════════════════════════════════════════
+                         08 — EARNINGS PER SHARE
+                    ═══════════════════════════════════════════ -->
+                    <section class="detail-section">
+                        <span class="section-label">08 — Earnings Per Share</span>
+                        <h3>Earnings Per Share</h3>
+
+                        <div class="metric-pair-grid">
+                            <div class="metric-pair">
+                                <span class="mp-label">Q2 FY2026 Non-GAAP EPS</span>
+                                <span class="mp-value">$1.21</span>
+                                <span class="mp-context">Beat consensus estimate of $1.15</span>
+                            </div>
+                            <div class="metric-pair">
+                                <span class="mp-label">Q1 FY2026 Non-GAAP EPS</span>
+                                <span class="mp-value">$1.09</span>
+                                <span class="mp-context">+35% year-over-year growth</span>
+                            </div>
+                        </div>
+
+                        <p>Synaptics has demonstrated a consistent beat-and-raise cadence on EPS. The strong operating leverage reflects
+                            a leaner cost structure following restructuring, with non-GAAP margins holding steady despite the ongoing
+                            revenue mix shift away from higher-volume (but lower-margin) mobile touch products.</p>
+                    </section>
+
+                    <!-- ═══════════════════════════════════════════
+                         09 — BALANCE SHEET
+                    ═══════════════════════════════════════════ -->
+                    <section class="detail-section">
+                        <span class="section-label">09 — Balance Sheet</span>
+                        <h3>Balance Sheet</h3>
+
+                        <div class="metric-pair-grid">
+                            <div class="metric-pair">
+                                <span class="mp-label">Gross Debt Reduction (FY2025)</span>
+                                <span class="mp-value">~$134M</span>
+                                <span class="mp-context">Deliberate deleveraging of the balance sheet</span>
+                            </div>
+                            <div class="metric-pair">
+                                <span class="mp-label">Share Repurchases (FY2025)</span>
+                                <span class="mp-value">~$128M</span>
+                                <span class="mp-context">Signals management confidence in intrinsic value</span>
+                            </div>
+                        </div>
+
+                        <p>Synaptics enters FY2026 in a meaningfully stronger financial position than a year ago.
+                            The combination of debt paydown and aggressive share buybacks reflects confident capital allocation from
+                            management. A net cash position (post-adjustments) supports the intrinsic value calculation in our
+                            EV-to-EBITDA model.</p>
+                    </section>
+
+                    <!-- ═══════════════════════════════════════════
+                         10 — VALUATION
+                    ═══════════════════════════════════════════ -->
+                    <section class="detail-section">
+                        <span class="section-label">10 — Valuation</span>
                         <h3>Valuation</h3>
-                        <p>We determined a fair value for Synaptics' equity by applying a forward EV/EBITDA multiple based on a peer analysis.</p>
-                        
-                        <h4>Table 1: Comparable Analysis</h4>
-                        <table class="valuation-table">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Market Cap (B)</th>
-                                    <th>1Yr Sales GR</th>
-                                    <th>EV/EBITDA Forward</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>Cirrus Logic, Inc.</td><td>$6.2</td><td>6.0%</td><td>14.0</td></tr>
-                                <tr><td>Himax Technologies</td><td>$1.5</td><td>-4.1%</td><td>17.3</td></tr>
-                                <tr><td>Qorvo, Inc.</td><td>$8.5</td><td>-1.3%</td><td>19.3</td></tr>
-                                <tr><td>NXP</td><td>$56.5</td><td>-4.5%</td><td>16.0</td></tr>
-                                <tr><td>Rambus Inc.</td><td>$11.0</td><td>19.6%</td><td>35.0</td></tr>
-                                <tr><td><b>Average</b></td><td><b>$16.7</b></td><td><b>3.1%</b></td><td><b>19.6</b></td></tr>
-                                <tr><td><b>Median</b></td><td><b>$8.5</b></td><td><b>-1.3%</b></td><td><b>16.1</b></td></tr>
-                                <tr><td><b>Synaptics</b></td><td><b>$2.7</b></td><td><b>12.0%</b></td><td><b>15.0</b></td></tr>
-                            </tbody>
-                        </table>
+                        <p>We determined a fair value for Synaptics' equity by applying a forward EV/EBITDA multiple based on
+                            a peer comparable analysis.</p>
 
-                        <p>We forecast the company will achieve $260 million in EBITDA by year-end 2028. Applying a 16.0x target multiple (based on the peer median) results in an enterprise value of $4,153 million. After adjusting for the company's net cash position, the implied 3-year equity value is $4,422 million, or $114.26 per share. To find its present value, we discounted this price to September 2026 using a 9.3% cost of equity, resulting in a final price target of $95.64.</p>
-                        <p>
-                            <b>Target Multiple:</b> 16.0x<br>
-                            <b>2028E EBITDA:</b> $260M<br>
-                            <b>Implied Enterprise Value (EV):</b> $4,153M<br>
-                            <b>3-Year Price Target (2028):</b> $114.26<br>
-                            <b>Discounted 1-Year Price Target: $95.64</b>
-                         </p>
-                        <p>This suggests a 39.7% upside from the current share price of $68.45.</p>
+                        <h4>Comparable Company Analysis</h4>
+                        <div style="overflow-x: auto; margin: 1rem 0;">
+                            <table style="width:100%; border-collapse:collapse; font-size:0.875rem;">
+                                <thead>
+                                    <tr style="background:#f8f9fa;">
+                                        <th style="border:1px solid #e9ecef; padding:10px 12px; text-align:left; font-weight:600; color:#495057;">Company</th>
+                                        <th style="border:1px solid #e9ecef; padding:10px 12px; text-align:right; font-weight:600; color:#495057;">Mkt Cap</th>
+                                        <th style="border:1px solid #e9ecef; padding:10px 12px; text-align:right; font-weight:600; color:#495057;">1Yr Sales GR</th>
+                                        <th style="border:1px solid #e9ecef; padding:10px 12px; text-align:right; font-weight:600; color:#495057;">EV/EBITDA Fwd</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="border:1px solid #e9ecef; padding:10px 12px;">Cirrus Logic, Inc.</td>
+                                        <td style="border:1px solid #e9ecef; padding:10px 12px; text-align:right;">$6.2B</td>
+                                        <td style="border:1px solid #e9ecef; padding:10px 12px; text-align:right;">6.0%</td>
+                                        <td style="border:1px solid #e9ecef; padding:10px 12px; text-align:right;">14.0x</td>
+                                    </tr>
+                                    <tr style="background:#fafafa;">
+                                        <td style="border:1px solid #e9ecef; padding:10px 12px;">Himax Technologies</td>
+                                        <td style="border:1px solid #e9ecef; padding:10px 12px; text-align:right;">$1.5B</td>
+                                        <td style="border:1px solid #e9ecef; padding:10px 12px; text-align:right;">-4.1%</td>
+                                        <td style="border:1px solid #e9ecef; padding:10px 12px; text-align:right;">17.3x</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border:1px solid #e9ecef; padding:10px 12px;">Qorvo, Inc.</td>
+                                        <td style="border:1px solid #e9ecef; padding:10px 12px; text-align:right;">$8.5B</td>
+                                        <td style="border:1px solid #e9ecef; padding:10px 12px; text-align:right;">-1.3%</td>
+                                        <td style="border:1px solid #e9ecef; padding:10px 12px; text-align:right;">19.3x</td>
+                                    </tr>
+                                    <tr style="background:#fafafa;">
+                                        <td style="border:1px solid #e9ecef; padding:10px 12px;">NXP Semiconductors</td>
+                                        <td style="border:1px solid #e9ecef; padding:10px 12px; text-align:right;">$56.5B</td>
+                                        <td style="border:1px solid #e9ecef; padding:10px 12px; text-align:right;">-4.5%</td>
+                                        <td style="border:1px solid #e9ecef; padding:10px 12px; text-align:right;">16.0x</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border:1px solid #e9ecef; padding:10px 12px;">Rambus Inc.</td>
+                                        <td style="border:1px solid #e9ecef; padding:10px 12px; text-align:right;">$11.0B</td>
+                                        <td style="border:1px solid #e9ecef; padding:10px 12px; text-align:right;">19.6%</td>
+                                        <td style="border:1px solid #e9ecef; padding:10px 12px; text-align:right;">35.0x</td>
+                                    </tr>
+                                    <tr style="background:#f0f4f8; font-weight:600;">
+                                        <td style="border:1px solid #d1dae6; padding:10px 12px;">Peer Average</td>
+                                        <td style="border:1px solid #d1dae6; padding:10px 12px; text-align:right;">$16.7B</td>
+                                        <td style="border:1px solid #d1dae6; padding:10px 12px; text-align:right;">3.1%</td>
+                                        <td style="border:1px solid #d1dae6; padding:10px 12px; text-align:right;">19.6x</td>
+                                    </tr>
+                                    <tr style="background:#f0f4f8; font-weight:600;">
+                                        <td style="border:1px solid #d1dae6; padding:10px 12px;">Peer Median</td>
+                                        <td style="border:1px solid #d1dae6; padding:10px 12px; text-align:right;">$8.5B</td>
+                                        <td style="border:1px solid #d1dae6; padding:10px 12px; text-align:right;">-1.3%</td>
+                                        <td style="border:1px solid #d1dae6; padding:10px 12px; text-align:right;">16.1x</td>
+                                    </tr>
+                                    <tr style="background:#1E3A5F; color:white; font-weight:600;">
+                                        <td style="border:1px solid #152e4a; padding:10px 12px;">Synaptics (SYNA)</td>
+                                        <td style="border:1px solid #152e4a; padding:10px 12px; text-align:right;">$2.7B</td>
+                                        <td style="border:1px solid #152e4a; padding:10px 12px; text-align:right;">12.0%</td>
+                                        <td style="border:1px solid #152e4a; padding:10px 12px; text-align:right;">15.0x</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <p>We forecast SYNA will achieve <strong>$260 million in EBITDA by year-end 2028</strong>. Applying a
+                            <strong>16.0x target multiple</strong> (based on the peer median) results in an enterprise value of $4,153 million.
+                            After adjusting for the company's net cash position, the implied 3-year equity value is $4,422 million,
+                            or <strong>$114.26 per share</strong>. Discounted back to September 2026 using a 9.3% cost of equity, we
+                            arrive at a final price target of <strong>$95.64</strong>.</p>
+
+                        <div class="metric-pair-grid">
+                            <div class="metric-pair">
+                                <span class="mp-label">Target EV/EBITDA Multiple</span>
+                                <span class="mp-value">16.0x</span>
+                                <span class="mp-context">Based on peer median</span>
+                            </div>
+                            <div class="metric-pair">
+                                <span class="mp-label">2028E EBITDA Forecast</span>
+                                <span class="mp-value">$260M</span>
+                                <span class="mp-context">Base case projection</span>
+                            </div>
+                            <div class="metric-pair">
+                                <span class="mp-label">Implied Enterprise Value</span>
+                                <span class="mp-value">$4,153M</span>
+                                <span class="mp-context">Before net cash adjustment</span>
+                            </div>
+                            <div class="metric-pair">
+                                <span class="mp-label">1-Year Discounted Target</span>
+                                <span class="mp-value">$95.64</span>
+                                <span class="mp-context">9.3% cost of equity discount rate</span>
+                            </div>
+                        </div>
                     </section>
 
-                    <section class="detail-section" style="border-top: 2px solid #ccc; padding-top: 20px; margin-top: 20px;">
-                        <h3>Update Q1 FY2026 (As of November 08, 2025)</h3>
-                        <p>We are updating our coverage following Synaptics' Q1 FY2026 earnings results. The stock traded at <strong>$69.32</strong> at the time of this update.</p>
-                        
-                        <h4 style="margin-bottom: 0.5rem;">Key Highlights from Q1 FY2026:</h4>
-                        <p><strong>Thesis Validation (Core IoT):</strong> The primary driver of our BUY thesis—acceleration in IoT—is materializing faster than expected. Core IoT revenue grew <strong>74% year-over-year</strong>, significantly outpacing the ~53% growth rate cited in our initial report. This segment now accounts for 35% of total revenue.</p>
-
-                        <p><strong>Astra Platform Success:</strong> Management confirmed that the new Astra AI-native processors are securing design wins "way ahead" of schedule. Revenue contribution from these high-margin processors is expected to begin in the second half of calendar 2026.</p>
-
-                        <p><strong>Profitability & Margins:</strong> Despite mixed revenue from legacy segments, the company delivered strong operating leverage. Non-GAAP EPS grew 35% year-over-year to $1.09, driven by solid gross margins of 53.2%.</p>
-
-                        <p><strong>Short-Term Headwinds:</strong> Mobile Touch revenue was lower than expected due to supply chain constraints, and Automotive demand remains subdued. We view the mobile constraints as transitory revenue push-outs rather than lost demand.</p>
-
-                        <h4>Updated Outlook:</h4>
-                        <p>The Q1 results strongly validate our thesis that Synaptics is successfully transforming into an Edge AI leader. The 74% growth in Core IoT is masking the weakness in legacy segments, setting the stage for significant multiple expansion as the "Astra" AI revenue layers in next year.</p>
-                        
-                        <p>
-                            <b>Remaining Potential Upside:</b> ($95.64 - $69.32) / $69.32 = <strong>38.0%</strong>
-                        </p>
-
-                        <p>We reiterate our <strong>BUY</strong> rating.</p>
+                    <!-- ═══════════════════════════════════════════
+                         11 — KEY RISKS
+                    ═══════════════════════════════════════════ -->
+                    <section class="detail-section">
+                        <span class="section-label">11 — Key Risks</span>
+                        <h3>Key Risks</h3>
+                        <p><strong>Competitive Pressures:</strong> The semiconductor industry is intensely competitive. Synaptics faces formidable
+                            rivals with greater scale and financial resources — Qualcomm, NXP, and STMicroelectronics — who could compete
+                            aggressively on price or accelerate their own R&amp;D timelines.</p>
+                        <p><strong>Execution Risk:</strong> Future success is contingent on flawless execution of the IoT-focused strategy.
+                            Delays in the Astra™ or Veros™ product roadmaps, or a failure to secure key design wins at major OEMs, could
+                            undermine the growth narrative and trigger a multiple compression.</p>
+                        <p><strong>Industry Cyclicality &amp; Macro Headwinds:</strong> The semiconductor industry is inherently cyclical.
+                            A significant global economic downturn could reduce consumer and enterprise spending on end-products, directly
+                            impacting demand for Synaptics' components.</p>
+                        <p><strong>Customer Concentration:</strong> As a supplier to major OEMs, Synaptics is exposed to customer concentration
+                            risk. The loss of, or a significant reduction in orders from, a single key customer could have a material adverse
+                            effect on revenue.</p>
+                        <p><strong>Technological Obsolescence:</strong> The pace of technological change is relentless. Synaptics must
+                            continuously invest in R&amp;D to maintain its leadership. A failure to adapt to new AI architecture standards
+                            could render its products obsolete before the Astra platform reaches scale.</p>
                     </section>
 
-                    <section class="detail-section" style="border-top: 2px solid #ccc; padding-top: 20px; margin-top: 20px;">
-                        <h3>Update Q2 FY2026 (As of February 10, 2026)</h3>
-                        <p>We are updating our coverage following Synaptics' Q2 FY2026 earnings results, released on February 5, 2026. The stock is currently trading at <strong>$85.98</strong>.</p>
-                        
-                        <h4 style="margin-bottom: 0.5rem;">Key Highlights from Q2 FY2026:</h4>
-                        <p><strong>Solid Financial Beat:</strong> Synaptics delivered its fifth consecutive quarter of double-digit growth. Revenue came in at $302.5 million (up 13% YoY), beating estimates. Non-GAAP EPS was $1.21, beating the consensus estimate of $1.15.</p>
+                    <!-- ═══════════════════════════════════════════
+                         12 — FINAL VERDICT
+                    ═══════════════════════════════════════════ -->
+                    <section class="detail-section">
+                        <span class="section-label">12 — Final Verdict</span>
+                        <h3>Final Verdict</h3>
 
-                        <p><strong>Core IoT Still Driving Growth:</strong> Core IoT product sales grew 53% year-over-year. While this is a deceleration from the 74% growth seen in Q1, it remains the primary engine of the company's expansion, masking softer performance in mobile and auto.</p>
-                        
-                        <p><strong>Valuation Re-Rating:</strong> The stock has rallied ~24% since our last update, reflecting the market's acceptance of the AI transformation story.</p>
-
-                        <h4>Updated Outlook & Recommendation Change:</h4>
-                        <p>With the price at $85.98, the gap to our fair value target of $95.64 has narrowed significantly. We believe the easy money has been made.</p>
-                        
-                        <p>
-                            <b>Remaining Potential Upside:</b> ($95.64 - $85.98) / $85.98 = <strong>11.2%</strong>
-                        </p>
-
-                        <p>We are downgrading our rating from BUY to <strong>HOLD</strong>.</p>
+                        <div class="final-verdict-box">
+                            <div class="fvb-inner">
+                                <div>
+                                    <span class="fvb-rating-label">Current Rating</span>
+                                    <div class="fvb-rating">HOLD</div>
+                                </div>
+                                <div class="fvb-stats-row">
+                                    <div>
+                                        <span class="fvb-stat-label">Current Price</span>
+                                        <span class="fvb-stat-value">$85.98</span>
+                                    </div>
+                                    <div>
+                                        <span class="fvb-stat-label">Price Target</span>
+                                        <span class="fvb-stat-value">$95.64</span>
+                                    </div>
+                                    <div>
+                                        <span class="fvb-stat-label">Upside to Target</span>
+                                        <span class="fvb-stat-value fvb-neutral">+11.2%</span>
+                                    </div>
+                                    <div>
+                                        <span class="fvb-stat-label">Prior Rating</span>
+                                        <span class="fvb-stat-value">BUY</span>
+                                    </div>
+                                    <div>
+                                        <span class="fvb-stat-label">Rally Since Initiation</span>
+                                        <span class="fvb-stat-value fvb-positive">~+26%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="fvb-reasoning">
+                                We are downgrading Synaptics to a <strong style="color:white;">HOLD</strong> (from BUY). Since our Q1 FY2026 update,
+                                the stock has rallied approximately 24%, and approximately 26% since our initial report. While the company continues
+                                to execute exceptionally on its Edge AI pivot — with Core IoT at 74% and then 53% YoY growth — the valuation has
+                                re-rated to fully reflect this success. With the stock now trading within ~11% of our fair value target of $95.64,
+                                we believe the risk/reward no longer justifies adding to positions. We advise existing holders to retain their
+                                shares and wait for a more attractive entry point before adding exposure.
+                            </p>
+                        </div>
                     </section>
 
                 </article>
