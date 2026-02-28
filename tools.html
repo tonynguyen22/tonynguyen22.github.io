@@ -1,10 +1,9 @@
-<!-- c:\Users\Tony\Documents\GITHUB\tonynguyen22.github.io\tools.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investment Tools - Tonivest Research</title>
+    <title>Tools & Projects - Tonivest Research</title>
     <link rel="icon" href="assets/logo-nav.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -17,13 +16,13 @@
                     <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 </button>
             </div>
-            
+
             <nav class="sidebar-nav">
                 <a href="index.html" class="nav-item">
                     <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
                     <span class="nav-label">Company Analysis</span>
                 </a>
-                
+
                 <a href="port.html" class="nav-item">
                     <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 011-1h1m-1 1v1m0 0H4a1 1 0 00-1 1v1m2-2h14m-1 0V5a2 2 0 00-1-1h-1m1 1v1"/></svg>
                     <span class="nav-label">My Portfolio</span>
@@ -31,7 +30,7 @@
 
                 <a href="tools.html" class="nav-item active">
                     <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-                    <span class="nav-label">Tools & Projects</span>
+                    <span class="nav-label">Tools &amp; Projects</span>
                 </a>
 
                 <a href="about.html" class="nav-item">
@@ -42,17 +41,92 @@
         </aside>
 
         <main class="main-content">
-            <section class="hero-section">
-                <div class="hero-content">
-                    <h1 class="hero-title">Tools & Projects</h1>
+            <div class="valuation-container">
+                <div class="valuation-header">
+                    <div class="page-title">
+                        <h1>Tools &amp; Projects</h1>
+                        <p>Finance tools and personal projects I have built.</p>
+                    </div>
                 </div>
-            </section>
-            <div class="tool-feature">
-                <h2>ValuWise</h2>
-                <p>Built a professional equity valuation platform with DCF modeling, comparable company analysis, and financial grading — try it at <a href="https://valuewise.netlify.app" target="_blank">valuewise.netlify.app</a></p>
+
+                <!-- ValuWise -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <div>
+                            <h2 class="project-name">ValuWise</h2>
+                            <p class="project-tagline">Professional Equity Valuation Platform</p>
+                        </div>
+                        <a href="https://valuewise.netlify.app" target="_blank" class="project-link">
+                            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            Launch App
+                        </a>
+                    </div>
+
+                    <p style="color:#495057; line-height:1.65; margin-bottom:1rem;">
+                        A browser-based equity valuation tool that walks through a complete fundamental analysis workflow — from DCF modeling with custom WACC assumptions, to comparable company analysis (EV/EBITDA, P/E, EV/Sales multiples), to an automated financial health score that grades a company across profitability, leverage, and growth dimensions.
+                    </p>
+
+                    <p style="color:#495057; line-height:1.65; margin-bottom:0;">
+                        Designed to mirror the workflow of a buy-side analyst: input a ticker, pull financials, stress-test assumptions across bull/base/bear scenarios, and arrive at a price target with supporting documentation. Built as a standalone web app with no server-side dependencies.
+                    </p>
+
+                    <div class="project-tags">
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">HTML / CSS</span>
+                        <span class="project-tag">DCF Modeling</span>
+                        <span class="project-tag">Comparable Analysis</span>
+                        <span class="project-tag">Financial API</span>
+                        <span class="project-tag">Netlify</span>
+                    </div>
+                </div>
+
+                <!-- Tonivest Research -->
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <div>
+                            <h2 class="project-name">Tonivest Research</h2>
+                            <p class="project-tagline">Personal Investment Research Platform &amp; Portfolio Tracker</p>
+                        </div>
+                        <a href="index.html" class="project-link">
+                            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            View Site
+                        </a>
+                    </div>
+
+                    <p style="color:#495057; line-height:1.65; margin-bottom:1rem;">
+                        This website — built from scratch as a personal investment research platform. Houses in-depth equity research reports (DCF, comparable analysis, investment thesis) across US and Vietnam markets, alongside a live portfolio tracker that fetches real-time prices via the Finnhub API and visualizes sector allocation using Chart.js.
+                    </p>
+
+                    <p style="color:#495057; line-height:1.65; margin-bottom:0;">
+                        Reports follow an institutional format: business summary, industry context, competitive advantages, financial analysis, valuation model, and final verdict with price target. Designed to serve as a working demonstration of equity research skills.
+                    </p>
+
+                    <div class="project-tags">
+                        <span class="project-tag">HTML / CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">Finnhub API</span>
+                        <span class="project-tag">Chart.js</span>
+                        <span class="project-tag">GitHub Pages</span>
+                        <span class="project-tag">Equity Research</span>
+                    </div>
+                </div>
+
             </div>
         </main>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebar = document.querySelector('.sidebar');
+            const toggleBtn = document.getElementById('sidebar-toggle');
+            if (localStorage.getItem('sidebar-collapsed') === 'true') {
+                sidebar.classList.add('collapsed');
+            }
+            toggleBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('collapsed');
+                localStorage.setItem('sidebar-collapsed', sidebar.classList.contains('collapsed'));
+            });
+        });
+    </script>
 </body>
 </html>
