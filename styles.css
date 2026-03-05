@@ -1493,3 +1493,188 @@ PORTFOLIO PAGE — CARD WRAPPERS
     margin-top: 1rem;
     line-height: 1.5;
 }
+
+/* ==============================================
+   SCENARIO COMPARISON (Bull / Base / Bear)
+============================================== */
+
+.scenario-comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.25rem 0;
+}
+
+.scenario-col {
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    border: 1px solid;
+}
+
+.scenario-col.bear {
+    background: rgba(239, 68, 68, 0.05);
+    border-color: rgba(239, 68, 68, 0.2);
+}
+
+.scenario-col.base {
+    background: #f8f9fa;
+    border-color: #dee2e6;
+}
+
+.scenario-col.bull {
+    background: rgba(16, 185, 129, 0.05);
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+.scenario-col-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.75rem;
+}
+
+.scenario-col.bull .scenario-col-label { color: #059669; }
+.scenario-col.base .scenario-col-label { color: #1E3A5F; }
+.scenario-col.bear .scenario-col-label { color: #dc2626; }
+
+.scenario-col-pt {
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.scenario-col.bull .scenario-col-pt { color: #059669; }
+.scenario-col.base .scenario-col-pt { color: #1E3A5F; }
+.scenario-col.bear .scenario-col-pt { color: #dc2626; }
+
+.scenario-col-upside {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.875rem;
+    padding-bottom: 0.875rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.scenario-col.bull .scenario-col-upside { color: #059669; }
+.scenario-col.base .scenario-col-upside { color: #d97706; }
+.scenario-col.bear .scenario-col-upside { color: #dc2626; }
+
+.scenario-col-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.scenario-col-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+.scenario-col-row-label { color: #6c757d; }
+
+.scenario-col-row-val {
+    font-weight: 600;
+    color: #1E3A5F;
+}
+
+/* ==============================================
+   FORECAST TABLE
+============================================== */
+
+.forecast-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.83rem;
+    margin: 1rem 0 0;
+}
+
+.forecast-table th {
+    background: #1E3A5F;
+    color: #fff;
+    padding: 0.55rem 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+.forecast-table th:not(:first-child) { text-align: right; }
+
+.forecast-table td {
+    border-bottom: 1px solid #e9ecef;
+    padding: 0.5rem 0.75rem;
+    color: #343a40;
+}
+
+.forecast-table td:not(:first-child) {
+    text-align: right;
+    font-weight: 500;
+}
+
+.forecast-table tr:last-child td { border-bottom: none; }
+
+.forecast-table .ft-section {
+    background: #eef2f7;
+    font-weight: 700;
+    color: #1E3A5F;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ==============================================
+   SENSITIVITY ANALYSIS TABLE
+============================================== */
+
+.sensitivity-wrap {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+.sensitivity-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    min-width: 480px;
+}
+
+.sensitivity-table th {
+    background: #1E3A5F;
+    color: #fff;
+    padding: 0.45rem 0.65rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.72rem;
+}
+
+.sensitivity-table th.st-corner { background: #0f1d2f; }
+
+.sensitivity-table td {
+    border: 1px solid #dee2e6;
+    padding: 0.45rem 0.65rem;
+    text-align: center;
+    color: #343a40;
+}
+
+.sensitivity-table tr:nth-child(even) td:not(.st-row-head) { background: #f8f9fa; }
+
+.sensitivity-table .st-row-head {
+    background: #1E3A5F;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.72rem;
+    border-color: #1E3A5F;
+}
+
+.sensitivity-table .st-highlight {
+    background: rgba(245, 158, 11, 0.18) !important;
+    font-weight: 700;
+    color: #92400e;
+}
+
+@media (max-width: 640px) {
+    .scenario-comparison-grid {
+        grid-template-columns: 1fr;
+    }
+}
