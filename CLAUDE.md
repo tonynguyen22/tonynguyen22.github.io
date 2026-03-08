@@ -189,6 +189,35 @@ Every stock page must have a corresponding card in `index.html`. Each card requi
 
 ---
 
+## Writing Style
+
+Apply these rules to all prose content in stock research pages:
+
+- **Lead with the conclusion.** State what you found, then explain why. ("Azure grew 31% — the fastest pace in two years. Here is what drove it.")
+- **One idea per sentence.** Short sentences are easier to scan and harder to misread.
+- **Numbers first.** "$77B in FCF" not "free cash flow of approximately $77 billion." Put the figure before the qualifier.
+- **No jargon stacking.** Write "AI infrastructure spending" not "secular AI-driven infrastructure monetization tailwinds." If a plain word exists, use it.
+- **Spell out metrics on first use.** "Return on invested capital (ROIC) was 24.2%." Then just say ROIC.
+- **No hedge-word chains.** "May disappoint" not "could potentially underperform market expectations." Pick one hedge, not three.
+- **Tables carry the numbers; prose carries the meaning.** Do not restate table data in the paragraph above it. Explain what the data means instead.
+- **Write to a smart non-specialist.** Assume the reader understands P/E ratios and WACC. Do not explain what a stock is. Do explain why a specific number matters.
+- **First person throughout.** "I think," "I believe," "What I find compelling." This is personal research, not a press release.
+- **No em dashes.** Use commas, colons, or restructure the sentence.
+
+---
+
+## Research Notes Structure
+
+Research notes live in `stock-note/[TICKER]/` (a subfolder per ticker, uppercase). Each folder may contain:
+- `EarningTranscript-[Quarter].txt` — earnings call takeaways and management commentary
+- `Forecast.txt` — analyst consensus targets, EPS/revenue estimates
+- `Dividend.txt` — dividend history and analysis
+- Other topic-specific .txt files
+
+Always check `stock-note/[TICKER]/` first when reading notes for a ticker.
+
+---
+
 ## DO NOT
 
 - Do not create separate CSS files — all styles go in `styles.css`

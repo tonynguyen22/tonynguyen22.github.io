@@ -1,0 +1,125 @@
+Microsoft Stock Forecast
+All Analysts
+Top Analysts
+Stock Price Forecast
+The 33 analysts that cover Microsoft stock have a consensus rating of "Strong Buy" and an average price target of $603.27, which forecasts a 47.51% increase in the stock price over the next year. The lowest target is $392 and the highest is $675.
+
+Price Target: $603.27 (+47.51%)
+Analyst Consensus: Strong Buy
+Target	Low	Average	Median	High
+Price	$392	$603.27	$600	$675
+Change	-4.15%	+47.51%	+46.71%	+65.05%
+* Price targets were last updated on Feb 5, 2026.
+Analyst Ratings
+The average analyst rating for Microsoft stock is "Strong Buy". This means that analysts believe this stock is likely to perform very well in the near future and significantly outperform the market.
+
+Recommendation Trends
+
+Bar Chart
+
+1 Year
+Rating	Oct '25	Nov '25	Dec '25	Jan '26	Feb '26	Mar '26
+Strong Buy	14	14	14	13	12	12
+Buy	17	18	18	19	19	19
+Hold	1	2	2	2	3	3
+Sell	0	0	0	0	0	0
+Strong Sell	0	0	0	0	0	0
+Total	32	34	34	34	34	34
+Latest Forecasts
+
+Columns
+
+Analyst Performance
+
+Rating
+
+Upside
+
+Action
+Analyst	Firm	Rating	Action	Price Target	Upside	Date
+Brad Reback
+Stifel	Strong Buy → Hold	Downgrades	$540 → $392	-4.15%	Feb 5, 2026
+Tyler Radke
+Citigroup	Strong Buy	Maintains	$660 → $635	+55.27%	Jan 30, 2026
+Gil Luria
+DA Davidson	Strong Buy	Maintains	$650	+58.94%	Jan 29, 2026
+Rishi Jaluria
+RBC Capital	Buy	Reiterates	$640	+56.49%	Jan 29, 2026
+Patrick Colville
+Scotiabank	Buy	Maintains	$650 → $600	+46.71%	Jan 29, 2026
+More Analyst Ratings
+Financial Forecast
+Annual
+Quarterly
+
+Download
+Revenue This Year
+334.61B
+Increased by18.77%
+from 281.72B
+Revenue Next Year
+386.71B
+Increased by15.57%
+from 334.61B
+EPS This Year
+16.92
+Increased by24.05%
+from 13.64
+EPS Next Year
+19.38
+Increased by14.54%
+from 16.92
+Fiscal Year	FY 2021	FY 2022	FY 2023	FY 2024	FY 2025	FY 2026	FY 2027	FY 2028	FY 2029	FY 2030
+Period Ending	Jun 30, 2021	Jun 30, 2022	Jun 30, 2023	Jun 30, 2024	Jun 30, 2025	Jun 30, 2026	Jun 30, 2027	Jun 30, 2028	Jun 30, 2029	Jun 30, 2030
+Revenue
+168.09B	198.27B	211.92B	245.12B	281.72B	334.61B	386.71B	Upgrade	Upgrade	Upgrade
+Revenue Growth
+17.53%	17.96%	6.88%	15.67%	14.93%	18.77%	15.57%	Upgrade	Upgrade	Upgrade
+EPS
+8.05	9.65	9.68	11.80	13.64	16.92	19.38	Upgrade	Upgrade	Upgrade
+EPS Growth
+39.76%	19.88%	0.31%	21.90%	15.59%	24.05%	14.54%	Upgrade	Upgrade	Upgrade
+Forward PE
+-	-	-	-	-	24.17	21.10	Upgrade	Upgrade	Upgrade
+No. Analysts
+-	-	-	-	-	61	59	Upgrade	Upgrade	Upgrade
+Historical EPS numbers are GAAP, while forecasted numbers may be non-GAAP.
+Revenue Forecast
+Revenue	2026	2027	2028	2029	2030
+High	348.1B	417.4B	Pro	Pro	Pro
+Avg	334.6B	386.7B	Pro	Pro	Pro
+Low	318.5B	352.2B	Pro	Pro	Pro
+Revenue Growth
+Revenue Growth	2026	2027	2028	2029	2030
+High	
+23.6%
+24.7%
+Pro	Pro	Pro
+Avg	
+18.8%
+15.6%
+Pro	Pro	Pro
+Low	
+13.1%
+5.3%
+Pro	Pro	Pro
+EPS Forecast
+EPS	2026	2027	2028	2029	2030
+High	17.70	21.03	Pro	Pro	Pro
+Avg	16.92	19.38	Pro	Pro	Pro
+Low	15.94	16.32	Pro	Pro	Pro
+EPS Growth
+EPS Growth	2026	2027	2028	2029	2030
+High	
+29.8%
+24.3%
+Pro	Pro	Pro
+Avg	
+24.0%
+14.5%
+Pro	Pro	Pro
+Low	
+16.9%
+-3.6%
+Pro	Pro	Pro
+Sources: Price targets and analyst ratings provided by Benzinga. Revenue and EPS forecast data provided by Finnhub. The data is sourced from Wall Street analysts. Data disclaimer.
