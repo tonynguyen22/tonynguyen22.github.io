@@ -11,7 +11,8 @@
       "Bash(node -e \":*)",
       "Bash(npm run lint)",
       "Bash(python3 -c \":*)",
-      "Bash(py -c \":*)"
+      "Bash(py -c \":*)",
+      "Bash(test -f \"c:\\\\Users\\\\Tony\\\\Documents\\\\GITHUB\\\\tonynguyen22.github.io\\\\stocks\\\\nvo.html\")"
     ]
   }
 }

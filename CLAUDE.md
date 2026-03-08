@@ -185,6 +185,8 @@ Every stock page must have a corresponding card in `index.html`. Each card requi
 5. Add the card to `index.html` with correct rating badge and link
 6. Append any new CSS classes to the **end** of `styles.css` only
 
+**DCF defaults:** Use terminal growth rate (TGR) of **2.5%** and equity risk premium (ERP) of **5.5%** for all DCF models unless the user specifies otherwise.
+
 ---
 
 ## DO NOT

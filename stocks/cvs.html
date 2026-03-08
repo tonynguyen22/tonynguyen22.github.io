@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVS Analysis - Tonivest Research</title>
+    <meta name="description" content="In-depth equity research on CVS Health Corporation (CVS) including DCF valuation, dividend analysis, Bull/Base/Bear scenarios, and sensitivity analysis." />
+    <meta name="author" content="Tonivest Research" />
+    <meta name="keywords" content="company analysis, stocks, investment, CVS, CVS Health, pharmacy, Aetna, Caremark, PBM, healthcare, dividend" />
+    <meta property="og:title" content="CVS Analysis - Tonivest Research" />
+    <meta property="og:description" content="In-depth equity research on CVS Health Corporation (CVS)." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="../assets/logo-nav.png" type="image/png">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <span class="logo-text">Tonivest Research</span>
+                <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle Sidebar">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="../index.html" class="nav-item active">
+                    <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    <span class="nav-label">Company Analysis</span>
+                </a>
+                <a href="../port.html" class="nav-item">
+                    <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 011-1h1m-1 1v1m0 0H4a1 1 0 00-1 1v1m2-2h14m-1 0V5a2 2 0 00-1-1h-1m1 1v1"/></svg>
+                    <span class="nav-label">My Portfolio</span>
+                </a>
+                <a href="../tools.html" class="nav-item">
+                    <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                    <span class="nav-label">Tools &amp; Projects</span>
+                </a>
+                <a href="../about.html" class="nav-item">
+                    <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                    <span class="nav-label">About Me</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="analysis-detail-container">
+
+                <header class="analysis-detail-header">
+                    <div class="header-content">
+                        <h1 class="detail-title">Equity Research: CVS Health Corporation (CVS)</h1>
+                        <p class="detail-meta">Initiated: Mar 2026 &nbsp;|&nbsp; Last Updated: Mar 7, 2026 &nbsp;|&nbsp; Author: Tony Nguyen</p>
+                    </div>
+                    <a href="../index.html" class="back-button">&#8592; Back</a>
+                </header>
+
+                <article class="detail-content">
+
+                    <!-- ═══════════════════════════════════════════
+                         01 — OVERVIEW CARD
+                    ═══════════════════════════════════════════ -->
+                    <div class="stock-overview-card">
+                        <div class="stock-ticker-row">
+                            <div>
+                                <div class="stock-ticker">CVS</div>
+                                <div class="stock-company-name">CVS Health Corporation &nbsp;·&nbsp; NYSE</div>
+                            </div>
+                            <span class="verdict-badge verdict-hold">HOLD</span>
+                        </div>
+                        <div class="info-tags">
+                            <span class="info-tag">Healthcare</span>
+                            <span class="info-tag">Pharmacy &amp; PBM</span>
+                            <span class="info-tag">Health Insurance (Aetna)</span>
+                            <span class="info-tag">Large Cap ~$99B</span>
+                        </div>
+                        <p class="stock-thesis">
+                            "CVS Health is the most vertically integrated healthcare company in the US — combining retail pharmacy, PBM (Caremark), and health insurance (Aetna). Near-term earnings are pressured by Medicare Advantage medical cost headwinds, but management's 2028 recovery roadmap, a well-covered 3.41% dividend yield, and durable FCF generation offer a measured total return case for patient investors."
+                        </p>
+                        <div class="quick-stats-grid">
+                            <div class="quick-stat">
+                                <div class="quick-stat-value">$77.92</div>
+                                <div class="quick-stat-label">Price (Mar 6, 2026)</div>
+                            </div>
+                            <div class="quick-stat">
+                                <div class="quick-stat-value">$88</div>
+                                <div class="quick-stat-label">3-Yr Price Target</div>
+                            </div>
+                            <div class="quick-stat">
+                                <div class="quick-stat-value qs-positive">+13.0%</div>
+                                <div class="quick-stat-label">Upside to Target</div>
+                            </div>
+                            <div class="quick-stat">
+                                <div class="quick-stat-value">$402.1B</div>
+                                <div class="quick-stat-label">FY2025 Revenue</div>
+                            </div>
+                            <div class="quick-stat">
+                                <div class="quick-stat-value">$9.27B</div>
+                                <div class="quick-stat-label">FY2025 EBITDA</div>
+                            </div>
+                            <div class="quick-stat">
+                                <div class="quick-stat-value">$7.81B</div>
+                                <div class="quick-stat-label">FY2025 FCF</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ═══════════════════════════════════════════
+                         02 — RECENT NEWS & EARNINGS
+                    ═══════════════════════════════════════════ -->
+                    <section class="detail-section">
+                        <span class="section-label">02 &mdash; Recent News &amp; Earnings Updates</span>
+                        <h3>Recent News</h3>
+
+                        <div class="update-timeline">
+                            <div class="update-card latest-update">
+                                <div class="update-card-header">
+                                    <div class="update-card-title">Q4 &amp; FY2025 Results &mdash; Initiation</div>
+                                    <div class="update-card-meta">
+                                        <span class="update-date-pill">Feb 2026</span>
+                                        <span class="rating-pill rating-hold">HOLD Initiated</span>
+                                    </div>
+                                </div>
+                                <p>CVS delivered a strong close to FY2025. Q4 adjusted EPS of $1.09 beat the $1.00 consensus estimate. Full year adjusted EPS of $6.75 and operating cash flow of $10.6B meaningfully outperformed initial expectations, beating the initial EPS guidance by approximately 15%. Aetna's adjusted operating income improved by over $2.6B year-over-year, the most important inflection of the year. FY2025 medical benefit ratio (MBR) finished at 91.2%, modestly above the low-90s target. Management reaffirmed FY2026 guidance: revenue ≥$400B, adjusted EPS $7.00–$7.20, and OCF ≥$9B. Pharmacy script share reached 29%+, supported by the Rite Aid store transfer. The 2027 Medicare Advantage preliminary rate notice (roughly -0.3% benchmark rate) is a known headwind; margin recovery at Aetna is now targeted for 2028. Initiating at HOLD — limited near-term upside relative to execution risk and a $71.5B net debt burden.</p>
+                                <div class="update-upside-row">
+                                    <span>Stock: $77.92 &nbsp;|&nbsp; 3-Yr PT: $88</span>
+                                    <span class="upside-value positive">+13.0% upside</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ═══════════════════════════════════════════
+                         03 — BUSINESS SUMMARY
+                    ═══════════════════════════════════════════ -->
+                    <section class="detail-section">
+                        <span class="section-label">03 &mdash; Business Summary</span>
+                        <h3>Business Summary</h3>
+                        <p>CVS Health Corporation (NYSE: CVS) is the largest integrated healthcare company in the United States by revenue, operating across three distinct but strategically linked segments. The company's thesis rests on closing the loop between insuring patients (Aetna), managing their drug benefits (Caremark), and serving them at the point of care (retail pharmacy and Oak Street Health primary care clinics). As of FY2025, CVS generated $402.1B in revenue and employed over 300,000 colleagues across the country.</p>
+
+                        <h4>Pharmacy &amp; Consumer Wellness (Retail Pharmacy)</h4>
+                        <p>Approximately 9,000 retail pharmacy locations across the US, representing over 29% of total US prescription market share as of Q4 2025 — the largest in the country. The segment includes MinuteClinic (1,100+ clinic locations), front-store retail, and specialty pharmacy. FY2025 segment revenue approximated $132B, growing over 12% in Q4 driven by same-store pharmacy volume growth of ~10% and an influx of Rite Aid transfer scripts. Adjusted operating income exceeded $6B for the full year — the strongest segment contributor on an absolute dollar basis. Management established a new baseline of at least flat annual earnings for this segment starting in 2026.</p>
+
+                        <h4>Pharmacy Services (Caremark PBM)</h4>
+                        <p>Caremark is the largest pharmacy benefit manager (PBM) in the US by prescription volume, serving over 110 million plan members. It manages drug formularies, negotiates rebates with pharmaceutical manufacturers, and processes claims for employer health plans, insurers, and government programs. FY2025 segment revenue approximated $173B, growing 9% year-over-year in Q4. Caremark's TrueCost transparent pricing model is strategically positioned ahead of PBM transparency legislation. This segment generates durable margins and is the most capital-efficient business within CVS.</p>
+
+                        <h4>Health Care Benefits (Aetna)</h4>
+                        <p>Aetna is the third-largest US health insurer by enrollment, covering approximately 26.6 million medical members across commercial, Medicaid, and Medicare Advantage (MA) products. Medicare Advantage is the segment's primary earnings pressure point. The FY2025 MBR of 91.2% reflects elevated medical costs across all products, though the trend improved meaningfully from the first half of the year. Adjusted operating income improved by over $2.6B year-over-year — the most significant turnaround metric of FY2025. Oak Street Health (acquired 2023 for $10.6B) provides primary care clinics focused on Medicare patients, serving over 3.5 million consumers annually through Signify in-home health evaluations.</p>
+                    </section>
+
+                    <!-- ═══════════════════════════════════════════
+                         04 — INDUSTRY CONTEXT
+                    ═══════════════════════════════════════════ -->
+                    <section class="detail-section">
+                        <span class="section-label">04 &mdash; Industry Context</span>
+                        <h3>Industry Context</h3>
+                        <p>The US healthcare industry exceeds $4.5 trillion annually and grows at a structural rate of 5–6% per year, driven by aging demographics, rising chronic disease prevalence, and the ongoing expansion of Medicare and Medicaid programs. CVS operates across all major layers of the healthcare value chain — retail pharmacy, pharmacy benefit management, and health insurance — a breadth of positioning matched in the US only by UnitedHealth Group.</p>
+                        <p>Medicare Advantage (MA) is the industry's most consequential battleground. Enrollment grew from approximately 22 million beneficiaries in 2018 to over 34 million in 2025, now representing roughly 54% of all Medicare eligibles. This rapid growth attracted aggressive pricing competition, and the 2024–2025 period saw medical cost inflation materially exceed actuarial assumptions industry-wide, compressing margins at every major insurer. CVS (Aetna), Humana, UnitedHealth, and Elevance all reported elevated MBRs. The 2027 MA preliminary rate notice released in 2026 implies a benchmark rate reduction of approximately 0.3%, adding a further revenue headwind for the forward period.</p>
+                        <p>Pharmacy benefit managers face increasing political and regulatory scrutiny. Congress and the FTC have focused on PBM spread pricing practices, rebate pass-through transparency, and formulary design. While Caremark's TrueCost model partially pre-empts regulatory risk, legislative change remains a structural overhang. Branded drug list price increases — averaging 4% above inflation per year since 2012, per CVS management — continue to place pressure on the healthcare system even as CVS's PBM negotiates savings on behalf of clients.</p>
+                    </section>
+
+                    <!-- ═══════════════════════════════════════════
+                         05 — COMPETITIVE ADVANTAGES / MOAT
+                    ═══════════════════════════════════════════ -->
+                    <section class="detail-section">
+                        <span class="section-label">05 &mdash; Competitive Advantages &amp; Moat</span>
+                        <h3>Competitive Advantages &amp; Moat</h3>
+
+                        <h4>1. Unmatched Vertical Integration</h4>
+                        <p>CVS is the only US company that simultaneously owns a top-3 PBM (Caremark), a top-3 health insurer (Aetna), and a national retail pharmacy network of ~9,000 locations. This creates a closed-loop healthcare ecosystem: insure the member (Aetna), manage their drug benefit (Caremark), fill their prescription (CVS Pharmacy), and provide primary care (Oak Street). Aetna members with a combined medical and pharmacy benefit through CVS show measurably lower medical costs and higher medication adherence — a real-world proof of integration value.</p>
+
+                        <h4>2. Pharmacy Scale &amp; Market Share</h4>
+                        <p>CVS holds 29%+ of total US prescription volume — the largest share of any single pharmacy operator. This scale provides direct purchasing leverage with drug manufacturers and generates the fixed-cost absorption advantage that smaller competitors cannot replicate. The ~9,000 retail locations represent decades of real estate and brand investment; no competitor can replicate this footprint within a plausible investment horizon.</p>
+
+                        <h4>3. Caremark PBM Network Effects</h4>
+                        <p>As the largest PBM, Caremark benefits from scale-driven rebate negotiation power with pharmaceutical manufacturers. In FY2025, Caremark's HUMIRA biosimilar strategy achieved 96% adoption of a low list price product with over 80% of members paying $0 out of pocket, generating more than $1.5B in client savings. Switching costs for employer health plan sponsors are high due to formulary complexity, data integration, and contract duration. Caremark serves over 110 million plan members, creating a deeply embedded client base.</p>
+
+                        <h4>4. Oak Street Health &mdash; Primary Care Flywheel</h4>
+                        <p>Acquired in 2023, Oak Street operates value-based primary care clinics focused on Medicare patients. Over 3.5 million consumers are served annually, including nearly 100,000 urgent escalations facilitated through Signify in-home health evaluations. Oak Street is critical to Aetna's long-term MA cost management — better-managed primary care reduces downstream hospital utilization. This vertical closes the loop that UnitedHealth has proven through Optum.</p>
+
+                        <h4>5. Free Cash Flow Durability</h4>
+                        <p>Despite GAAP earnings volatility caused by non-cash goodwill impairment charges, CVS generated $7.81B in FCF and $10.64B in operating cash flow in FY2025. Over the past five years, cumulative FCF has exceeded $53B. This recurring cash generation funds the $2.66 annual dividend, debt service of approximately $4B per year, and capital expenditure of ~$2.8B — with meaningful residual available for deleveraging.</p>
+                    </section>
+
+                    <!-- ═══════════════════════════════════════════
+                         06 — REVENUE GROWTH & PROFITABILITY
+                    ═══════════════════════════════════════════ -->
+                    <section class="detail-section">
+                        <span class="section-label">06 &mdash; Revenue Growth &amp; Profitability</span>
+                        <h3>Revenue Growth &amp; Profitability</h3>
+
+                        <div class="metric-pair-grid">
+                            <div class="metric-pair">
+                                <div class="mp-label">FY2025 Revenue</div>
+                                <div class="mp-value">$402.1B</div>
+                                <div class="mp-context">+7.85% YoY; 5-yr CAGR ~8.4%</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">Gross Profit (FY2025)</div>
+                                <div class="mp-value">$55.4B</div>
+                                <div class="mp-context">13.77% gross margin; declining from 17.84% in FY2021</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">EBITDA (FY2025)</div>
+                                <div class="mp-value">$9.27B</div>
+                                <div class="mp-context">2.31% EBITDA margin; compressed by elevated Aetna MBR</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">GAAP Operating Margin</div>
+                                <div class="mp-value">1.16%</div>
+                                <div class="mp-context">FY2025; depressed by ~$6B goodwill impairment charges</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">FY2025 Free Cash Flow</div>
+                                <div class="mp-value">$7.81B</div>
+                                <div class="mp-context">OCF $10.64B minus CapEx $2.83B</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">FY2025 Net Income (GAAP)</div>
+                                <div class="mp-value">$1.77B</div>
+                                <div class="mp-context">Impacted by non-cash goodwill impairments; adjusted OI ~$14B</div>
+                            </div>
+                        </div>
+
+                        <h4 style="margin-top:1.5rem;">Historical Revenue &amp; Profitability</h4>
+                        <table class="forecast-table" style="margin-top:0.5rem;">
+                            <thead>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>FY2021</th>
+                                    <th>FY2022</th>
+                                    <th>FY2023</th>
+                                    <th>FY2024</th>
+                                    <th>FY2025</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Revenue ($B)</td>
+                                    <td>$292.1</td>
+                                    <td>$322.5</td>
+                                    <td>$357.8</td>
+                                    <td>$372.8</td>
+                                    <td>$402.1</td>
+                                </tr>
+                                <tr>
+                                    <td>Revenue Growth</td>
+                                    <td>8.71%</td>
+                                    <td>10.39%</td>
+                                    <td>10.95%</td>
+                                    <td>4.20%</td>
+                                    <td>7.85%</td>
+                                </tr>
+                                <tr>
+                                    <td>Gross Profit ($B)</td>
+                                    <td>$52.1</td>
+                                    <td>$54.5</td>
+                                    <td>$54.4</td>
+                                    <td>$51.4</td>
+                                    <td>$55.4</td>
+                                </tr>
+                                <tr>
+                                    <td>Gross Margin</td>
+                                    <td>17.84%</td>
+                                    <td>16.90%</td>
+                                    <td>15.21%</td>
+                                    <td>13.79%</td>
+                                    <td>13.77%</td>
+                                </tr>
+                                <tr>
+                                    <td>EBITDA ($B)</td>
+                                    <td>$17.80</td>
+                                    <td>$12.18</td>
+                                    <td>$18.11</td>
+                                    <td>$13.11</td>
+                                    <td>$9.27</td>
+                                </tr>
+                                <tr>
+                                    <td>EBITDA Margin</td>
+                                    <td>6.10%</td>
+                                    <td>3.78%</td>
+                                    <td>5.06%</td>
+                                    <td>3.52%</td>
+                                    <td>2.31%</td>
+                                </tr>
+                                <tr>
+                                    <td>FCF ($B)</td>
+                                    <td>$15.75</td>
+                                    <td>$13.45</td>
+                                    <td>$10.40</td>
+                                    <td>$6.33</td>
+                                    <td>$7.81</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="font-size:0.8rem;color:#A9B4C2;margin-top:0.75rem;">Note: FY2022 and FY2024 EBITDA compressed by elevated Aetna medical cost inflation. FY2023 EBITDA elevated by favorable prior-period claims development. FCF decline FY2021–FY2024 reflects integration of Oak Street Health ($10.6B, 2023) and Signify Health acquisitions.</p>
+                    </section>
+
+                    <!-- ═══════════════════════════════════════════
+                         07 — EARNINGS PER SHARE
+                    ═══════════════════════════════════════════ -->
+                    <section class="detail-section">
+                        <span class="section-label">07 &mdash; Earnings Per Share</span>
+                        <h3>Earnings Per Share</h3>
+
+                        <div class="metric-pair-grid">
+                            <div class="metric-pair">
+                                <div class="mp-label">FY2023 GAAP EPS</div>
+                                <div class="mp-value">$6.47</div>
+                                <div class="mp-context">Favorable claims settlement; peak GAAP year</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">FY2024 GAAP EPS</div>
+                                <div class="mp-value">$3.66</div>
+                                <div class="mp-context">MBR elevation + goodwill impairment; sharp GAAP decline</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">FY2025 GAAP EPS</div>
+                                <div class="mp-value">$1.39</div>
+                                <div class="mp-context">~$6B non-cash goodwill impairment distorts GAAP</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">FY2025 Adjusted EPS</div>
+                                <div class="mp-value">$6.75</div>
+                                <div class="mp-context">Strips non-cash impairments; beat initial FY2025 guidance by ~15%</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">FY2026E Adj EPS (guidance)</div>
+                                <div class="mp-value">$7.00–$7.20</div>
+                                <div class="mp-context">Management guidance; midpoint ~$7.10; +5% YoY</div>
+                            </div>
+                        </div>
+
+                        <h4 style="margin-top:1.5rem;">EPS Trend &mdash; GAAP vs. Adjusted ($ per share)</h4>
+                        <table class="forecast-table" style="margin-top:0.5rem;">
+                            <thead>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>FY2021</th>
+                                    <th>FY2022</th>
+                                    <th>FY2023</th>
+                                    <th>FY2024</th>
+                                    <th>FY2025</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>GAAP EPS</td>
+                                    <td>$6.02</td>
+                                    <td>$3.26</td>
+                                    <td>$6.47</td>
+                                    <td>$3.66</td>
+                                    <td>$1.39</td>
+                                </tr>
+                                <tr>
+                                    <td>Adj EPS</td>
+                                    <td>&mdash;</td>
+                                    <td>&mdash;</td>
+                                    <td>~$8.69</td>
+                                    <td>~$7.68</td>
+                                    <td>$6.75</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="font-size:0.8rem;color:#A9B4C2;margin-top:0.75rem;">GAAP EPS volatility is driven primarily by non-cash goodwill impairment charges related to the Aetna and Oak Street Health acquisitions. Adjusted EPS strips these items and reflects the underlying business earnings power. Use adjusted EPS for trend analysis and dividend coverage assessment.</p>
+                    </section>
+
+                    <!-- ═══════════════════════════════════════════
+                         07b — DIVIDEND ANALYSIS
+                    ═══════════════════════════════════════════ -->
+                    <section class="detail-section">
+                        <span class="section-label">07b &mdash; Dividend Analysis</span>
+                        <h3>Dividend Analysis</h3>
+
+                        <div class="metric-pair-grid">
+                            <div class="metric-pair">
+                                <div class="mp-label">Annual Dividend</div>
+                                <div class="mp-value">$2.66/share</div>
+                                <div class="mp-context">$0.665/quarter; maintained at this level since Q1 2024</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">Forward Yield</div>
+                                <div class="mp-value">3.41%</div>
+                                <div class="mp-context">At price $77.92 (Mar 6, 2026); last ex-div Jan 22, 2026</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">GAAP Payout Ratio</div>
+                                <div class="mp-value">191%</div>
+                                <div class="mp-context">Misleading; based on GAAP EPS $1.39 (distorted by ~$6B goodwill impairment)</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">Adjusted Payout Ratio</div>
+                                <div class="mp-value">39.4%</div>
+                                <div class="mp-context">$2.66 / $6.75 adj EPS; well within sustainable range</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">FCF Coverage</div>
+                                <div class="mp-value">2.3&times;</div>
+                                <div class="mp-context">$7.81B FCF vs. $3.40B dividends paid in FY2025</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">Shareholder Yield</div>
+                                <div class="mp-value">2.70%</div>
+                                <div class="mp-context">Dividend yield net of modest share dilution; no material buybacks currently</div>
+                            </div>
+                        </div>
+
+                        <h4 style="margin-top:1.5rem;">Dividend History (Quarterly, per share)</h4>
+                        <table class="forecast-table" style="margin-top:0.5rem;">
+                            <thead>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>2021</th>
+                                    <th>2022</th>
+                                    <th>2023</th>
+                                    <th>2024</th>
+                                    <th>2025</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Quarterly Dividend</td>
+                                    <td>$0.500</td>
+                                    <td>$0.550</td>
+                                    <td>$0.605</td>
+                                    <td>$0.665</td>
+                                    <td>$0.665</td>
+                                </tr>
+                                <tr>
+                                    <td>Annual Dividend</td>
+                                    <td>$2.00</td>
+                                    <td>$2.20</td>
+                                    <td>$2.42</td>
+                                    <td>$2.66</td>
+                                    <td>$2.66</td>
+                                </tr>
+                                <tr>
+                                    <td>YoY Growth</td>
+                                    <td>&mdash;</td>
+                                    <td>+10.0%</td>
+                                    <td>+10.0%</td>
+                                    <td>+9.9%</td>
+                                    <td>0% (frozen)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p style="margin-top:1.25rem;">CVS grew its dividend at approximately 10% per year from 2021 through 2024 before freezing payments at $0.665/quarter in FY2025. The freeze reflects a deliberate prioritization of balance sheet repair and debt reduction following the $10.6B Oak Street Health acquisition in 2023, which significantly elevated net debt. Despite the pause in growth, the dividend is well-covered on both an earnings and cash flow basis: the adjusted payout ratio stands at 39.4% ($2.66 / $6.75 adj EPS), and FCF of $7.81B covers the $3.40B in dividends paid by 2.3 times. Management has explicitly committed to maintaining the dividend at its current level. A dividend cut is unlikely barring a catastrophic deterioration in Medicare Advantage medical costs or a severe regulatory shock to Caremark. The dividend CAGR from 2021 to 2025 is approximately 7.4%, and resumption of dividend growth is probable post-2027 as net debt is reduced and Aetna margins recover toward target.</p>
+                    </section>
+
+                    <!-- ═══════════════════════════════════════════
+                         08 — BALANCE SHEET
+                    ═══════════════════════════════════════════ -->
+                    <section class="detail-section">
+                        <span class="section-label">08 &mdash; Balance Sheet</span>
+                        <h3>Balance Sheet</h3>
+
+                        <div class="metric-pair-grid">
+                            <div class="metric-pair">
+                                <div class="mp-label">Cash &amp; Equivalents</div>
+                                <div class="mp-value">$8.45B</div>
+                                <div class="mp-context">FY2025 year-end; $2.8B held at parent level</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">Total Debt</div>
+                                <div class="mp-value">$79.95B</div>
+                                <div class="mp-context">Long-term debt legacy of Aetna (2018, $69B) and Oak Street (2023, $10.6B) acquisitions</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">Net Debt</div>
+                                <div class="mp-value">~$71.5B</div>
+                                <div class="mp-context">$79.95B total debt minus $8.45B cash; primary risk factor</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">Shareholders' Equity</div>
+                                <div class="mp-value">$75.38B</div>
+                                <div class="mp-context">Book value impacted by accumulated goodwill impairment charges</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">Total Assets</div>
+                                <div class="mp-value">$253.54B</div>
+                                <div class="mp-context">Includes significant goodwill and intangible assets from acquisitions</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">Debt / Equity</div>
+                                <div class="mp-value">1.06&times;</div>
+                                <div class="mp-context">Leverage ~4× EBITDA (year-end 2025); target ~3× by 2028</div>
+                            </div>
+                        </div>
+
+                        <p style="margin-top:1.25rem;">CVS carries one of the largest debt loads in US healthcare, a direct legacy of the $69B Aetna acquisition (2018) and the $10.6B Oak Street Health acquisition (2023). Net debt of approximately $71.5B represents roughly 7.7× FY2025 FCF — elevated, but manageable given the business's scale and recurring cash generation. Management reduced the leverage ratio from approximately 4.8× in 2024 to ~4× by year-end 2025, and targets further reduction to ~3× by 2028 through FCF deployment. Annual interest expense approximates $4B, a meaningful drag on net income that suppresses GAAP EPS. The primary balance sheet risk is a scenario where Aetna medical costs remain persistently elevated, compressing FCF and slowing deleveraging. No material near-term debt maturity cliff has been disclosed.</p>
+                    </section>
+
+                    <!-- ═══════════════════════════════════════════
+                         09 — 3-YEAR FORECAST
+                    ═══════════════════════════════════════════ -->
+                    <section class="detail-section">
+                        <span class="section-label">09 &mdash; 3-Year Forecast</span>
+                        <h3>3-Year Forecast &amp; Scenario Analysis</h3>
+                        <p>Three scenarios based on Aetna MBR recovery trajectory and pharmacy/PBM stability. All price targets shown below represent 3-year (FY2028) intrinsic value estimates. Pricing as of Mar 6, 2026 ($77.92).</p>
+
+                        <div class="scenario-comparison-grid">
+
+                            <div class="scenario-col bear">
+                                <div class="scenario-col-label">Bear Case</div>
+                                <div class="scenario-col-pt">$62</div>
+                                <div class="scenario-col-upside">&#8722;20% downside</div>
+                                <div class="scenario-col-rows">
+                                    <div class="scenario-col-row">
+                                        <span class="scenario-col-row-label">Adj EPS 2026E</span>
+                                        <span class="scenario-col-row-val">$6.25</span>
+                                    </div>
+                                    <div class="scenario-col-row">
+                                        <span class="scenario-col-row-label">Revenue Growth</span>
+                                        <span class="scenario-col-row-val">~3% avg</span>
+                                    </div>
+                                    <div class="scenario-col-row">
+                                        <span class="scenario-col-row-label">FCF (FY2028E)</span>
+                                        <span class="scenario-col-row-val">~$6.0B</span>
+                                    </div>
+                                    <div class="scenario-col-row">
+                                        <span class="scenario-col-row-label">MBR (FY2028)</span>
+                                        <span class="scenario-col-row-val">91%+</span>
+                                    </div>
+                                    <div class="scenario-col-row">
+                                        <span class="scenario-col-row-label">Trigger</span>
+                                        <span class="scenario-col-row-val">MBR stays elevated; MA headwinds compound; FCF deteriorates; debt stays ~4×</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="scenario-col base">
+                                <div class="scenario-col-label">Base Case</div>
+                                <div class="scenario-col-pt">$88</div>
+                                <div class="scenario-col-upside">+13% upside</div>
+                                <div class="scenario-col-rows">
+                                    <div class="scenario-col-row">
+                                        <span class="scenario-col-row-label">Adj EPS 2026E</span>
+                                        <span class="scenario-col-row-val">$7.10</span>
+                                    </div>
+                                    <div class="scenario-col-row">
+                                        <span class="scenario-col-row-label">Revenue Growth</span>
+                                        <span class="scenario-col-row-val">~6% avg</span>
+                                    </div>
+                                    <div class="scenario-col-row">
+                                        <span class="scenario-col-row-label">FCF (FY2028E)</span>
+                                        <span class="scenario-col-row-val">$10.0B</span>
+                                    </div>
+                                    <div class="scenario-col-row">
+                                        <span class="scenario-col-row-label">MBR (FY2028)</span>
+                                        <span class="scenario-col-row-val">~88%</span>
+                                    </div>
+                                    <div class="scenario-col-row">
+                                        <span class="scenario-col-row-label">Trigger</span>
+                                        <span class="scenario-col-row-val">Aetna recovery on track; pharmacy stable; leverage falls to ~3×</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="scenario-col bull">
+                                <div class="scenario-col-label">Bull Case</div>
+                                <div class="scenario-col-pt">$97</div>
+                                <div class="scenario-col-upside">+25% upside</div>
+                                <div class="scenario-col-rows">
+                                    <div class="scenario-col-row">
+                                        <span class="scenario-col-row-label">Adj EPS 2026E</span>
+                                        <span class="scenario-col-row-val">$7.50</span>
+                                    </div>
+                                    <div class="scenario-col-row">
+                                        <span class="scenario-col-row-label">Revenue Growth</span>
+                                        <span class="scenario-col-row-val">~8% avg</span>
+                                    </div>
+                                    <div class="scenario-col-row">
+                                        <span class="scenario-col-row-label">FCF (FY2028E)</span>
+                                        <span class="scenario-col-row-val">~$11.5B</span>
+                                    </div>
+                                    <div class="scenario-col-row">
+                                        <span class="scenario-col-row-label">MBR (FY2028)</span>
+                                        <span class="scenario-col-row-val">~87%</span>
+                                    </div>
+                                    <div class="scenario-col-row">
+                                        <span class="scenario-col-row-label">Trigger</span>
+                                        <span class="scenario-col-row-val">MA recovery beats plan; Oak Street scales; FCF surprise; rating rerates</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div style="background:#eef2f7;border-radius:8px;padding:1rem 1.25rem;margin-top:1.25rem;font-size:0.875rem;color:#1E3A5F;">
+                            Risk / Reward: Base vs. Bear = 1.6&times; &nbsp;|&nbsp; Bull vs. Bear = 2.25&times; &nbsp;|&nbsp; Max downside (Bear): &minus;20% &nbsp;|&nbsp; Max upside (Bull): +25%
+                        </div>
+
+                        <h4 style="margin-top:1.75rem;">Base Case &mdash; Annual Projections</h4>
+                        <table class="forecast-table" style="margin-top:0.5rem;">
+                            <thead>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>FY2025A</th>
+                                    <th>FY2026E</th>
+                                    <th>FY2027E</th>
+                                    <th>FY2028E</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="ft-section">
+                                    <td colspan="5">Income Statement</td>
+                                </tr>
+                                <tr>
+                                    <td>Revenue ($B)</td>
+                                    <td>$402.1</td>
+                                    <td>$420.0</td>
+                                    <td>$445.0</td>
+                                    <td>$472.0</td>
+                                </tr>
+                                <tr>
+                                    <td>Revenue Growth</td>
+                                    <td>7.9%</td>
+                                    <td>4.5%</td>
+                                    <td>6.0%</td>
+                                    <td>6.1%</td>
+                                </tr>
+                                <tr>
+                                    <td>Gross Margin</td>
+                                    <td>13.77%</td>
+                                    <td>14.0%</td>
+                                    <td>14.5%</td>
+                                    <td>15.0%</td>
+                                </tr>
+                                <tr>
+                                    <td>EBITDA ($B)</td>
+                                    <td>$9.27</td>
+                                    <td>$11.0</td>
+                                    <td>$13.0</td>
+                                    <td>$14.5</td>
+                                </tr>
+                                <tr>
+                                    <td>Adj EPS</td>
+                                    <td>$6.75</td>
+                                    <td>$7.10</td>
+                                    <td>$8.40</td>
+                                    <td>$9.50</td>
+                                </tr>
+                                <tr class="ft-section">
+                                    <td colspan="5">Cash Flow</td>
+                                </tr>
+                                <tr>
+                                    <td>FCF ($B)</td>
+                                    <td>$7.81</td>
+                                    <td>$7.00</td>
+                                    <td>$8.50</td>
+                                    <td>$10.00</td>
+                                </tr>
+                                <tr>
+                                    <td>FCF / Share</td>
+                                    <td>$6.15</td>
+                                    <td>$5.51</td>
+                                    <td>$6.69</td>
+                                    <td>$7.87</td>
+                                </tr>
+                                <tr class="ft-section">
+                                    <td colspan="5">Per Share &amp; Dividend</td>
+                                </tr>
+                                <tr>
+                                    <td>Annual Dividend</td>
+                                    <td>$2.66</td>
+                                    <td>$2.66</td>
+                                    <td>$2.66</td>
+                                    <td>$2.66</td>
+                                </tr>
+                                <tr>
+                                    <td>Adj Payout Ratio</td>
+                                    <td>39.4%</td>
+                                    <td>37.5%</td>
+                                    <td>31.7%</td>
+                                    <td>28.0%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- ═══════════════════════════════════════════
+                         10 — VALUATION
+                    ═══════════════════════════════════════════ -->
+                    <section class="detail-section">
+                        <span class="section-label">10 &mdash; Valuation</span>
+                        <h3>Valuation</h3>
+                        <p>Valuation methodology: discounted cash flow (DCF) on free cash flow to firm (FCFF) with a 3-year explicit projection period (FY2026E–FY2028E), terminal value via the Gordon Growth Model, and a net debt bridge to equity value. Current price as of Mar 6, 2026.</p>
+
+                        <div class="metric-pair-grid">
+                            <div class="metric-pair">
+                                <div class="mp-label">Current Price</div>
+                                <div class="mp-value">$77.92</div>
+                                <div class="mp-context">As of Mar 6, 2026 (NYSE: CVS)</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">Risk-Free Rate</div>
+                                <div class="mp-value">4.3%</div>
+                                <div class="mp-context">10-year US Treasury yield (Mar 2026)</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">Equity Risk Premium</div>
+                                <div class="mp-value">5.5%</div>
+                                <div class="mp-context">Applied ERP for US large-cap healthcare</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">Beta</div>
+                                <div class="mp-value">0.60</div>
+                                <div class="mp-context">Defensive healthcare; lower market sensitivity</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">WACC</div>
+                                <div class="mp-value">7.5%</div>
+                                <div class="mp-context">Cost of equity 7.6%; blended with after-tax cost of debt; rounded</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">Terminal Growth Rate</div>
+                                <div class="mp-value">2.5%</div>
+                                <div class="mp-context">Long-run nominal GDP growth; reflects mature, scaled business</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">FCF Projections</div>
+                                <div class="mp-value">$7.0B / $8.5B / $10.0B</div>
+                                <div class="mp-context">FY2026E / FY2027E / FY2028E; then 2.5% terminal growth</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">Net Debt (deducted)</div>
+                                <div class="mp-value">$71.5B</div>
+                                <div class="mp-context">Bridge from enterprise value to equity value</div>
+                            </div>
+                            <div class="metric-pair">
+                                <div class="mp-label">DCF Implied Value</div>
+                                <div class="mp-value">~$91/share</div>
+                                <div class="mp-context">Base WACC 7.5% / TGR 2.5%; ~1.27B diluted shares</div>
+                            </div>
+                        </div>
+
+                        <p style="margin-top:1.25rem;">The DCF at base WACC (7.5%) and TGR (2.5%) implies approximately $91 per share. The $88 price target applies a conservative haircut to reflect execution risk on the Aetna margin recovery timeline and the uncertainty around the 2027 Medicare Advantage rate environment. CVS currently trades at 10.87&times; forward earnings and 11.52&times; EV/EBITDA — both below healthcare sector averages — reflecting the market's skepticism on near-term earnings quality. At the current price of $77.92, the stock is priced at roughly the 8.0% WACC scenario in a base TGR environment, implying the market is already pricing in some execution risk. The 3.41% dividend yield provides a meaningful income return floor. Total 3-year return potential in the base case: approximately 16–17% (13% price appreciation + 3.4% annual dividend yield).</p>
+                    </section>
+
+                    <!-- ═══════════════════════════════════════════
+                         11 — SENSITIVITY ANALYSIS
+                    ═══════════════════════════════════════════ -->
+                    <section class="detail-section">
+                        <span class="section-label">11 &mdash; Sensitivity Analysis</span>
+                        <h3>DCF Sensitivity Analysis</h3>
+                        <p>WACC &times; Terminal Growth Rate matrix. Values represent implied equity value per share in USD. Highlighted cell = base case (WACC 7.5% / TGR 2.5%). FCF inputs held constant at base case projections ($7.0B / $8.5B / $10.0B for FY2026–FY2028).</p>
+
+                        <div class="sensitivity-wrap">
+                            <table class="sensitivity-table">
+                                <thead>
+                                    <tr>
+                                        <th class="st-corner">WACC \ TGR</th>
+                                        <th>1.5%</th>
+                                        <th>2.0%</th>
+                                        <th>2.5%</th>
+                                        <th>3.0%</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="st-row-head">7.5%</td>
+                                        <td>$69</td>
+                                        <td>$79</td>
+                                        <td class="st-highlight">$91 &#9654;</td>
+                                        <td>$105</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="st-row-head">8.0%</td>
+                                        <td>$59</td>
+                                        <td>$68</td>
+                                        <td>$77</td>
+                                        <td>$89</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="st-row-head">8.5%</td>
+                                        <td>$51</td>
+                                        <td>$58</td>
+                                        <td>$66</td>
+                                        <td>$76</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="st-row-head">9.0%</td>
+                                        <td>$44</td>
+                                        <td>$49</td>
+                                        <td>$56</td>
+                                        <td>$64</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p style="font-size:0.8rem;color:#A9B4C2;margin-top:0.75rem;">Highlighted cell (WACC 7.5% / TGR 2.5%) = base case; DCF implies ~$91/share. The $88 price target reflects a conservative discount from the midpoint. At WACC 8.0% / TGR 2.5% ($77), the stock is approximately fairly valued at current price — consistent with a neutral HOLD rating. Downside scenarios (WACC 9.0%, TGR 1.5–2.0%) imply $44–$49 per share and require sustained MA cost deterioration or a regulatory shock to materialize.</p>
+                    </section>
+
+                    <!-- ═══════════════════════════════════════════
+                         12 — KEY RISKS
+                    ═══════════════════════════════════════════ -->
+                    <section class="detail-section">
+                        <span class="section-label">12 &mdash; Key Risks</span>
+                        <h3>Key Risks</h3>
+
+                        <h4>1. Medicare Advantage Medical Cost Inflation</h4>
+                        <p>The single largest earnings risk. Aetna's FY2025 MBR of 91.2% remains above the target range (~87–88%). The 2027 MA preliminary rate notice implies roughly a -0.3% benchmark rate adjustment, compressing revenue per member at a time when medical cost trends remain elevated. If MBR does not normalize toward 87–88% by 2028, FCF projections, the debt reduction timeline, and the base case price target are all at risk. Any resurgence of flu, respiratory illness, or behavioral health utilization in the back half of any year could re-elevate MBR unexpectedly.</p>
+
+                        <h4>2. Debt Leverage &mdash; $71.5B Net Debt</h4>
+                        <p>Approximately 4&times; EBITDA leverage leaves limited margin for operational error. Annual interest expense of ~$4B is a structural earnings drag that suppresses GAAP results and limits capital return flexibility. If FCF deteriorates from our base case due to sustained Aetna headwinds, debt reduction will slow, increasing refinancing risk over the medium term. This is the primary reason CVS does not earn a BUY rating despite a positive risk/reward setup.</p>
+
+                        <h4>3. PBM Regulatory &amp; Legislative Risk</h4>
+                        <p>Congress and the Federal Trade Commission are actively scrutinizing pharmacy benefit manager practices, including spread pricing, rebate design, and formulary construction. Adverse legislation that restricts Caremark's current practices could structurally impair the most capital-efficient segment in CVS's portfolio. While the TrueCost transparent model provides some regulatory buffer, the political environment remains unfavorable toward large PBMs.</p>
+
+                        <h4>4. Medicare Advantage Rate &amp; Enrollment Competition</h4>
+                        <p>The 2027 MA benchmark rate reduction (-0.3% preliminary) will compress per-member reimbursement. Simultaneously, CVS (Aetna) is competing against UnitedHealth (UHG), Humana, and Elevance for MA enrollment. CVS ended FY2025 with approximately 26.6 million medical members — a slight year-over-year decline. Failure to stabilize MA enrollment while improving MBR is a compound risk that threatens the Aetna recovery thesis.</p>
+
+                        <h4>5. Goodwill Impairment Risk</h4>
+                        <p>CVS has taken over $6B in cumulative non-cash goodwill impairment charges across the Aetna and Oak Street Health acquisitions. If the Oak Street primary care model fails to achieve profitability on management's timeline, or if Aetna's fair value continues to be impaired, additional non-cash charges could further suppress GAAP earnings and damage investor sentiment. While these charges do not affect FCF, they create GAAP EPS volatility that complicates conventional earnings-based valuation.</p>
+
+                        <h4>6. Pharmacy Reimbursement Compression</h4>
+                        <p>Retail pharmacy reimbursement rates from PBMs and government programs (Medicare Part D, Medicaid) continue to compress on a structural basis across the industry. This pressure is chronic and ongoing. CVS largely offset it in FY2025 through volume gains (Rite Aid store transfers) and favorable drug mix, but these are one-time tailwinds. The segment's long-term earnings are guided as "at least flat" annually — not a growth driver.</p>
+                    </section>
+
+                    <!-- ═══════════════════════════════════════════
+                         13 — FINAL VERDICT
+                    ═══════════════════════════════════════════ -->
+                    <section class="detail-section">
+                        <span class="section-label">13 &mdash; Final Verdict</span>
+                        <h3>Final Verdict</h3>
+
+                        <div class="final-verdict-box">
+                            <div class="fvb-inner">
+                                <div>
+                                    <div class="fvb-rating-label">Current Rating</div>
+                                    <div class="fvb-rating">HOLD</div>
+                                </div>
+                                <div class="fvb-stats-row">
+                                    <div>
+                                        <div class="fvb-stat-label">Current Price</div>
+                                        <div class="fvb-stat-value">$77.92</div>
+                                    </div>
+                                    <div>
+                                        <div class="fvb-stat-label">3-Yr Price Target</div>
+                                        <div class="fvb-stat-value">$88</div>
+                                    </div>
+                                    <div>
+                                        <div class="fvb-stat-label">Upside to Target</div>
+                                        <div class="fvb-stat-value fvb-positive">+13.0%</div>
+                                    </div>
+                                    <div>
+                                        <div class="fvb-stat-label">Dividend Yield</div>
+                                        <div class="fvb-stat-value fvb-positive">3.41%</div>
+                                    </div>
+                                    <div>
+                                        <div class="fvb-stat-label">Total Return (3yr)</div>
+                                        <div class="fvb-stat-value fvb-positive">~16–17%</div>
+                                    </div>
+                                    <div>
+                                        <div class="fvb-stat-label">Bull Case PT</div>
+                                        <div class="fvb-stat-value fvb-positive">$97 (+25%)</div>
+                                    </div>
+                                    <div>
+                                        <div class="fvb-stat-label">Bear Case PT</div>
+                                        <div class="fvb-stat-value fvb-negative">$62 (-20%)</div>
+                                    </div>
+                                    <div>
+                                        <div class="fvb-stat-label">Net Debt</div>
+                                        <div class="fvb-stat-value fvb-negative">$71.5B (~4&times; EBITDA)</div>
+                                    </div>
+                                    <div>
+                                        <div class="fvb-stat-label">Adj Payout Ratio</div>
+                                        <div class="fvb-stat-value fvb-neutral">39.4%</div>
+                                    </div>
+                                    <div>
+                                        <div class="fvb-stat-label">Initiated</div>
+                                        <div class="fvb-stat-value">Mar 2026</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fvb-reasoning">
+                                CVS Health is a structurally sound but cyclically challenged business. The company's vertical integration across retail pharmacy, PBM, and health insurance is a genuine competitive moat — one matched in the US only by UnitedHealth Group. At $77.92, the market is pricing the stock as though the Aetna margin recovery will fail and leverage will remain a permanent feature. The base case — a measured 6% revenue CAGR, Aetna MBR normalizing to ~88% by 2028, and FCF recovering to $10B — implies a 3-year price target of $88, or +13% price appreciation. Add a 3.41% annual dividend yield — well covered at a 39.4% adjusted payout ratio and 2.3&times; FCF coverage — and total 3-year return potential rises to approximately 16–17%. The dividend is explicitly committed to by management and is unlikely to be cut absent catastrophic operating deterioration. Initiating at HOLD: the risk/reward is positively skewed (base +13%, bull +25%, bear -20%), but conviction is limited by $71.5B of net debt, persistent Medicare Advantage medical cost uncertainty through 2027, and a long path before margin recovery is fully confirmed. Investors seeking income with healthcare exposure can own CVS here; those seeking capital appreciation with higher conviction should wait for clearer MBR normalization signals.
+                            </div>
+                        </div>
+                    </section>
+
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebar = document.querySelector('.sidebar');
+            const toggleBtn = document.getElementById('sidebar-toggle');
+            if (localStorage.getItem('sidebar-collapsed') === 'true') {
+                sidebar.classList.add('collapsed');
+            }
+            toggleBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('collapsed');
+                localStorage.setItem('sidebar-collapsed', sidebar.classList.contains('collapsed'));
+            });
+        });
+    </script>
+</body>
+</html>

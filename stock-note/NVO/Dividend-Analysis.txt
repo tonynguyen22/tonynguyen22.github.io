@@ -1,0 +1,38 @@
+Novo Nordisk Dividend Information
+Novo Nordisk has an annual dividend of $1.23 per share, with a yield of 3.19%. The dividend is paid every six months and the last ex-dividend date was Aug 18, 2025.
+
+Dividend Yield
+3.19%
+Annual Dividend
+$1.23
+Ex-Dividend Date
+Aug 18, 2025
+Payout Frequency
+Semi-Annual
+Payout Ratio
+33.99%
+Dividend Growth
+19.97%
+Growth Years
+6
+Buyback Yield
+0.34%
+Shareholder Yield
+3.53%
+Open in Dividend Calculator 
+Dividend History
+
+Download
+
+Data Source
+Ex-Dividend Date	Cash Amount	Record Date	Pay Date
+Aug 18, 2025	$0.41155	Aug 18, 2025	Aug 26, 2025
+Mar 31, 2025	$0.81907	Mar 31, 2025	Apr 8, 2025
+Aug 16, 2024	$0.36234	Aug 16, 2024	Aug 26, 2024
+Mar 22, 2024	$0.66341	Mar 25, 2024	Apr 2, 2024
+Aug 18, 2023	$0.31236	Aug 21, 2023	Aug 29, 2023
+Mar 24, 2023	$0.42341	Mar 27, 2023	Apr 4, 2023
+Aug 12, 2022	$0.20338	Aug 15, 2022	Aug 23, 2022
+Mar 25, 2022	$0.36568	Mar 28, 2022	Apr 5, 2022
+Aug 16, 2021	$0.19336	Aug 17, 2021	Aug 25, 2021
+Mar 26, 2021	$0.33158	Mar 29, 2021	Apr 7, 2021

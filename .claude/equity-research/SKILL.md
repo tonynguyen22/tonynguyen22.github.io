@@ -77,6 +77,8 @@ Extract and record:
 - **DCF outputs**: WACC used, terminal growth rate (TGR), intrinsic value (Bear / Base / Bull price targets)
 - **Sensitivity table**: A grid of WACC values (rows) vs TGR values (columns), each cell = implied price
 
+**Default DCF parameters:** Terminal growth rate (TGR) = **2.5%**, equity risk premium (ERP) = **5.5%** unless the user specifies otherwise.
+
 If a value is not in the Excel file, note it as "N/A" rather than guessing.
 
 ---

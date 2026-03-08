@@ -1678,3 +1678,161 @@ PORTFOLIO PAGE — CARD WRAPPERS
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================================================
+   NVO — Dual-Shock Decline Callout (Section 02)
+============================================================ */
+.shock-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin: 1.25rem 0;
+    background: rgba(220, 38, 38, 0.07);
+    border: 1px solid rgba(220, 38, 38, 0.18);
+    border-radius: 8px;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+.shock-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+}
+.shock-date {
+    font-size: 0.7rem;
+    color: #64748b;
+    margin-bottom: 0.2rem;
+}
+.shock-event {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.3rem;
+}
+.shock-pct {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #dc2626;
+}
+.shock-trigger {
+    font-size: 0.7rem;
+    color: #64748b;
+    margin-top: 0.2rem;
+}
+.shock-divider {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    font-weight: 300;
+    padding: 0 0.25rem;
+    align-self: center;
+}
+
+/* ============================================================
+   NVO — GLP-1 Market Share Split Bar (Section 05)
+============================================================ */
+.mss-wrap {
+    margin: 1.5rem 0;
+}
+.mss-label {
+    font-size: 0.82rem;
+    color: #A9B4C2;
+    margin-bottom: 0.5rem;
+}
+.mss-bar {
+    display: flex;
+    height: 2.5rem;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 100%;
+}
+.mss-segment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+}
+.mss-nvo {
+    background: #1E3A5F;
+}
+.mss-lly {
+    background: #7c3aed;
+}
+.mss-legend {
+    margin-top: 0.5rem;
+    font-size: 0.78rem;
+    color: #A9B4C2;
+}
+.mss-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 0.25rem;
+}
+.mss-dot-nvo {
+    background: #1E3A5F;
+}
+.mss-dot-lly {
+    background: #7c3aed;
+}
+
+/* ============================================================
+   NVO — Revenue & Gross Margin Bar Chart (Section 07)
+============================================================ */
+.rev-chart-wrap {
+    margin: 1.5rem 0 2rem;
+}
+.rev-chart-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.75rem;
+    height: 140px;
+    padding: 0 0.5rem;
+    border-bottom: 1px solid rgba(169, 180, 194, 0.2);
+}
+.rcb-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    justify-content: flex-end;
+}
+.rcb-val {
+    font-size: 0.7rem;
+    color: #A9B4C2;
+    margin-bottom: 0.2rem;
+}
+.rcb-bar {
+    width: 100%;
+    background: #1E3A5F;
+    border-radius: 3px 3px 0 0;
+}
+.rcb-bar-current {
+    background: #A9B4C2;
+}
+.rcb-year {
+    font-size: 0.72rem;
+    color: #A9B4C2;
+    margin-top: 0.4rem;
+}
+.rcb-margin {
+    font-size: 0.7rem;
+    color: #6ee7b7;
+    margin-top: 0.15rem;
+}
+.rcb-margin-warn {
+    color: #fca5a5;
+}
+.rcb-footnote {
+    font-size: 0.72rem;
+    color: #A9B4C2;
+    margin-top: 0.5rem;
+    font-style: italic;
+}

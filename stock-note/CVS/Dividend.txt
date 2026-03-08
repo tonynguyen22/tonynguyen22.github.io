@@ -1,0 +1,46 @@
+CVS Health Dividend Information
+CVS Health has an annual dividend of $2.66 per share, with a yield of 3.41%. The dividend is paid every three months and the last ex-dividend date was Jan 22, 2026.
+
+Dividend Yield
+3.41%
+Annual Dividend
+$2.66
+Ex-Dividend Date
+Jan 22, 2026
+Payout Frequency
+Quarterly
+Payout Ratio
+191.37%
+Dividend Growth
+n/a
+Buyback Yield
+-0.71%
+Shareholder Yield
+2.70%
+Open in Dividend Calculator 
+Dividend History
+
+Download
+
+Data Source
+Ex-Dividend Date	Cash Amount	Record Date	Pay Date
+Jan 22, 2026	$0.665	Jan 22, 2026	Feb 2, 2026
+Oct 23, 2025	$0.665	Oct 23, 2025	Nov 3, 2025
+Jul 22, 2025	$0.665	Jul 22, 2025	Aug 1, 2025
+Apr 22, 2025	$0.665	Apr 22, 2025	May 1, 2025
+Jan 23, 2025	$0.665	Jan 23, 2025	Feb 3, 2025
+Oct 21, 2024	$0.665	Oct 21, 2024	Nov 1, 2024
+Jul 22, 2024	$0.665	Jul 22, 2024	Aug 1, 2024
+Apr 19, 2024	$0.665	Apr 22, 2024	May 1, 2024
+Jan 19, 2024	$0.665	Jan 22, 2024	Feb 1, 2024
+Oct 19, 2023	$0.605	Oct 20, 2023	Nov 1, 2023
+Jul 20, 2023	$0.605	Jul 21, 2023	Aug 1, 2023
+Apr 20, 2023	$0.605	Apr 21, 2023	May 1, 2023
+Jan 19, 2023	$0.605	Jan 20, 2023	Feb 1, 2023
+Oct 20, 2022	$0.550	Oct 21, 2022	Nov 1, 2022
+Jul 21, 2022	$0.550	Jul 22, 2022	Aug 1, 2022
+Apr 21, 2022	$0.550	Apr 22, 2022	May 2, 2022
+Jan 20, 2022	$0.550	Jan 21, 2022	Feb 1, 2022
+Oct 21, 2021	$0.500	Oct 22, 2021	Nov 1, 2021
+Jul 22, 2021	$0.500	Jul 23, 2021	Aug 2, 2021
+Apr 22, 2021	$0.500	Apr 23, 2021	May 3, 2021
