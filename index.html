@@ -18,29 +18,35 @@
     <div class="app-container">
         <aside class="sidebar">
             <div class="sidebar-logo">
-                <span class="logo-text">Tonivest Research</span>
+                <a href="index.html" class="brand-block" title="Tonivest Labs">
+                    <span class="brand-mark" aria-hidden="true">TL</span>
+                    <span class="brand-copy">
+                        <span class="logo-text">Tonivest Labs</span>
+                        <span class="logo-subtext">Independent equity research</span>
+                    </span>
+                </a>
                 <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle Sidebar">
                     <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 </button>
             </div>
             
             <nav class="sidebar-nav">
-                <a href="index.html" class="nav-item active">
+                <a href="index.html" class="nav-item active" aria-current="page" title="Company Analysis">
                     <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
                     <span class="nav-label">Company Analysis</span>
                 </a>
                 
-                <a href="port.html" class="nav-item">
+                <a href="port.html" class="nav-item" title="My Portfolio">
                     <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 011-1h1m-1 1v1m0 0H4a1 1 0 00-1 1v1m2-2h14m-1 0V5a2 2 0 00-1-1h-1m1 1v1"/></svg>
                     <span class="nav-label">My Portfolio</span>
                 </a>
 
-                <a href="tools.html" class="nav-item">
+                <a href="tools.html" class="nav-item" title="Tools and Projects">
                     <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
                     <span class="nav-label">Tools & Projects</span>
                 </a>
 
-                <a href="about.html" class="nav-item">
+                <a href="about.html" class="nav-item" title="About Me">
                     <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
                     <span class="nav-label">About Me</span>
                 </a>
@@ -55,6 +61,20 @@
                         In-depth analysis of companies listed on the US stock market. 
                         Providing detailed reports on financial status, business prospects, and stock valuation.
                     </p>
+                    <div class="hero-metrics" aria-label="Research coverage summary">
+                        <div class="hero-metric">
+                            <span class="hero-metric-label">Reports</span>
+                            <span class="hero-metric-value">10</span>
+                        </div>
+                        <div class="hero-metric">
+                            <span class="hero-metric-label">Coverage</span>
+                            <span class="hero-metric-value">US + Vietnam</span>
+                        </div>
+                        <div class="hero-metric">
+                            <span class="hero-metric-label">Latest Update</span>
+                            <span class="hero-metric-value">Mar 2026</span>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -63,7 +83,7 @@
                     <article class="analysis-card">
                         <div class="card-header">
                             <div class="card-identity">
-                                <img class="card-logo" src="https://www.google.com/s2/favicons?domain=amd.com&amp;sz=128" alt="AMD" onerror="this.style.display='none'">
+                                <img class="card-logo" src="https://www.google.com/s2/favicons?domain=amd.com&amp;sz=128" alt="AMD" onerror="this.src='assets/logo-nav.png';this.classList.add('fallback-logo');this.onerror=null;">
                                 <span class="stock-symbol">AMD</span>
                             </div>
                             <span class="card-rating-badge crb-buy">BUY</span>
@@ -74,6 +94,11 @@
                         </div>
                         <div class="card-content">
                             <h2 class="card-title">AMD: The AI Second-Source at a Growth Discount</h2>
+                            <div class="card-tags">
+                                <span class="card-tag">Semiconductors</span>
+                                <span class="card-tag">AI Infrastructure</span>
+                                <span class="card-tag">High Volatility</span>
+                            </div>
                             <p class="card-description">
                                 The only semiconductor company gaining share in both server CPUs and AI GPUs. Data Center revenue grew 39% in Q4, MI450 GPU ramp begins mid-2026, and the stock trades at a PEG of 0.68. BUY with 3-yr price target $300 (+56%).
                             </p>
@@ -89,7 +114,7 @@
                     <article class="analysis-card">
                         <div class="card-header">
                             <div class="card-identity">
-                                <img class="card-logo" src="https://www.google.com/s2/favicons?domain=microsoft.com&amp;sz=128" alt="MSFT" onerror="this.style.display='none'">
+                                <img class="card-logo" src="https://www.google.com/s2/favicons?domain=microsoft.com&amp;sz=128" alt="MSFT" onerror="this.src='assets/logo-nav.png';this.classList.add('fallback-logo');this.onerror=null;">
                                 <span class="stock-symbol">MSFT</span>
                             </div>
                             <span class="card-rating-badge crb-buy">BUY</span>
@@ -100,6 +125,11 @@
                         </div>
                         <div class="card-content">
                             <h2 class="card-title">Microsoft: Azure AI at a Discount to History</h2>
+                            <div class="card-tags">
+                                <span class="card-tag">Mega Cap</span>
+                                <span class="card-tag">Cloud and AI</span>
+                                <span class="card-tag">Quality Compounder</span>
+                            </div>
                             <p class="card-description">
                                 The world's best-positioned AI infrastructure company. Azure grew 31% in Q2 FY2026, Copilot seats tripled YoY, and cloud revenue crossed $51.5B in a single quarter. At 24x forward earnings vs. a 32x historical average, MSFT is cheap for what it is. 3-yr price target $563 (+38%).
                             </p>
@@ -115,7 +145,7 @@
                     <article class="analysis-card">
                         <div class="card-header">
                             <div class="card-identity">
-                                <img class="card-logo" src="https://www.google.com/s2/favicons?domain=novonordisk.com&amp;sz=128" alt="NVO" onerror="this.style.display='none'">
+                                <img class="card-logo" src="https://www.google.com/s2/favicons?domain=novonordisk.com&amp;sz=128" alt="NVO" onerror="this.src='assets/logo-nav.png';this.classList.add('fallback-logo');this.onerror=null;">
                                 <span class="stock-symbol">NVO</span>
                             </div>
                             <span class="card-rating-badge crb-hold">HOLD</span>
@@ -126,6 +156,11 @@
                         </div>
                         <div class="card-content">
                             <h2 class="card-title">Novo Nordisk: GLP-1 Leader at a Crossroads</h2>
+                            <div class="card-tags">
+                                <span class="card-tag">Healthcare</span>
+                                <span class="card-tag">GLP-1</span>
+                                <span class="card-tag">Regulatory Risk</span>
+                            </div>
                             <p class="card-description">
                                 World's largest GLP-1 manufacturer facing competitive pressure from Eli Lilly and a CagriSema trial setback, but trading at a 46% discount to its 5-year average P/E. HOLD with 3-yr price target $52 (+34% upside).
                             </p>
@@ -141,7 +176,7 @@
                     <article class="analysis-card">
                         <div class="card-header">
                             <div class="card-identity">
-                                <img class="card-logo" src="https://www.google.com/s2/favicons?domain=cvshealth.com&amp;sz=128" alt="CVS" onerror="this.style.display='none'">
+                                <img class="card-logo" src="https://www.google.com/s2/favicons?domain=cvshealth.com&amp;sz=128" alt="CVS" onerror="this.src='assets/logo-nav.png';this.classList.add('fallback-logo');this.onerror=null;">
                                 <span class="stock-symbol">CVS</span>
                             </div>
                             <span class="card-rating-badge crb-hold">HOLD</span>
@@ -152,6 +187,11 @@
                         </div>
                         <div class="card-content">
                             <h2 class="card-title">CVS Health: Integrated Healthcare at a Distressed Valuation</h2>
+                            <div class="card-tags">
+                                <span class="card-tag">Healthcare Services</span>
+                                <span class="card-tag">Value</span>
+                                <span class="card-tag">Turnaround</span>
+                            </div>
                             <p class="card-description">
                                 America's most vertically integrated healthcare company — pharmacy, PBM (Caremark), and Aetna insurance. Dividend yield 3.41%, FCF-backed. HOLD with 3-yr price target $88 (+13% upside).
                             </p>
@@ -167,7 +207,7 @@
                     <article class="analysis-card">
                         <div class="card-header">
                             <div class="card-identity">
-                                <img class="card-logo" src="https://www.google.com/s2/favicons?domain=google.com&amp;sz=128" alt="GOOGL" onerror="this.style.display='none'">
+                                <img class="card-logo" src="https://www.google.com/s2/favicons?domain=google.com&amp;sz=128" alt="GOOGL" onerror="this.src='assets/logo-nav.png';this.classList.add('fallback-logo');this.onerror=null;">
                                 <span class="stock-symbol">GOOGL</span>
                             </div>
                             <span class="card-rating-badge crb-buy">BUY</span>
@@ -178,6 +218,11 @@
                         </div>
                         <div class="card-content">
                             <h2 class="card-title">Alphabet: AI Platform Compounding at Scale</h2>
+                            <div class="card-tags">
+                                <span class="card-tag">Digital Ads</span>
+                                <span class="card-tag">Cloud</span>
+                                <span class="card-tag">AI Platform</span>
+                            </div>
                             <p class="card-description">
                                 World's dominant search and digital advertising platform, accelerating through Gemini AI, AI Overviews monetization, and Google Cloud. 3-yr price target $418 (+39.8% upside).
                             </p>
@@ -193,7 +238,7 @@
                     <article class="analysis-card">
                         <div class="card-header">
                             <div class="card-identity">
-                                <img class="card-logo" src="https://www.google.com/s2/favicons?domain=adobe.com&amp;sz=128" alt="ADBE" onerror="this.style.display='none'">
+                                <img class="card-logo" src="https://www.google.com/s2/favicons?domain=adobe.com&amp;sz=128" alt="ADBE" onerror="this.src='assets/logo-nav.png';this.classList.add('fallback-logo');this.onerror=null;">
                                 <span class="stock-symbol">ADBE</span>
                             </div>
                             <span class="card-rating-badge crb-buy">BUY</span>
@@ -204,6 +249,11 @@
                         </div>
                         <div class="card-content">
                             <h2 class="card-title">Adobe: AI Monetization at a Valuation Reset</h2>
+                            <div class="card-tags">
+                                <span class="card-tag">Software</span>
+                                <span class="card-tag">Creative Cloud</span>
+                                <span class="card-tag">Execution Risk</span>
+                            </div>
                             <p class="card-description">
                                 Entrenched creative &amp; enterprise software platform. Firefly AI monetization in early innings; $9.9B FCF, aggressive buybacks, and 26.7% upside to $322 target.
                             </p>
@@ -219,7 +269,7 @@
                     <article class="analysis-card">
                         <div class="card-header">
                             <div class="card-identity">
-                                <img class="card-logo" src="https://www.google.com/s2/favicons?domain=synaptics.com&amp;sz=128" alt="SYNA" onerror="this.style.display='none'">
+                                <img class="card-logo" src="https://www.google.com/s2/favicons?domain=synaptics.com&amp;sz=128" alt="SYNA" onerror="this.src='assets/logo-nav.png';this.classList.add('fallback-logo');this.onerror=null;">
                                 <span class="stock-symbol">SYNA</span>
                             </div>
                             <span class="card-rating-badge crb-hold">HOLD</span>
@@ -230,6 +280,11 @@
                         </div>
                         <div class="card-content">
                             <h2 class="card-title">Synaptics: Edge AI Pivot Validated</h2>
+                            <div class="card-tags">
+                                <span class="card-tag">Semiconductors</span>
+                                <span class="card-tag">Edge AI</span>
+                                <span class="card-tag">Cyclical</span>
+                            </div>
                             <p class="card-description">
                                 Semiconductor leader executing its IoT &amp; Edge AI transformation. Downgraded to HOLD after ~26% rally; 11.2% upside to $95.64 target.
                             </p>
@@ -245,7 +300,7 @@
                     <article class="analysis-card">
                         <div class="card-header">
                             <div class="card-identity">
-                                <img class="card-logo" src="https://www.google.com/s2/favicons?domain=gxo.com&amp;sz=128" alt="GXO" onerror="this.style.display='none'">
+                                <img class="card-logo" src="https://www.google.com/s2/favicons?domain=gxo.com&amp;sz=128" alt="GXO" onerror="this.src='assets/logo-nav.png';this.classList.add('fallback-logo');this.onerror=null;">
                                 <span class="stock-symbol">GXO</span>
                             </div>
                             <span class="card-rating-badge crb-hold">HOLD</span>
@@ -256,6 +311,11 @@
                         </div>
                         <div class="card-content">
                             <h2 class="card-title">GXO Logistics: Record Results, Full Valuation</h2>
+                            <div class="card-tags">
+                                <span class="card-tag">Logistics</span>
+                                <span class="card-tag">Contract Warehousing</span>
+                                <span class="card-tag">Execution Risk</span>
+                            </div>
                             <p class="card-description">
                                 World’s largest pure-play contract logistics company. Stock has surpassed our $62.01 target; maintaining HOLD as valuation is full.
                             </p>
@@ -271,17 +331,22 @@
                     <article class="analysis-card">
                         <div class="card-header">
                             <div class="card-identity">
-                                <img class="card-logo" src="https://www.google.com/s2/favicons?domain=sasairport.com.vn&amp;sz=128" alt="SAS" onerror="this.style.display='none'">
+                                <img class="card-logo" src="https://www.google.com/s2/favicons?domain=sasairport.com.vn&amp;sz=128" alt="SAS" onerror="this.src='assets/logo-nav.png';this.classList.add('fallback-logo');this.onerror=null;">
                                 <span class="stock-symbol">SAS</span>
                             </div>
                             <span class="card-rating-badge crb-buy">BUY</span>
                         </div>
                         <div class="card-meta">
-                            <time class="card-date">15 Jul 2025</time>
+                            <time class="card-date">Initiated Jul 2025</time>
                             <span class="country-tag">🇻🇳 Vietnam</span>
                         </div>
                         <div class="card-content">
                             <h2 class="card-title">Southern Airports Services JSC: Airport Non-Aviation Leader</h2>
+                            <div class="card-tags">
+                                <span class="card-tag">Airports</span>
+                                <span class="card-tag">Vietnam</span>
+                                <span class="card-tag">Small Cap</span>
+                            </div>
                             <p class="card-description">
                                 Vietnam’s dominant airport lounge &amp; duty-free operator. Long Thanh Airport expansion and international passenger recovery drive 19.8% base IRR.
                             </p>
@@ -297,17 +362,22 @@
                     <article class="analysis-card">
                         <div class="card-header">
                             <div class="card-identity">
-                                <img class="card-logo" src="https://www.google.com/s2/favicons?domain=pvtrans.com.vn&amp;sz=128" alt="PVT" onerror="this.style.display='none'">
+                                <img class="card-logo" src="https://www.google.com/s2/favicons?domain=pvtrans.com.vn&amp;sz=128" alt="PVT" onerror="this.src='assets/logo-nav.png';this.classList.add('fallback-logo');this.onerror=null;">
                                 <span class="stock-symbol">PVT</span>
                             </div>
                             <span class="card-rating-badge crb-buy">BUY</span>
                         </div>
                         <div class="card-meta">
-                            <time class="card-date">15 Jun 2025</time>
+                            <time class="card-date">Initiated Jun 2025</time>
                             <span class="country-tag">🇻🇳 Vietnam</span>
                         </div>
                         <div class="card-content">
                             <h2 class="card-title">PetroVietnam Transportation: Energy Shipping Leader</h2>
+                            <div class="card-tags">
+                                <span class="card-tag">Energy Shipping</span>
+                                <span class="card-tag">Vietnam</span>
+                                <span class="card-tag">Dividend</span>
+                            </div>
                             <p class="card-description">
                                 State-backed energy shipping operator with stable PVN contracts. Chemical tanker expansion and LPG recovery drive 18% base IRR.
                             </p>
