@@ -156,23 +156,26 @@ Create the file at `stocks/[ticker].html`. Use the exact HTML structure below. D
 
 #### 5c. Main Layout
 
-```html
-<div class="main-content">
-    <header class="analysis-detail-header">
-        <div class="header-content">
-            <h1 class="detail-title">Equity Research: [Company Name] ([TICKER])</h1>
-            <p class="detail-meta">Initiated: [Month Year] &nbsp;|&nbsp; Last Updated: [Date] &nbsp;|&nbsp; Author: Tony Nguyen</p>
-        </div>
-        <a href="../index.html" class="back-button">← Back</a>
-    </header>
+CRITICAL: Use `<main class="main-content">` (not `<div>`). The `<header>` must be INSIDE `<div class="analysis-detail-container">`, not outside it. Getting this wrong breaks the page header layout.
 
+```html
+<main class="main-content">
     <div class="analysis-detail-container">
+        <header class="analysis-detail-header">
+            <div class="header-content">
+                <h1 class="detail-title">Equity Research: [Company Name] ([TICKER])</h1>
+                <p class="detail-meta">Initiated: [Month Year] &nbsp;|&nbsp; Last Updated: [Date] &nbsp;|&nbsp; Author: Tony Nguyen</p>
+            </div>
+            <a href="../index.html" class="back-button">← Back</a>
+        </header>
         <article class="detail-content">
-            <!-- 14 sections go here -->
+            <!-- sections go here -->
         </article>
     </div>
-</div>
+</main>
 ```
+
+CRITICAL: Do not set inline `color` on `.stock-thesis` or `.fvb-reasoning` — these are defined in `styles.css` as `color: #ffffff` (pure white). Both classes render text inside the dark blue gradient boxes (overview card and final verdict). Any opacity reduction will make the text look grey and hard to read.
 
 ---
 
@@ -612,14 +615,14 @@ Include a `.metric-pair-grid` for current-year highlights, then a historical dat
             <span class="mp-context">Base case</span>
         </div>
         <div class="metric-pair">
-            <span class="mp-label">WACC Used</span>
+            <span class="mp-label">Required Return Rate (WACC)</span>
             <span class="mp-value">[X]%</span>
-            <span class="mp-context">[Beta, risk-free note]</span>
+            <span class="mp-context">the minimum annual return investors expect</span>
         </div>
         <div class="metric-pair">
-            <span class="mp-label">Terminal Growth Rate</span>
+            <span class="mp-label">Long-run Growth Rate (TGR)</span>
             <span class="mp-value">[X]%</span>
-            <span class="mp-context">[rationale note]</span>
+            <span class="mp-context">assumed steady growth rate after forecast period</span>
         </div>
         <div class="metric-pair">
             <span class="mp-label">EV / EBITDA</span>
@@ -648,12 +651,12 @@ Include a `.metric-pair-grid` for current-year highlights, then a historical dat
 <section class="detail-section">
     <span class="section-label">12 — Sensitivity Analysis</span>
     <h3>Sensitivity Analysis</h3>
-    <p>[1-2 sentences on what you are stress-testing and what ranges you find most plausible. First person.]</p>
+    <p>[1-2 sentences on what you are stress-testing and what ranges you find most plausible. First person. Then add one plain-English sentence explaining the table, e.g.: "Each cell shows what the stock would be worth under a different combination of required return rate and long-run growth assumption."]</p>
     <div class="sensitivity-wrap">
         <table class="sensitivity-table">
             <thead>
                 <tr>
-                    <th class="st-corner">WACC \ TGR</th>
+                    <th class="st-corner">Required Return \ Long-run Growth</th>
                     <th>[TGR1]%</th>
                     <th>[TGR2]%</th>
                     <th>[TGR3]%</th>
@@ -784,6 +787,8 @@ Read `index.html` to find the card grid. Add a new card for this stock in the co
 - Use specific numbers from the Excel and web research rather than vague language.
 - Include visual tables and figure callouts wherever data supports them.
 - Prose should read like an analyst note, not an AI summary.
+- Write for a general audience. Assume the reader is smart but has no finance or tech background. Do not assume familiarity with any term or ratio. Explain the "so what" behind every number.
+- Explain every abbreviation on first use. Write the full term, then the abbreviation in parentheses. After that, you may use the abbreviation alone. Example: "weighted average cost of capital (WACC)" on first use, then "WACC" thereafter.
 
 ---
 

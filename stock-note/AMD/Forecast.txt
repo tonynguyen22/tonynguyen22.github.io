@@ -1,0 +1,124 @@
+Advanced Micro Devices Stock Forecast
+All Analysts
+Top Analysts
+Stock Price Forecast
+The 33 analysts that cover Advanced Micro Devices stock have a consensus rating of "Buy" and an average price target of $261.21, which forecasts a 35.74% increase in the stock price over the next year. The lowest target is $120 and the highest is $358.
+
+Price Target: $261.21 (+35.74%)
+Analyst Consensus: Buy
+Target	Low	Average	Median	High
+Price	$120	$261.21	$280	$358
+Change	-37.64%	+35.74%	+45.51%	+86.04%
+Analyst Ratings
+The average analyst rating for Advanced Micro Devices stock is "Buy". This means that analysts believe this stock is likely to outperform the market over the next twelve months.
+
+Recommendation Trends
+
+Bar Chart
+
+1 Year
+Rating	Oct '25	Nov '25	Dec '25	Jan '26	Feb '26	Mar '26
+Strong Buy	14	15	15	15	14	14
+Buy	13	13	13	13	12	12
+Hold	8	8	8	7	8	8
+Sell	0	0	0	0	0	0
+Strong Sell	0	0	0	0	0	0
+Total	35	36	36	35	34	34
+Latest Forecasts
+
+Columns
+
+Analyst Performance
+
+Rating
+
+Upside
+
+Action
+Analyst	Firm	Rating	Action	Price Target	Upside	Date
+James Schneider
+Goldman Sachs	Hold	Maintains	$210 → $240	+24.72%	Feb 25, 2026
+Srini Pajjuri
+RBC Capital	Hold	Reiterates	$230	+19.52%	Feb 25, 2026
+Mark Lipacis
+Evercore ISI Group	Buy	Maintains	$328 → $358	+86.04%	Feb 25, 2026
+Vijay Rakesh
+Mizuho	Buy	Maintains	$275 → $280	+45.51%	Feb 25, 2026
+Cody Acree
+Benchmark	Strong Buy	Reiterates	$325	+68.89%	Feb 25, 2026
+More Analyst Ratings
+Financial Forecast
+Annual
+Quarterly
+
+Download
+Revenue This Year
+46.91B
+Increased by35.41%
+from 34.64B
+Revenue Next Year
+66.87B
+Increased by42.56%
+from 46.91B
+EPS This Year
+6.72
+Increased by153.69%
+from 2.65
+EPS Next Year
+10.97
+Increased by63.16%
+from 6.72
+Fiscal Year	FY 2021	FY 2022	FY 2023	FY 2024	FY 2025	FY 2026	FY 2027	FY 2028	FY 2029	FY 2030
+Period Ending	Dec 25, 2021	Dec 31, 2022	Dec 30, 2023	Dec 28, 2024	Dec 27, 2025	Dec 31, 2026	Dec 31, 2027	Dec 31, 2028	Dec 31, 2029	Dec 31, 2030
+Revenue
+16.43B	23.60B	22.68B	25.79B	34.64B	46.91B	66.87B	Upgrade	Upgrade	Upgrade
+Revenue Growth
+68.33%	43.61%	-3.90%	13.69%	34.34%	35.41%	42.56%	Upgrade	Upgrade	Upgrade
+EPS
+2.57	0.84	0.53	1.00	2.65	6.72	10.97	Upgrade	Upgrade	Upgrade
+EPS Growth
+24.53%	-67.32%	-37.01%	88.99%	165.03%	153.69%	63.16%	Upgrade	Upgrade	Upgrade
+Forward PE
+-	-	-	-	-	28.62	17.54	Upgrade	Upgrade	Upgrade
+No. Analysts
+-	-	-	-	-	59	55	Upgrade	Upgrade	Upgrade
+Historical EPS numbers are GAAP, while forecasted numbers may be non-GAAP.
+Revenue Forecast
+Revenue	2026	2027	2028	2029	2030
+High	53.2B	96.9B	Pro	Pro	Pro
+Avg	46.9B	66.9B	Pro	Pro	Pro
+Low	43.3B	49.0B	Pro	Pro	Pro
+Revenue Growth
+Revenue Growth	2026	2027	2028	2029	2030
+High	
+53.7%
+106.6%
+Pro	Pro	Pro
+Avg	
+35.4%
+42.6%
+Pro	Pro	Pro
+Low	
+25.1%
+4.5%
+Pro	Pro	Pro
+EPS Forecast
+EPS	2026	2027	2028	2029	2030
+High	10.19	18.09	Pro	Pro	Pro
+Avg	6.72	10.97	Pro	Pro	Pro
+Low	5.49	7.25	Pro	Pro	Pro
+EPS Growth
+EPS Growth	2026	2027	2028	2029	2030
+High	
+284.3%
+169.1%
+Pro	Pro	Pro
+Avg	
+153.7%
+63.2%
+Pro	Pro	Pro
+Low	
+107.1%
+7.9%
+Pro	Pro	Pro
+Sources: Price targets and analyst ratings provided by Benzinga. Revenue and EPS forecast data provided by Finnhub. The data is sourced from Wall Street analysts. Data disclaimer.

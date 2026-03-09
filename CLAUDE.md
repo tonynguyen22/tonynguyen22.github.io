@@ -200,7 +200,8 @@ Apply these rules to all prose content in stock research pages:
 - **Spell out metrics on first use.** "Return on invested capital (ROIC) was 24.2%." Then just say ROIC.
 - **No hedge-word chains.** "May disappoint" not "could potentially underperform market expectations." Pick one hedge, not three.
 - **Tables carry the numbers; prose carries the meaning.** Do not restate table data in the paragraph above it. Explain what the data means instead.
-- **Write to a smart non-specialist.** Assume the reader understands P/E ratios and WACC. Do not explain what a stock is. Do explain why a specific number matters.
+- **Write for a general audience.** Assume the reader is smart but has no finance or tech background. Do not assume familiarity with any term or ratio. Explain the "so what" behind every number.
+- **Explain every abbreviation on first use.** Write the full term, then the abbreviation in parentheses. After that, you may use the abbreviation alone. Example: "weighted average cost of capital (WACC)" on first use, then "WACC" thereafter.
 - **First person throughout.** "I think," "I believe," "What I find compelling." This is personal research, not a press release.
 - **No em dashes.** Use commas, colons, or restructure the sentence.
 
